@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02/09/2015, 02/09/2015 10:06:43
+    Author     : supervisor
+*/
+
+.table-view {
+/*
+    -fx-base:  #dddddd;
+    -fx-control-inner-background: #dddddd;
+    -fx-background-color: #dddddd;
+*/
+    -fx-base:  #dddddd;
+    -fx-control-inner-background: #dddddd;
+    -fx-background-color: #dddddd;
+    /*-fx-border-color: #ffffff;*/
+    -fx-border-color: #000000;
+    -fx-border-radius: 5 5 5 5;
+    -fx-table-cell-border-color: green; 
+    -fx-table-header-border-color: #1d1d1d;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    /*-fx-text-fill: white;*/
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 30;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 2 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 8pt;
+    -fx-font-family: "Segoe UI Light";
+    /*-fx-text-fill: white;*/
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view #imv_rgimv {
+    -fx-alignment: center;
+    -fx-text-fill: blue;
+}
+
+.table-view #imv_tipo {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-text-fill: orange;
+    -fx-fill-height: true;
+}
+
+.table-view #imv_endereco {
+    -fx-alignment: center-left;
+    /*-fx-text-fill: white;*/
+    -fx-text-fill: black;
+}
+
+.table-view #imv_situacao {
+    -fx-alignment: center;
+    -fx-text-fill: greenyellow;
+}
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}

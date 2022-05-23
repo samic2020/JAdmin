@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Bordero" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c858bc6c-c1eb-482f-93ff-2e001d668f61">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="contrato" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="emissao" class="java.lang.String"/>
+	<field name="vencimento" class="java.lang.String"/>
+	<field name="cpfcnpj" class="java.lang.String"/>
+	<field name="nnumero" class="java.lang.String"/>
+	<field name="multa" class="java.math.BigDecimal"/>
+	<field name="juros" class="java.math.BigDecimal"/>
+	<field name="valor" class="java.math.BigDecimal"/>
+	<field name="tag" class="java.lang.Boolean"/>
+	<field name="aut" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="147f88de-8a36-49a1-b2d2-9a4735dc7e24" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9191b553-bbec-498c-aee7-24f0cd27f967" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8268846-c002-4bcc-a690-9be1d940700c" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="305b83a7-52d0-40eb-9884-d4cee084fee2" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[vencimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d8baf8c3-5d1e-4254-b703-a010739aa70a" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[emissao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a8d659f9-12e9-46b0-9930-f4fb02fe8b15" x="500" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[nnumero]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a5193cb2-ebf8-427e-ab8e-90051fddce41" x="600" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5b7e437e-2e82-422b-9040-177f637b3469" x="702" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[aut]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="53dbcdea-074c-47b2-a188-7051e2b3dcd8" x="0" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2d2a0126-09ea-4bad-b5b1-ba5aeee6dd54" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{contrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d493532a-18da-4700-8ebb-54dc0ab40059" x="200" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="48ec6f70-4519-4679-a70b-18f9996f26c1" x="300" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{vencimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="67d15505-be07-4981-9b47-e258cae47354" x="400" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{emissao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8dcb88b7-8de0-4dcc-9504-b463e896b378" x="500" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nnumero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ffc58c45-e975-4ffd-a14a-33cece39b098" x="600" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1f006356-b7c7-450c-844d-79e753cac4cc" x="702" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{aut}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

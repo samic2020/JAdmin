@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="508.0" prefWidth="900.0" style="-fx-background-color: cornsilk;" stylesheets="@../../css/ptableImoveis.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Extrato.ExtratoController">
+   <children>
+      <GridPane layoutX="7.0" layoutY="33.0" prefHeight="508.0" prefWidth="1154.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="603.0" minWidth="10.0" percentWidth="69.0" prefWidth="559.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="346.0" minWidth="10.0" percentWidth="39.0" prefWidth="171.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" percentHeight="100.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="553.0" prefWidth="450.0" style="-fx-background-color: cornsilk;" GridPane.columnIndex="1">
+               <children>
+                  <SplitPane dividerPositions="0.5197628458498024" orientation="VERTICAL" prefHeight="318.0" prefWidth="320.0" style="-fx-background-color: cornsilk;" VBox.vgrow="ALWAYS">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="320.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <Pane fx:id="ePagtos" layoutX="2.0" layoutY="-36.0" prefHeight="318.0" prefWidth="320.0" style="-fx-border-width: 0.5; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                                 <effect>
+                                    <InnerShadow />
+                                 </effect>
+                              </Pane>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="165.0" prefWidth="448.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <TableView fx:id="eBloqueados" layoutY="131.0" prefHeight="109.0" prefWidth="323.0" style="-fx-background-color: cornsilk;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="131.0">
+                                <columns>
+                                  <TableColumn fx:id="eBloqTipo" editable="false" prefWidth="32.0" text="Tipo" />
+                                  <TableColumn fx:id="eBloqRgImv" editable="false" prefWidth="56.0" text="Id" />
+                                    <TableColumn fx:id="eBloqNome" editable="false" prefWidth="133.0" text="Descrição" />
+                                    <TableColumn fx:id="eBloqVencto" editable="false" maxWidth="186.0" minWidth="50.0" prefWidth="146.0" resizable="false" text="Vencimento" />
+                                </columns>
+                              </TableView>
+                              <Label alignment="CENTER" layoutX="-2.0" layoutY="111.0" prefHeight="16.0" prefWidth="325.0" style="-fx-background-color: Yellow; -fx-text-fill: red;" text="BLOQUEADOS" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="111.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font></Label>
+                              <Pane prefHeight="109.0" prefWidth="323.0" style="-fx-background-color: lightgreen; -fx-background-radius: 5 5 5 5; -fx-border-color: black; -fx-border-radius: 5 5 5 5;">
+                                 <children>
+                                    <Label layoutX="8.0" layoutY="6.0" text="Pagamentos Anteriores">
+                                       <font>
+                                          <Font name="System Bold Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <ListView fx:id="extPagAnt" layoutX="8.0" layoutY="27.0" prefHeight="75.0" prefWidth="308.0" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: cornsilk;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="39.0" prefWidth="808.0" spacing="4.0" style="-fx-background-color: cornsilk;">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="58.0" text="Codigo:" />
+                        <TextField fx:id="eCodigo" prefHeight="26.0" prefWidth="85.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="16.0" prefWidth="43.0" text="Nome:" />
+                        <TextField fx:id="eNome" layoutX="65.0" layoutY="10.0" prefHeight="25.0" prefWidth="270.0" />
+                        <Button fx:id="btnDepositos" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Depósitos" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </padding>
+                  </HBox>
+                  <AnchorPane fx:id="eExtratoPdf" prefHeight="471.0" prefWidth="575.0" style="-fx-background-color: cornsilk;" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

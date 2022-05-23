@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.HTMLEditor?>
+<AnchorPane fx:id="anchorPane" prefHeight="354.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.PreAviso.PreAvisoController">
+   <children>
+      <AnchorPane fx:id="anchorPaneRetornar" layoutX="8.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="485.0" rotate="180.0" style="-fx-background-color: #dddddd; -fx-border-color: black; -fx-border-width: 2;" visible="false">
+         <children>
+            <TableView fx:id="tblLancados" layoutX="8.0" layoutY="7.0" prefHeight="288.0" prefWidth="470.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="7.0">
+              <columns>
+                <TableColumn fx:id="tblLan_id" prefWidth="75.0" text="Id" />
+                  <TableColumn fx:id="tblLan_conta" prefWidth="208.0" text="Conta" />
+                  <TableColumn fx:id="tblLan_codigo" prefWidth="75.0" text="Codigo" />
+                <TableColumn fx:id="tblLan_tipo" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="tblLan_texto" prefWidth="75.0" text="Texto" />
+                  <TableColumn fx:id="tblLan_valor" prefWidth="75.0" text="Valor" />
+                  <TableColumn fx:id="tblLan_usuario" prefWidth="75.0" text="Usuario" />
+                  <TableColumn fx:id="tblLan_dtlanc" prefWidth="75.0" text="DtLanc" />
+                  <TableColumn fx:id="tblLan_obs" prefWidth="75.0" text="Obs" />
+                  <TableColumn fx:id="tblLan_aut" editable="false" prefWidth="75.0" sortable="false" text="aut" visible="false" />
+              </columns>
+            </TableView>
+            <Button fx:id="tgbRetornar" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: linear-gradient(#a8ecb9, #50da73); -fx-text-fill: white; -fx-background-radius: 30; -fx-background-insets: 0; -fx-font: bold italic 10pt &quot;Arial&quot;;" text="Pré Avisos" />
+         </children>
+         <rotationAxis>
+            <Point3D y="90.0" z="90.0" />
+         </rotationAxis>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneAvisos" layoutX="8.0" layoutY="7.0" minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="485.0" style="-fx-background-color: #dddddd; -fx-border-color: black; -fx-border-width: 2;">
+         <children>
+            <TabPane fx:id="tbpAvisos" layoutX="8.0" layoutY="6.0" prefHeight="73.0" prefWidth="470.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="avAdm" text="Adm">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="54.0" prefWidth="486.0" style="-fx-background-color: #dddddd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="46.0" text="Codigo:" />
+                              <TextField fx:id="txbAvCodigo" layoutX="62.0" layoutY="13.0" prefHeight="26.0" prefWidth="91.0" />
+                              <TextField fx:id="txbAvNome" layoutX="155.0" layoutY="13.0" prefHeight="26.0" prefWidth="293.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="AvPrp" text="Proprietarios">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="55.0" text="Registro:" />
+                              <TextField fx:id="txbPrCodigo" layoutX="71.0" layoutY="13.0" prefHeight="26.0" prefWidth="82.0" />
+                              <TextField fx:id="txbPrNome" layoutX="155.0" layoutY="13.0" prefHeight="26.0" prefWidth="293.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="AvLoc" text="Locatarios">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="55.0" text="Contrato:" />
+                              <TextField fx:id="txbLcCodigo" layoutX="71.0" layoutY="13.0" prefHeight="26.0" prefWidth="82.0" />
+                              <TextField fx:id="txbLcNome" layoutX="155.0" layoutY="13.0" prefHeight="26.0" prefWidth="293.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="AvSc" text="Socios">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="20.0" text="Id:" />
+                              <TextField fx:id="txbScCodigo" layoutX="33.0" layoutY="13.0" prefHeight="26.0" prefWidth="82.0" />
+                              <TextField fx:id="txbScNome" layoutX="118.0" layoutY="13.0" prefHeight="26.0" prefWidth="330.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="AvCta" text="Contas">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" prefHeight="16.0" prefWidth="42.0" text="Conta:" />
+                              <TextField fx:id="txbCtCodigo" layoutX="52.0" layoutY="13.0" prefHeight="26.0" prefWidth="82.0" />
+                              <TextField fx:id="txbCtNome" layoutX="136.0" layoutY="13.0" prefHeight="26.0" prefWidth="312.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <ToggleButton fx:id="tgbCrDb" layoutX="153.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: linear-gradient(#00ff54, #00be1d); -fx-text-fill: white; -fx-background-radius: 30; -fx-background-insets: 0; -fx-font: bold italic 10pt &quot;Arial&quot;;" text="Crédito" />
+            <Label layoutX="275.0" layoutY="305.0" text="Valor:" />
+            <TextField fx:id="txbValor" alignment="CENTER_RIGHT" layoutX="315.0" layoutY="300.0" prefHeight="26.0" prefWidth="86.0" promptText="0,00" style="-fx-font-size: 11;" text="0,00" />
+            <Button fx:id="tgbLancamentos" layoutX="14.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: linear-gradient(#bda4ff, #5a1dfe); -fx-text-fill: white; -fx-background-radius: 30; -fx-background-insets: 0; -fx-font: bold italic 10pt &quot;Arial&quot;;" text="Lançamentos" />
+            <HTMLEditor fx:id="txaTexto" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="10.0" layoutY="82.0" prefHeight="207.0" prefWidth="462.0" />
+            <Button fx:id="btnLancar" layoutX="409.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: linear-gradient(#00ff54, #00be1d); -fx-background-insets: 0; -fx-background-radius: 30; -fx-font: bold italic 10pt &quot;Arial&quot;;" text="Lançar" />
+         </children>
+         <rotationAxis>
+            <Point3D y="90.0" z="90.0" />
+         </rotationAxis>
+      </AnchorPane>
+   </children>
+   <rotationAxis>
+      <Point3D />
+   </rotationAxis>
+</AnchorPane>

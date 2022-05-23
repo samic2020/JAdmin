@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import masktextfield.MaskTextField?>
+
+<AnchorPane id="AnchorPane" fx:id="usuariosAnchorPane" maxHeight="1415.0" maxWidth="750.0" minHeight="428.0" minWidth="750.0" prefHeight="428.0" prefWidth="750.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Usuarios.UsuarioController">
+   <children>
+      <Pane maxHeight="656.0" maxWidth="750.0" minHeight="426.0" minWidth="750.0" prefHeight="426.0" prefWidth="750.0" style="-fx-background-color: cornsilk;" styleClass="background">
+         <children>
+            <Button fx:id="listaUser_btIncluir" layoutX="646.0" layoutY="14.0" mnemonicParsing="false" onAction="#btIncluir_OnAction" prefHeight="25.0" prefWidth="86.0" styleClass="listaUser_btIncluir" text="Incluir" />
+            <Button fx:id="listaUser_btExcluir" layoutX="646.0" layoutY="74.0" mnemonicParsing="false" onAction="#btExcluir_OnAction" prefHeight="25.0" prefWidth="86.0" styleClass="listaUser_btExcluir" text="Excluir" />
+            <TableView id="listaUser" fx:id="listaUser" layoutX="14.0" layoutY="14.0" onKeyReleased="#listaUsers_newKeyRelease" onMouseReleased="#listaUsers_newButtonRelease" prefHeight="147.0" prefWidth="623.0" style="-fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;" stylesheets="@../css/ptableImoveis.css">
+              <columns>
+                <TableColumn id="listaUser_id" fx:id="listaUser_id" editable="false" prefWidth="44.0" resizable="false" text="Id" />
+                <TableColumn id="listaUser_nome" fx:id="listaUser_nome" editable="false" prefWidth="555.0" resizable="false" text="Nome" />
+              </columns>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </TableView>
+            <Pane layoutX="15.0" layoutY="372.0" prefHeight="46.0" prefWidth="720.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+               <children>
+                  <Label layoutX="14.0" layoutY="16.0" text="Usuario:" />
+                  <TextField fx:id="login" layoutX="67.0" layoutY="11.0" />
+                  <Label layoutX="224.0" layoutY="16.0" text="Senha:" />
+                  <TextField fx:id="password" layoutX="268.0" layoutY="11.0" />
+                  <CheckBox fx:id="resenha" layoutX="426.0" layoutY="14.0" maxHeight="15.0" minHeight="15.0" mnemonicParsing="false" style="-fx-text-fill: rgba(255,255,255,0.4); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" stylesheets="@../css/checkbox.css" text="Resenha">
+                     <font>
+                        <Font size="12.0" />
+                     </font></CheckBox>
+               </children>
+            </Pane>
+            <Button fx:id="btGravar" layoutX="646.0" layoutY="109.0" mnemonicParsing="false" onAction="#btGravar_OnAction" prefHeight="25.0" prefWidth="86.0" styleClass="btGravar" text="Gravar" />
+            <Button fx:id="btRetornar" layoutX="646.0" layoutY="135.0" mnemonicParsing="false" onAction="#btRetornar_OnAction" prefHeight="25.0" prefWidth="86.0" styleClass="btRetornar" text="Retornar" />
+            <Pane layoutX="14.0" layoutY="169.0" prefHeight="200.0" prefWidth="720.0" style="-fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk; -fx-border-color: black; -fx-border-width: 0.5; -fx-border-style: dashed; -fx-background-radius: 5 5 5 5;">
+               <children>
+                  <Pane layoutX="5.0" layoutY="13.0" prefHeight="175.0" prefWidth="161.0" style="-fx-border-color: black; -fx-background-color: transparent;">
+                     <children>
+                        <ImageView fx:id="foto" fitHeight="140.0" fitWidth="161.0" layoutY="2.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../Figuras/kasa.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="scanner" layoutX="5.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" styleClass="scanner" text="Scanner" />
+                        <Button fx:id="arquivo" layoutX="79.0" layoutY="144.0" mnemonicParsing="false" onAction="#arquivo_OnAction" prefHeight="25.0" prefWidth="80.0" styleClass="arquivo" text="Arquivo" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="169.0" layoutY="21.0" text="Nome:" />
+                  <TextField fx:id="nome" layoutX="208.0" layoutY="16.0" prefHeight="24.0" prefWidth="317.0" promptText="Entre com o nome completo do usuário..." />
+                  <Label layoutX="540.0" layoutY="21.0" text="Cpf.:" />
+                  <Label layoutX="167.0" layoutY="48.0" text="Endereço:" />
+                  <TextField fx:id="ender" layoutX="221.0" layoutY="44.0" onMouseClicked="#ender_OnMouseClicked" prefHeight="24.0" prefWidth="351.0" promptText="Entre com o endereço... Duplo clique para relação de endereços..." />
+                  <Label layoutX="577.0" layoutY="48.0" text="Num.:" />
+                  <TextField fx:id="numero" layoutX="609.0" layoutY="44.0" prefHeight="24.0" prefWidth="104.0" />
+                  <TextField fx:id="cplto" layoutX="221.0" layoutY="72.0" prefHeight="24.0" prefWidth="167.0" />
+                  <Label layoutX="167.0" layoutY="76.0" text="Complto:" />
+                  <Label layoutX="414.0" layoutY="76.0" text="Bairro:" />
+                  <TextField fx:id="bairro" layoutX="456.0" layoutY="72.0" prefHeight="24.0" prefWidth="256.0" />
+                  <Label layoutX="167.0" layoutY="104.0" text="Cidade:" />
+                  <TextField fx:id="cidade" layoutX="209.0" layoutY="100.0" prefHeight="24.0" prefWidth="256.0" />
+                  <Label layoutX="473.0" layoutY="104.0" text="Estado:" />
+                  <TextField fx:id="estado" layoutX="517.0" layoutY="100.0" prefHeight="24.0" prefWidth="42.0" />
+                  <Label layoutX="590.0" layoutY="104.0" text="Cep:" />
+                  <MenuButton fx:id="email_opc" layoutX="166.0" layoutY="160.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="E-Mail(s):">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#email_adc" text="Adicionar" />
+                        <MenuItem mnemonicParsing="false" onAction="#email_del" text="Excluir" />
+                     </items>
+                  </MenuButton>
+                  <ComboBox fx:id="email" layoutX="256.0" layoutY="159.0" prefHeight="25.0" prefWidth="456.0" />
+                  <ComboBox fx:id="tel" layoutX="268.0" layoutY="129.0" prefHeight="24.0" prefWidth="197.0" />
+                  <MenuButton fx:id="tel_opc" layoutX="167.0" layoutY="129.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#tel_adc" text="Adicionar" />
+                        <MenuItem mnemonicParsing="false" onAction="#tel_del" text="Excluir" />
+                     </items>
+                  </MenuButton>
+                  <Label layoutX="488.0" layoutY="134.0" text="Data de Nascimento:" />
+                  <DatePicker fx:id="dtnasc" layoutX="606.0" layoutY="129.0" prefHeight="24.0" prefWidth="104.0" />
+                  <MaskTextField fx:id="cep" layoutX="622.0" layoutY="100.0" mask="NNNNN-NNN" onAction="#cep_OnAction" prefHeight="24.0" prefWidth="90.0" />
+                  <TextField fx:id="cpf" layoutX="575.0" layoutY="16.0" prefHeight="24.0" prefWidth="138.0" promptText="Entre com o CPF" />
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Pane>
+            <Button fx:id="listaUser_btAlterar" layoutX="646.0" layoutY="40.0" mnemonicParsing="false" onAction="#btAlterar_OnAction" prefHeight="25.0" prefWidth="86.0" styleClass="listaUser_btIncluir" text="Alterar" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/button.css" />
+      <URL value="@../css/menubutton.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" prefHeight="487.0" prefWidth="672.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Recebimento.RecibosController">
+   <children>
+      <VBox prefHeight="487.0" prefWidth="670.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="681.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Label text="Contrato:">
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="contrato" prefHeight="26.0" prefWidth="79.0" promptText="Contrato" style="-fx-font: bold 9pt &quot;Arial Bold&quot;;" />
+                  <Label layoutX="15.0" layoutY="20.0" text="Nome:">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="nome" prefHeight="25.0" prefWidth="466.0" promptText="Nome..." style="-fx-font: bold 9pt &quot;Arial Bold&quot;;" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="88.0" prefWidth="700.0" style="-fx-border-color: white; -fx-border-width: 0.5; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="714.0" style="-fx-background-color: cornsilk;">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="RgImv:" textFill="WHITE" />
+                        <TextField fx:id="rgimv" editable="false" prefHeight="26.0" prefWidth="75.0" promptText="Imovel" />
+                        <Label text="Proprietario:" textFill="WHITE">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="nomeprop" editable="false" layoutX="61.0" layoutY="15.0" prefHeight="24.0" prefWidth="454.0" promptText="Imovel" />
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="16.0" layoutY="16.0" prefHeight="31.0" prefWidth="578.0" style="-fx-background-color: cornsilk;">
+                     <children>
+                        <Label text="Endereço:" textFill="WHITE" />
+                        <TextField fx:id="enderimv" editable="false" prefHeight="24.0" prefWidth="333.0" promptText="Endereço do Imovel" />
+                        <Label text="Bairro:" textFill="WHITE">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="bairroimv" editable="false" layoutX="61.0" layoutY="15.0" prefHeight="24.0" prefWidth="215.0" promptText="Bairro" />
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="57.0" prefHeight="31.0" prefWidth="578.0" style="-fx-background-color: cornsilk;">
+                     <children>
+                        <Label text="Cidade:" textFill="WHITE" />
+                        <TextField fx:id="cidadeimv" editable="false" prefHeight="24.0" prefWidth="239.0" promptText="Cidade" />
+                        <Label text="Estado:" textFill="WHITE">
+                           <padding>
+                              <Insets left="153.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="estadoimv" editable="false" layoutX="61.0" layoutY="15.0" prefHeight="26.0" prefWidth="37.0" promptText="Estado" />
+                        <Label text="Cep:" textFill="WHITE">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="cepimv" editable="false" layoutX="414.0" layoutY="15.0" prefHeight="26.0" prefWidth="90.0" promptText="Cep" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </VBox>
+            <HBox prefHeight="196.0" prefWidth="660.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <children>
+                  <Pane prefHeight="192.0" prefWidth="333.0" style="-fx-border-width: 0.5; -fx-border-color: white; -fx-background-color: #dddddd;">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                     <children>
+                        <TableView fx:id="tableView" disable="true" editable="true" layoutY="2.0" prefHeight="185.0" prefWidth="330.0" style="-fx-background-color: cornsilk;">
+                           <columns>
+                              <TableColumn fx:id="tableColumn_Tag" prefWidth="24.0" resizable="false" sortable="false" text="T" />
+                              <TableColumn fx:id="tableColumn_Descr" editable="false" prefWidth="126.0" text="Descriçao" />
+                              <TableColumn fx:id="tableColumn_Cota" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="C/P" />
+                              <TableColumn fx:id="tableColumn_Valor" prefWidth="89.0" resizable="false" sortable="false" text="Valor" />
+                           </columns>
+                        </TableView>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Pane>
+                  <Pane prefHeight="191.0" prefWidth="304.0">
+                     <children>
+                        <Pane prefHeight="36.0" prefWidth="319.0" style="-fx-border-width: 0.3; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <ComboBox fx:id="venctos" disable="true" layoutX="115.0" layoutY="5.0" prefHeight="26.0" prefWidth="128.0" style="-fx-opacity: 1.0;" />
+                              <Label layoutX="4.0" layoutY="10.0" text="Vects:" textFill="WHITE" />
+                              <Spinner fx:id="nrvenctos" layoutX="40.0" layoutY="5.0" prefHeight="26.0" prefWidth="75.0" />
+                              <Button fx:id="btDemons" layoutX="246.0" layoutY="5.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="67.0" stylesheets="@../../css/button.css" text="Imprimir" />
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Pane>
+                        <Pane layoutY="36.0" prefHeight="36.0" prefWidth="319.0" style="-fx-border-width: 0.3; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Label layoutX="5.0" layoutY="10.0" text="Vr Recibo:" textFill="WHITE" />
+                              <TextField fx:id="valorvenctos" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="65.0" layoutY="4.0" prefHeight="26.0" prefWidth="85.0" style="-fx-opacity: 1.0; -fx-font: bold 8pt &quot;Arial Bold&quot;;" text="0,00" />
+                              <Label layoutX="156.0" layoutY="10.0" text="Tt Recibos:" textFill="WHITE" />
+                              <TextField fx:id="valortotal" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="220.0" layoutY="5.0" prefHeight="26.0" prefWidth="92.0" style="-fx-opacity: 1.0; -fx-font: bold 8pt &quot;Arial Bold&quot;;" text="0,00" />
+                              <ProgressBar fx:id="progressBar" disable="true" layoutX="99.0" layoutY="5.0" prefHeight="26.0" prefWidth="336.0" progress="0.0" style="-fx-background-color: radial-gradient(radius 100%, deepskyblue, dodgerblue, royalblue);" visible="false" />
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Pane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="144.0" prefWidth="660.0">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Pane prefHeight="149.0" prefWidth="332.0" style="-fx-border-width: 0.5; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;">
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <children>
+                        <TextField fx:id="muvr" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="206.0" layoutY="10.0" prefHeight="26.0" prefWidth="116.0" style="-fx-opacity: 1.0;" text="0,00" />
+                        <TextField fx:id="covr" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="206.0" layoutY="39.0" prefHeight="26.0" prefWidth="116.0" style="-fx-opacity: 1;" text="0,00" />
+                        <TextField fx:id="juvr" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="206.0" layoutY="68.0" prefHeight="26.0" prefWidth="116.0" style="-fx-opacity: 1.0;" text="0,00" />
+                        <TextField fx:id="tevr" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="206.0" layoutY="97.0" prefHeight="26.0" prefWidth="116.0" style="-fx-opacity: 1.0;" text="0,00" />
+                        <Label fx:id="mu" layoutX="19.0" layoutY="15.0" prefHeight="16.0" prefWidth="151.0" text="Multa" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="co" layoutX="19.0" layoutY="44.0" prefHeight="16.0" prefWidth="151.0" text="Correção" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="ju" layoutX="19.0" layoutY="73.0" prefHeight="16.0" prefWidth="151.0" text="Juros" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Label fx:id="te" layoutX="19.0" layoutY="102.0" prefHeight="16.0" prefWidth="151.0" text="Expediente" textFill="WHITE">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane fx:id="tpagtos" layoutX="346.0" layoutY="222.0" prefHeight="261.0" prefWidth="319.0" style="-fx-border-width: 0.5; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/label.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/ptableImoveis.css" />
+   </stylesheets>
+</AnchorPane>

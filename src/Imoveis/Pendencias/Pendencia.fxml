@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="anchorPane" prefHeight="302.0" prefWidth="600.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imoveis.Pendencias.PendenciaController">
+   <children>
+      <TableView fx:id="tPend" editable="true" prefHeight="302.0" prefWidth="600.0" style="-fx-background-color: cornsilk;">
+        <columns>
+          <TableColumn fx:id="cDtHr" maxWidth="116.0" minWidth="116.0" prefWidth="116.0" text="Hora Saida" />
+          <TableColumn fx:id="cImv" maxWidth="52.0" minWidth="52.0" prefWidth="52.0" text="Imóvel" />
+            <TableColumn fx:id="cNome" maxWidth="324.0" minWidth="324.0" prefWidth="324.0" text="Nome" />
+            <TableColumn fx:id="cEnd" maxWidth="324.0" minWidth="324.0" prefWidth="324.0" text="Endereço" />
+            <TableColumn fx:id="cDoc" maxWidth="237.0" minWidth="237.0" prefWidth="237.0" text="Documento" />
+            <TableColumn fx:id="cTel" minWidth="200.0" prefWidth="200.0" text="Telefone(s)" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

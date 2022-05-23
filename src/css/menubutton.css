@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/11/2015, 13:49:08
+    Author     : supervisor
+*/
+
+.menu-item .label {
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.menu-item:focused {
+     -fx-background-color: darkgray;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: blue;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color:  #dddddd;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 10 10;
+/*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+    -fx-border-width: 2;
+    -fx-border-color: black;
+    -fx-border-radius: 0 0 10 10;
+}

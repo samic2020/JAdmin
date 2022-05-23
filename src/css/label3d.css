@@ -1,0 +1,59 @@
+.label3d {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12;
+    -fx-text-fill: darkblue;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 5, 0.0 , 3, 3 );
+    -fx-background-color:  rgba(255, 255, 255, 0.3),
+                                   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+                                   rgb(218, 226, 224);
+    -fx-background-radius:  5 5 5 5;
+    -fx-padding: 0 0 0 5;
+    -fx-border-color: black;
+    -fx-border-radius: 5 5 5 5;
+    -fx-border-width: 2;
+}
+
+.label2d_center {
+    -fx-font-family:  "Arial";
+    fx-font-size: 12;
+    -fx-text-fill: white;
+    /* -fx-effect:  innershadow( three-pass-box , rgba(0,0,0,0.7) , 5, 0.0 , 3, 3 ); */
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 2;
+    -fx-alignment: center;
+}
+
+.label2d_left {
+    -fx-font-family:  "Arial";
+    fx-font-size: 12;
+    -fx-text-fill: white;
+    /* -fx-effect:  innershadow( three-pass-box , rgba(0,0,0,0.7) , 5, 0.0 , 3, 3 ); */
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 2;
+    -fx-alignment: center_left;
+}
+
+.label2d_right {
+    -fx-font-family:  "Arial";
+    fx-font-size: 12;
+    -fx-text-fill: white;
+    /* -fx-effect:  innershadow( three-pass-box , rgba(0,0,0,0.7) , 5, 0.0 , 3, 3 ); */
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 2;
+    -fx-alignment: center_right;
+}
+
+.label_textbox {
+    -fx-background-color: rgba(0,0,0,0.75),
+                          rgba(255,255,255,0.75),
+                          linear-gradient(to bottom,#aaaaaa 0%,#cccccc 100%);
+    -fx-background-insets: 0 1 1 0, 1 0 0 1, 1;
+    -fx-padding: 7px;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-font: 12px "Arial";
+    -fx-text-fill: black;
+}

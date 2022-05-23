@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane fx:id="anchorPane" prefHeight="419.0" prefWidth="742.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gerencia.Controle.ContasControle">
+   <children>
+      <Pane prefHeight="84.0" prefWidth="742.0" style="-fx-app-background: cornsilk; -fx-background-color: -fx-app-background; -fx-background-insets: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, grey, 10, 0, 0, 10); -fx-border-color: black; -fx-border-insets: 20 10 10 10; -fx-border-radius: 0 5 5 5;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="163.0" style="-fx-background-color: -fx-app-background;" text="[ Criação / Seleção de Contas ]" />
+            <Button id="btn_excluir" fx:id="btnExclusao" layoutX="22.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../css/button.css" text="Conta" />
+            <TextField fx:id="txtContas" layoutX="141.0" layoutY="37.0" prefHeight="25.0" prefWidth="458.0" stylesheets="@../../css/textfield.css" />
+            <Button fx:id="btnListar" layoutX="610.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" stylesheets="@../../css/button.css" text="Listar Conta" />
+         </children>
+      </Pane>
+      <Pane layoutY="91.0" prefHeight="321.0" prefWidth="742.0" style="-fx-app-background: cornsilk; -fx-background-color: -fx-app-background; -fx-background-insets: 5 5 5 5; -fx-effect: dropshadow(three-pass-box, grey, 10, 0, 0, 10); -fx-border-color: black; -fx-border-insets: 20 10 10 10; -fx-border-radius: 0 5 5 5;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="86.0" style="-fx-background-color: -fx-app-background;" text="[ Lançamentos ]" />
+            <TableView fx:id="tbvLanc" layoutX="22.0" layoutY="38.0" prefHeight="202.0" prefWidth="698.0">
+              <columns>
+                  <TableColumn fx:id="l_id" editable="false" prefWidth="75.0" text="Id" visible="false" />
+                  <TableColumn fx:id="l_registro" prefWidth="75.0" text="Registro" />
+                  <TableColumn fx:id="l_descreg" editable="false" prefWidth="75.0" text="DescReg" visible="false" />
+                <TableColumn fx:id="l_data" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Data" />
+                <TableColumn fx:id="l_desc" maxWidth="346.0" minWidth="346.0" prefWidth="346.0" text="Descrição" />
+                  <TableColumn fx:id="l_cr" maxWidth="97.0" minWidth="97.0" prefWidth="97.0" text="Crédito" />
+                  <TableColumn fx:id="l_db" maxWidth="97.0" minWidth="97.0" prefWidth="97.0" text="Débito" />
+                  <TableColumn fx:id="l_aut" maxWidth="68.0" minWidth="68.0" prefWidth="68.0" text="Aut" />
+              </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="254.0" text="Localizar:" />
+            <TextField fx:id="txtLocalizar" layoutX="78.0" layoutY="250.0" prefHeight="25.0" prefWidth="306.0" stylesheets="@../../css/textfield.css" />
+            <Label fx:id="lbl_TCr" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="450.0" layoutY="251.0" prefHeight="17.0" prefWidth="92.0" style="-fx-font-size: 11; -fx-background-color: rgba(255, 255, 255, 0.3),        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),        rgb(218, 226, 224); -fx-background-insets: 0 0 -1 0, 0, 1.5; -fx-background-radius: 6, 5, 4; -fx-padding: 6 10 4 10; -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 ); -fx-font-family: &quot;Arial&quot;; -fx-text-fill: darkblue;" text="0,00" textAlignment="RIGHT" />
+            <Label fx:id="lbl_TDb" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="542.0" layoutY="251.0" prefHeight="17.0" prefWidth="92.0" style="-fx-font-size: 11; -fx-background-color: rgba(255, 255, 255, 0.3),        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),        rgb(218, 226, 224); -fx-background-insets: 0 0 -1 0, 0, 1.5; -fx-background-radius: 6, 5, 4; -fx-padding: 6 10 4 10; -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 ); -fx-font-family: &quot;Arial&quot;; -fx-text-fill: darkred;" text="0,00" textAlignment="RIGHT" />
+            <Label fx:id="lbl_TSaldo" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="542.0" layoutY="278.0" prefHeight="17.0" prefWidth="92.0" style="-fx-font-size: 11; -fx-background-color: rgba(255, 255, 255, 0.3),        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),        rgb(218, 226, 224); -fx-background-insets: 0 0 -1 0, 0, 1.5; -fx-background-radius: 6, 5, 4; -fx-padding: 6 10 4 10; -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 ); -fx-font-family: &quot;Arial&quot;; -fx-text-fill: darkgreen;" text="0,00" textAlignment="RIGHT" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="421.0" layoutY="278.0" prefHeight="24.0" prefWidth="121.0" style="-fx-font-size: 11; -fx-padding: 6 10 4 10; -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 ); -fx-font-family: &quot;Arial&quot;; -fx-text-fill: darkblue;" text="Saldo da Conta =&gt;" textAlignment="RIGHT" />
+            <ImageView fx:id="btnClear" fitHeight="17.0" fitWidth="21.0" layoutX="363.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Figuras/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

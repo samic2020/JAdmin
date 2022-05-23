@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="826.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gerencia.MultasController">
+   <children>
+      <StackPane fx:id="BorderedTitledPane1" alignment="CENTER_LEFT" layoutY="83.0" prefHeight="69.0" prefWidth="325.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="322.0" style="-fx-border-color: black; -fx-border-width: 2;">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-6.0" layoutY="3.0" prefHeight="50.0" prefWidth="325.0" spacing="5.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Residencial:" />
+                        <TextField fx:id="residencial" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="72.0" />
+                        <Label text="Comercial:" />
+                        <TextField fx:id="comercial" alignment="CENTER_RIGHT" prefWidth="72.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleMU" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Multas" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <Button fx:id="btlancar" layoutX="735.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" stylesheets="@../css/button.css" text="Lançar" />
+      <TableView id="multas" fx:id="multas" layoutX="4.0" layoutY="293.0" prefHeight="168.0" prefWidth="810.0" style="-fx-border-color: black; -fx-background-color: cornsilk;">
+        <columns>
+          <TableColumn fx:id="multas_id" editable="false" prefWidth="75.0" sortable="false" text="id" visible="false" />
+          <TableColumn id="tipomulta" fx:id="multas_tipo" editable="false" prefWidth="72.0" text="tipo" />
+            <TableColumn id="percadm" editable="false" minWidth="6.0" prefWidth="301.0" text="Percentuais da Administradora">
+               <columns>
+                  <TableColumn fx:id="pa_mu" editable="false" prefWidth="75.0" style="-fx-border-color: transparent;" text="Multa" />
+                  <TableColumn fx:id="pa_ju" editable="false" prefWidth="75.0" text="Juros" />
+                  <TableColumn fx:id="pa_co" editable="false" prefWidth="75.0" text="Correçao" />
+                  <TableColumn fx:id="pa_ep" editable="false" prefWidth="73.0" text="Expediente" />
+               </columns>
+            </TableColumn>
+            <TableColumn id="multarescom" editable="false" prefWidth="118.0" text="Multas">
+               <columns>
+                  <TableColumn fx:id="mu_res" editable="false" prefWidth="75.0" text="Res" />
+                  <TableColumn fx:id="mu_com" editable="false" prefWidth="75.0" text="Com" />
+               </columns>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="203.0" text="Correçoes">
+               <columns>
+                  <TableColumn fx:id="co_tipo" editable="false" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="co_perc" editable="false" prefWidth="75.0" text="Percent" />
+                  <TableColumn fx:id="co_limite" editable="false" prefWidth="75.0" text="Limite" />
+                  <TableColumn fx:id="co_dias" editable="false" prefWidth="75.0" text="Dias" />
+               </columns>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="75.0" text="Juros">
+               <columns>
+                  <TableColumn fx:id="ju_tipo" editable="false" prefWidth="75.0" text="tipo" />
+                  <TableColumn fx:id="ju_percent" editable="false" prefWidth="75.0" text="perc" />
+               </columns>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="75.0" text="Carencias">
+               <columns>
+                  <TableColumn fx:id="ca_multa" editable="false" prefWidth="75.0" text="Multa" />
+                  <TableColumn fx:id="ca_juros" editable="false" prefWidth="75.0" text="Juros" />
+                  <TableColumn fx:id="ca_correcao" editable="false" prefWidth="75.0" text="Correçao" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="co" editable="false" prefWidth="75.0" text="Comissao %" />
+            <TableColumn editable="false" prefWidth="75.0" text="Expediente">
+               <columns>
+                  <TableColumn fx:id="ep_percent" editable="false" prefWidth="75.0" text="percentual" />
+                  <TableColumn fx:id="ep_vrlor" editable="false" prefWidth="75.0" text="Valor Minimo" />
+               </columns>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="btexcluir" layoutX="735.0" layoutY="258.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="77.0" stylesheets="@../css/button.css" text="Excluir" />
+      <RadioButton fx:id="mu_geral" layoutX="6.0" layoutY="10.0" mnemonicParsing="false" text="Geral">
+         <toggleGroup>
+            <ToggleGroup fx:id="tipomulta" />
+         </toggleGroup>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </RadioButton>
+      <RadioButton fx:id="mu_proprietarios" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" text="Proprietarios" toggleGroup="$tipomulta">
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </RadioButton>
+      <RadioButton fx:id="mu_imoveis" layoutX="183.0" layoutY="10.0" mnemonicParsing="false" text="Imoveis" toggleGroup="$tipomulta" />
+      <Label layoutX="258.0" layoutY="11.0" text="Codigo:">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="p_codigo" layoutX="323.0" layoutY="6.0" prefHeight="26.0" prefWidth="77.0" visible="false" />
+      <TextField fx:id="i_codigo" layoutX="324.0" layoutY="6.0" prefHeight="26.0" prefWidth="77.0" visible="false" />
+      <Label layoutX="400.0" layoutY="11.0" text="Nome:">
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="p_nome" layoutX="458.0" layoutY="6.0" prefHeight="26.0" prefWidth="358.0" visible="false" />
+      <TextField fx:id="i_nome" layoutX="459.0" layoutY="6.0" prefHeight="26.0" prefWidth="358.0" visible="false" />
+      <StackPane fx:id="BorderedTitledPane11" alignment="CENTER_LEFT" layoutX="332.0" layoutY="84.0" prefHeight="69.0" prefWidth="486.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="483.0" style="-fx-border-color: black; -fx-border-width: 2;">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-10.0" layoutY="3.0" prefHeight="50.0" prefWidth="493.0" spacing="5.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <RadioButton fx:id="co_simples" mnemonicParsing="false" text="Simples">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tipocor" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="co_composta" layoutX="16.0" layoutY="26.0" mnemonicParsing="false" text="Composta" toggleGroup="$tipocor" />
+                        <TextField fx:id="co_pecent" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="72.0" />
+                        <Label text="\%" />
+                        <CheckBox fx:id="cor_limite" mnemonicParsing="false" style="-fx-text-fill: black;" text="Limitado a:">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <TextField fx:id="cor_limite_a" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="38.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleCO" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Correção" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="BorderedTitledPane12" alignment="CENTER_LEFT" layoutY="151.0" prefHeight="69.0" prefWidth="325.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="4.0" layoutY="2.0" prefHeight="50.0" prefWidth="307.0" spacing="5.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <RadioButton fx:id="ju_mes" mnemonicParsing="false" text="Por Mes">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tipojur" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="ju_aomes" mnemonicParsing="false" text="Ao Mes" toggleGroup="$tipojur" />
+                        <Label text="Juros:" />
+                        <TextField fx:id="ju_perc" alignment="CENTER_RIGHT" prefWidth="72.0" />
+                        <Label text="\%" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleJU" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Juros" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="BorderedTitledPane111" alignment="CENTER_LEFT" layoutX="332.0" layoutY="151.0" prefHeight="69.0" prefWidth="486.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-2.0" layoutY="3.0" prefHeight="50.0" prefWidth="475.0" spacing="20.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Dias Multa:" />
+                        <TextField fx:id="ca_mu" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="38.0" />
+                        <Label layoutX="200.0" layoutY="27.0" text="Dias Juros:" />
+                        <TextField fx:id="ca_ju" alignment="CENTER_RIGHT" layoutX="279.0" layoutY="22.0" prefHeight="26.0" prefWidth="38.0" />
+                        <Label layoutX="263.0" layoutY="27.0" text="Dias Correçao:" />
+                        <TextField fx:id="ca_co" alignment="CENTER_RIGHT" layoutX="338.0" layoutY="22.0" prefHeight="26.0" prefWidth="38.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleCA" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Carências" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="BorderedTitledPane121" alignment="CENTER_LEFT" layoutY="220.0" prefHeight="69.0" prefWidth="195.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="4.0" layoutY="3.0" prefHeight="50.0" prefWidth="177.0" spacing="5.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Percentual" />
+                        <TextField fx:id="cm_perc" alignment="CENTER_RIGHT" prefWidth="72.0" />
+                        <Label text="\%" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleCM" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Comissão" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <StackPane fx:id="BorderedTitledPane1111" alignment="CENTER_LEFT" layoutX="195.0" layoutY="220.0" prefHeight="69.0" prefWidth="336.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="321.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-5.0" layoutY="2.0" prefHeight="50.0" prefWidth="325.0" spacing="3.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <Label text="Percentual:" />
+                        <TextField fx:id="ep_perc" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="71.0" />
+                        <Label text="\%">
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="200.0" layoutY="27.0" text="Valor Minimo:" />
+                        <TextField fx:id="ep_valor" alignment="CENTER_RIGHT" layoutX="279.0" layoutY="22.0" prefHeight="26.0" prefWidth="66.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleEP" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Expediente" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <Pane layoutX="5.0" layoutY="38.0" prefHeight="45.0" prefWidth="810.0" style="-fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5; -fx-border-color: white;">
+         <children>
+            <Label fx:id="lMulta" layoutX="12.0" layoutY="17.0" text="Multa:" />
+            <TextField fx:id="tMulta" alignment="CENTER_RIGHT" layoutX="55.0" layoutY="12.0" prefHeight="26.0" prefWidth="88.0" />
+            <Label fx:id="lJuros" layoutX="202.0" layoutY="17.0" text="Juros:" />
+            <TextField fx:id="tJuros" alignment="CENTER_RIGHT" layoutX="245.0" layoutY="13.0" prefWidth="88.0" />
+            <Label fx:id="lCorrecao" layoutX="403.0" layoutY="17.0" text="Correçao:" />
+            <TextField fx:id="tCorrecao" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="13.0" prefWidth="88.0" />
+            <Label fx:id="lExpediente" layoutX="619.0" layoutY="17.0" text="Expediente:" />
+            <TextField fx:id="tExpediente" alignment="CENTER_RIGHT" layoutX="693.0" layoutY="12.0" prefHeight="26.0" prefWidth="88.0" />
+            <Label fx:id="title" layoutX="9.0" layoutY="12.0" style="-fx-translate-y: -20; -fx-font-size: 14; -fx-translate-x: 10; -fx-text-fill: black; -fx-background-color: cornsilk;" text="Percentuais da Administradora (%):" textFill="WHITE" />
+         </children>
+      </Pane>
+      <StackPane fx:id="BorderedTitledPane11111" alignment="CENTER_LEFT" layoutX="525.0" layoutY="220.0" prefHeight="69.0" prefWidth="202.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: transparent; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Pane prefHeight="53.0" prefWidth="321.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="-5.0" layoutY="2.0" prefHeight="50.0" prefWidth="195.0" spacing="15.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <CheckBox fx:id="bol_txbanc" mnemonicParsing="false" style="-fx-text-fill: black;" text="Taxa Bancária" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </Pane>
+            <Label fx:id="titleEP1" style="-fx-background-color: rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.8), #090a0c, linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%), linear-gradient(#dddddd, #dddddd), radial-gradient(center 50% 0%, radius 100%, rgba(221,221,221,0.9),  rgba(255,255,255,0)); -fx-translate-y: -25; -fx-font-size: 14; -fx-translate-x: 10;" text="Boleto" textFill="WHITE" />
+         </children>
+      </StackPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/radiobutton.css" />
+      <URL value="@../css/ptableImoveis.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="257.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imposto.TabelaIRController">
+   <children>
+      <TableView fx:id="tbvIndices" layoutX="14.0" layoutY="101.0" prefHeight="200.0" prefWidth="232.0" style="-fx-background-color: cornsilk;">
+        <columns>
+            <TableColumn fx:id="clnId" prefWidth="55.0" text="Id" visible="false" />
+          <TableColumn fx:id="clnMesAno" prefWidth="95.0" text="Mês/Ano" />
+          <TableColumn fx:id="clnIndice" prefWidth="75.0" text="Indice" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="8.0" text="Mes/Ano:" />
+      <Label layoutX="14.0" layoutY="53.0" text="Indice (%):" />
+      <TextField fx:id="mesAno" layoutX="14.0" layoutY="22.0" prefHeight="26.0" prefWidth="124.0" promptText="mes/ano" />
+      <TextField fx:id="indicePerc" layoutX="14.0" layoutY="68.0" prefHeight="26.0" prefWidth="124.0" promptText="índice %" />
+      <Button fx:id="btnLancar" layoutX="172.0" layoutY="69.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Lançar" />
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/button.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/ptableImoveis.css" />
+   </stylesheets>
+</AnchorPane>

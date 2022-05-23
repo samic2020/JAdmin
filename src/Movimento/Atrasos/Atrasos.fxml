@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Atrasos.Atrasos">
+   <children>
+      <TableView fx:id="atrasados" layoutX="14.0" layoutY="14.0" prefHeight="375.0" prefWidth="571.0">
+        <columns>
+            <TableColumn fx:id="atzId" prefWidth="75.0" text="Column X" visible="false" />
+            <TableColumn fx:id="atzTipo" editable="false" prefWidth="75.0" sortable="false" text="Tipo" />
+            <TableColumn fx:id="atzContrato" editable="false" prefWidth="75.0" text="Contrato" />
+            <TableColumn fx:id="atzNome" editable="false" prefWidth="235.0" text="Nome" />
+            <TableColumn fx:id="atzVencimento" editable="false" minWidth="0.0" prefWidth="83.0" text="Vencimento" />
+            <TableColumn fx:id="atzTelefones" minWidth="8.0" prefWidth="21.0" text="Telefones" visible="false" />
+            <TableColumn fx:id="atzEMails" minWidth="0.0" prefWidth="23.0" text="EMails" visible="false" />
+            <TableColumn fx:id="atzAcoes" editable="false" prefWidth="99.0" text="Ações" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

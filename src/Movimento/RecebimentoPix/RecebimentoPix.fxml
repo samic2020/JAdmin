@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="530.0" prefWidth="1062.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.RecebimentoPix.RecebimentoPix">
+   <children>
+      <TreeTableView fx:id="pixBanco" layoutX="167.0" layoutY="14.0" prefHeight="504.0" prefWidth="373.0">
+         <columns>
+            <TreeTableColumn fx:id="id" prefWidth="112.0" text="id" />
+            <TreeTableColumn fx:id="contrato" prefWidth="112.0" text="contrato" />
+            <TreeTableColumn fx:id="nome" prefWidth="112.0" text="nome" />
+            <TreeTableColumn fx:id="vencto" prefWidth="112.0" text="vencimento" />
+         </columns>
+      </TreeTableView>
+      <Button fx:id="btnIn" layoutX="544.0" layoutY="60.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" text="&gt;" />
+      <Button fx:id="btnOut" layoutX="544.0" layoutY="90.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" text="&lt;" />
+      <Button fx:id="btnGerar" layoutX="521.0" layoutY="237.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" rotate="-90.0" text="Gerar" />
+      <TreeTableView fx:id="pix" layoutX="587.0" layoutY="14.0" prefHeight="284.0" prefWidth="465.0" showRoot="false">
+         <columns>
+            <TreeTableColumn fx:id="b_id" editable="false" prefWidth="75.0" text="Id" />
+            <TreeTableColumn fx:id="b_contrato" editable="false" prefWidth="75.0" text="Contrato" />
+            <TreeTableColumn fx:id="b_nome" prefWidth="157.0" text="Nome" />
+            <TreeTableColumn fx:id="b_vencimento" minWidth="0.0" prefWidth="75.0" text="Vencimento" />
+         </columns>
+      </TreeTableView>
+      <TabPane fx:id="Tabs" layoutX="576.0" layoutY="297.0" prefHeight="231.0" prefWidth="485.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="tabEmail" text="Correio Eletrônico">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="pix_email" layoutX="14.0" layoutY="14.0" prefHeight="120.0" prefWidth="441.0">
+                           <columns>
+                              <TableColumn fx:id="pix_email_contrato" editable="false" prefWidth="75.0" text="Contrato" />
+                              <TableColumn fx:id="pix_email_nome" editable="false" prefWidth="235.0" text="Nome" />
+                              <TableColumn fx:id="pix_email_vencto" editable="false" prefWidth="88.0" text="Vencimento" />
+                              <TableColumn fx:id="pix_email_nnumero" editable="false" prefWidth="88.0" text="NNumero" />
+                              <TableColumn fx:id="pix_email_status" editable="false" prefWidth="88.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnSendAll" layoutX="358.0" layoutY="138.0" mnemonicParsing="false" text="Enviar Todos" />
+                        <Button fx:id="btnSendSelecteds" layoutX="213.0" layoutY="138.0" mnemonicParsing="false" text="Enviar Selecionado(s)" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane layoutX="9.0" layoutY="14.0" prefHeight="504.0" prefWidth="153.0" style="-fx-border-color: black; -fx-border-radius: 10 0 10 0;">
+         <children>
+            <Button fx:id="btnListar" layoutX="7.0" layoutY="121.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Listar Locatarios" />
+            <Label layoutX="6.0" layoutY="156.0" text="Contrato:" />
+            <TextField fx:id="txbContrato" layoutX="6.0" layoutY="172.0" prefHeight="26.0" prefWidth="89.0" />
+            <Button fx:id="btnLancar" layoutX="100.0" layoutY="172.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" text="Ok">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="6.0" layoutY="20.0" text="Mês de Referencia" />
+            <Spinner fx:id="dtrefmm" layoutX="6.0" layoutY="44.0" prefHeight="24.0" prefWidth="138.0" />
+            <Spinner fx:id="dtrefaaaa" layoutX="6.0" layoutY="88.0" prefHeight="24.0" prefWidth="79.0" />
+            <Label layoutX="6.0" layoutY="71.0" text="Ano de Referencia" />
+            <Label layoutX="12.0" layoutY="216.0" text="Período" />
+            <DatePicker layoutX="7.0" layoutY="236.0" prefHeight="24.0" prefWidth="131.0" promptText="Inicial" />
+            <DatePicker layoutX="7.0" layoutY="267.0" prefHeight="24.0" prefWidth="131.0" promptText="Final" />
+            <Separator layoutX="3.0" layoutY="211.0" prefHeight="5.0" prefWidth="138.0" />
+            <ComboBox fx:id="bancoPix" layoutX="11.0" layoutY="356.0" prefHeight="25.0" prefWidth="131.0" promptText="Bancos Pix" />
+            <Label layoutX="11.0" layoutY="339.0" text="Bancos Pix" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/background.css" />
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/ptableincLoca.css" />
+      <URL value="@../../css/tabpane.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/checkbox.css" />
+   </stylesheets>
+</AnchorPane>

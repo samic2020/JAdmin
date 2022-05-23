@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SaldosDivLoca" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c6df376-7db3-44a6-a331-0aa3bf472b1c">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="registro" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="recibos" class="java.lang.Integer"/>
+	<field name="data" class="java.util.Date"/>
+	<field name="saldo" class="java.math.BigDecimal"/>
+	<variable name="Total" class="java.math.BigDecimal" incrementType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldo}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="20" uuid="41b8c6fa-6340-42be-a493-6dc29801ca51"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE DIVIDA DOS LOCATÁRIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="50" height="14" uuid="5835e1d2-c5d2-466d-b24a-f281ab731216">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1db1b4e0-2a81-4210-909c-f00ebf8d1f31"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="3" width="100" height="14" uuid="2d6f6c6b-23e2-4afb-a41e-3b73fda2945b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c9188f9-d6dd-4a3d-adbe-5fc9ea152b57"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="384" y="3" width="40" height="14" uuid="ac0df2c6-2dd4-4f9e-9a9a-8df4af7721d3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="131b196e-e1ec-47de-9dd5-a4672396a64e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[recibos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="3" width="60" height="14" uuid="dba96c7d-12c5-47b7-aa98-db7b106e8625">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="026b4991-7be6-4b10-a7ac-28dc908adbfd"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="484" y="3" width="69" height="14" uuid="03dc0357-6114-4ea3-9900-4bcbb07a8eef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa43ab69-4fd2-4ec2-b2fa-6b638b451237"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom"/>
+				<text><![CDATA[saldo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="17" width="553" height="1" uuid="1adf3fcd-e869-4e5f-bbb1-cb6c95929265">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="553" height="14" forecolor="#FFFFFF" backcolor="#E4E4EC" uuid="6eb8ffdf-dcac-4db5-8736-d31deddd978c">
+					<printWhenExpression><![CDATA[new Boolean(($V{COLUMN_COUNT}.intValue() % 2) == 0)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="14" uuid="230a1416-0fce-4cc1-8d74-ecd85bc0196c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1db1b4e0-2a81-4210-909c-f00ebf8d1f31"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{registro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="330" height="14" uuid="b8ec9d76-4fda-42c9-9e93-f09e996920e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c9188f9-d6dd-4a3d-adbe-5fc9ea152b57"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="384" y="0" width="40" height="14" uuid="4a28bf54-546b-4168-a0e2-c21428da899f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="131b196e-e1ec-47de-9dd5-a4672396a64e"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{recibos}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="424" y="0" width="60" height="14" uuid="5d229ec4-cc26-4de7-8ce3-d5a302886b0b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="026b4991-7be6-4b10-a7ac-28dc908adbfd"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="483" y="0" width="70" height="14" uuid="19051651-f288-4a6b-a706-ee110d5e8e63">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aa43ab69-4fd2-4ec2-b2fa-6b638b451237"/>
+				</reportElement>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{saldo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="3" width="553" height="1" uuid="f2249135-5940-46ba-b193-6096b8c244d5">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="3" width="210" height="17" uuid="6a83c911-853e-4e1f-a849-83248c2108e5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="353" y="3" width="100" height="17" uuid="9d3a751a-8092-4754-917f-8f69b621fac6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="453" y="3" width="100" height="17" uuid="8e858ad0-891d-40b7-8a73-9b557c4349cd"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="16">
+			<textField pattern="#,##0.00">
+				<reportElement x="483" y="0" width="70" height="14" uuid="fceb7042-c3d7-4bcd-bff1-56a1100d88cd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{Total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="0" width="163" height="14" uuid="876a6049-15f5-44ea-a209-9e5d54cbb3f0"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total da Divida Básica =>]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

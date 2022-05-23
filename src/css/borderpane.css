@@ -1,0 +1,16 @@
+.bordered-pane {
+    -fx-outer-border: white;
+    -fx-body-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-color:
+        -fx-outer-border,
+        -fx-body-color;
+    -fx-background-insets: 0, 6;
+    -fx-background-radius: 6px, 0px;
+    /*-fx-background-image:  url("/Figuras/Imagens/fundo.jpg");*/
+    -fx-background-repeat: repeat;
+
+    -fx-border-color: black;
+}

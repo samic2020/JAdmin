@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24/09/2015, 24/09/2015 09:53:04
+    Author     : supervisor
+*/
+
+.tab-pane {
+    -fx-background-color:  transparent;
+/*
+    -fx-background-image:  url("/Figuras/CoarseGrid.png");
+    -fx-background-repeat: repeat;
+*/
+    -fx-background-insets:  10 10 10 10;
+    -fx-background-radius:  5 5 5 5;
+    -fx-border-color: #ffffff;
+    /*-fx-border-image-insets: 5 5 5 5;*/
+    -fx-border-insets: 10 10 10 10;
+    -fx-border-radius: 5 5 5 5;
+    -fx-tab-min-height: 25;
+    -fx-tab-max-height: 25;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+    -fx-background-color: -fx-outer-border, -fx-inner-border, derive(-fx-color, -20%);
+    -fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
+}
+
+.tab-pane .tab {
+    -fx-background-color: #ffffff;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab-pane .tab:focused {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #96b946;
+}

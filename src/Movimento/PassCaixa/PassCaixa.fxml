@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane fx:id="anchorPanePassCaixa" prefHeight="274.0" prefWidth="676.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.PassCaixa.PassCaixaController">
+   <children>
+      <Pane fx:id="tpagtos" layoutX="351.0" layoutY="6.0" prefHeight="257.0" prefWidth="320.0" style="-fx-border-style: solid; -fx-background-color: cornsilk; -fx-border-color: white; -fx-border-radius: 5 5 5 5;" visible="false" />
+      <ToggleButton fx:id="tgbCrDb" layoutX="16.0" layoutY="234.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: linear-gradient(#00ff54, #00be1d); -fx-text-fill: white; -fx-background-radius: 30; -fx-background-insets: 0; -fx-font: bold italic 10pt &quot;Arial&quot;;" text="Crédito" />
+      <RadioButton fx:id="pcCheque" layoutX="16.0" layoutY="157.0" mnemonicParsing="false" text="Cheques" visible="false">
+         <toggleGroup>
+            <ToggleGroup fx:id="pctgCHDN" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="pcDinheiro" layoutX="16.0" layoutY="206.0" mnemonicParsing="false" text="Dinheiro" toggleGroup="$pctgCHDN" visible="false" />
+      <Label layoutX="156.0" layoutY="239.0" text="Valor Total:" />
+      <TextField fx:id="pcValorTotal" alignment="CENTER_RIGHT" disable="true" layoutX="220.0" layoutY="235.0" prefHeight="25.0" prefWidth="117.0" text="0,00" />
+      <Label layoutX="16.0" layoutY="6.0" prefHeight="17.0" prefWidth="320.0" style="-fx-background-color: lightblue;" text=" .:: Texto:" />
+      <ComboBox fx:id="pcChequesLista" disable="true" layoutX="16.0" layoutY="178.0" prefHeight="25.0" prefWidth="320.0" visible="false" />
+      <TextArea fx:id="pcTexto" layoutX="14.0" layoutY="23.0" prefHeight="200.0" prefWidth="320.0" stylesheets="@../../css/textarea.css" wrapText="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane fx:id="anchorPane" prefHeight="297.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entrada.BuscaGlobal.BuscaGlobal">
+   <children>
+      <Pane fx:id="panel" prefHeight="297.0" prefWidth="600.0" style="-fx-background-color: #c5f0bd;">
+         <children>
+            <TableView fx:id="buscaLista" layoutX="14.0" layoutY="14.0" prefHeight="247.0" prefWidth="571.0">
+              <columns>
+                  <TableColumn fx:id="buscaId" editable="false" prefWidth="75.0" text="id" visible="false" />
+                <TableColumn fx:id="buscaRgprp" editable="false" prefWidth="66.0" resizable="false" text="RgPrp" />
+                <TableColumn fx:id="buscaRgimv" editable="false" prefWidth="66.0" resizable="false" text="RgImv" />
+                  <TableColumn fx:id="buscaContrato" editable="false" resizable="false" text="Contrato" />
+                  <TableColumn fx:id="buscaCpfcnpj" editable="false" prefWidth="144.0" resizable="false" text="Cpj/Cnpj" />
+                  <TableColumn fx:id="buscaNome" editable="false" minWidth="179.0" prefWidth="179.0" text="Nome" />
+                  <TableColumn fx:id="buscaFantasia" editable="false" minWidth="179.0" prefWidth="179.0" text="Fantasia" />
+                  <TableColumn fx:id="buscaAtivo" editable="false" minWidth="179.0" prefWidth="179.0" text="Ativo" visible="false" />
+              </columns>
+            </TableView>
+            <RadioButton fx:id="buscaProprietarios" layoutX="412.0" layoutY="268.0" mnemonicParsing="false" selected="true" text="Proprietários">
+               <toggleGroup>
+                  <ToggleGroup fx:id="propLoca" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="buscaLocatarios" layoutX="510.0" layoutY="268.0" mnemonicParsing="false" text="Locatários" toggleGroup="$propLoca" />
+            <CheckBox fx:id="buscaQQPosicao" layoutX="14.0" layoutY="268.0" mnemonicParsing="false" text="Busca em qualquer posição." />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

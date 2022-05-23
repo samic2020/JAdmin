@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="anchorPaneCaixa" prefHeight="273.0" prefWidth="241.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.FecCaixa.FecCaixa">
+   <children>
+      <ListView fx:id="fecCaixas" layoutX="14.0" layoutY="14.0" prefHeight="137.0" prefWidth="213.0" />
+      <Label layoutX="14.0" layoutY="169.0" text="Dinheiro:" />
+      <TextField fx:id="tDN" alignment="CENTER_RIGHT" layoutX="78.0" layoutY="165.0" text="0,00" />
+      <Label layoutX="14.0" layoutY="199.0" text="Cheques:" />
+      <TextField fx:id="tCH" alignment="CENTER_RIGHT" layoutX="78.0" layoutY="195.0" text="0,00" />
+      <Button fx:id="btnFechar" layoutX="44.0" layoutY="232.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="168.0" stylesheets="@../../css/button.css" text="Fechar Caixa" />
+   </children>
+</AnchorPane>

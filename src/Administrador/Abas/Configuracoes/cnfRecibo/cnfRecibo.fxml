@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPanecnfRecibos" minHeight="0.0" minWidth="0.0" prefHeight="193.0" prefWidth="720.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.Configuracoes.cnfRecibo.cnfRecibo">
+   <children>
+      <Pane layoutX="14.0" layoutY="11.0" prefHeight="169.0" prefWidth="358.0">
+         <children>
+            <TableView fx:id="cf_recibos" editable="true" layoutX="1.0" layoutY="1.0" prefHeight="167.0" prefWidth="356.0">
+               <columns>
+                  <TableColumn fx:id="cf_recibos_id" editable="false" prefWidth="35.0" text="#" />
+                  <TableColumn fx:id="cf_recibos_descricao" editable="false" prefWidth="273.0" text="Descriçao" />
+                  <TableColumn fx:id="cf_recibos_tag" prefWidth="32.0" text="T" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Label fx:id="cfrc_mu" layoutX="385.0" layoutY="34.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Multa" />
+      <Label fx:id="cfrc_ju" layoutX="385.0" layoutY="55.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Juros" />
+      <Label fx:id="cfrc_co" layoutX="385.0" layoutY="76.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Correçao" />
+      <Label fx:id="cfrc_ep" layoutX="385.0" layoutY="98.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Expediente" />
+      <Label fx:id="cfrc_sg" layoutX="385.0" layoutY="119.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Seguro" />
+      <Label fx:id="cfrc_dc" layoutX="385.0" layoutY="140.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Desconto" />
+      <Label fx:id="cfrc_df" layoutX="385.0" layoutY="161.0" prefHeight="18.0" prefWidth="129.0" style="-fx-border-color: black;" text="Diferença" />
+      <Label layoutX="523.0" layoutY="14.0" text="Mostrar" />
+      <Label fx:id="cf_texto" layoutX="604.0" layoutY="14.0" text="Somar com Aluguel" />
+      <CheckBox fx:id="cf_mu_sw" layoutX="535.0" layoutY="34.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_ju_sw" layoutX="536.0" layoutY="55.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_co_sw" layoutX="536.0" layoutY="76.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_ep_sw" layoutX="536.0" layoutY="98.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_sg_sw" layoutX="536.0" layoutY="119.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_dc_sw" layoutX="535.0" layoutY="140.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_df_sw" layoutX="535.0" layoutY="161.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_mu_ad" layoutX="643.0" layoutY="35.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_ju_ad" layoutX="644.0" layoutY="56.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_co_ad" layoutX="644.0" layoutY="77.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_ep_ad" layoutX="644.0" layoutY="99.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_sg_ad" layoutX="644.0" layoutY="120.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_dc_ad" layoutX="643.0" layoutY="141.0" mnemonicParsing="false" />
+      <CheckBox fx:id="cf_df_ad" layoutX="643.0" layoutY="162.0" mnemonicParsing="false" />
+   </children>
+</AnchorPane>

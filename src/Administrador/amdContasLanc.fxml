@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" prefHeight="109.0" prefWidth="507.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.amdContasLanc">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Código:" />
+      <Label layoutX="75.0" layoutY="14.0" text="Descrição:" />
+      <TextField fx:id="codigo" layoutX="15.0" layoutY="35.0" prefHeight="26.0" prefWidth="50.0" />
+      <TextField fx:id="descricao" layoutX="75.0" layoutY="35.0" prefHeight="26.0" prefWidth="417.0" />
+      <Button fx:id="btnLancar" layoutX="329.0" layoutY="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="163.0" text="Lançar" />
+   </children>
+   <stylesheets>
+      <URL value="@../css/button.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/label.css" />
+   </stylesheets>
+</AnchorPane>

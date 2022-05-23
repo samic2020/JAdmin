@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" prefHeight="260.0" prefWidth="320.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PagRec.RecebimentoController">
+   <children>
+      <HBox prefHeight="260.0" prefWidth="320.0">
+         <children>
+            <VBox prefHeight="249.0" prefWidth="131.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="131.0" style="-fx-background-color: rgba(255, 255, 255, 0.08),        rgba(0, 0, 0, 0.8),        #090a0c,        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),        linear-gradient(#242a2e, #23282e),        radial-gradient(center 50% 0%, radius 100%, rgba(0,142,148,0.9),        rgba(255,255,255,0));;" text="FORMAS" textAlignment="CENTER" />
+                  <Button fx:id="btDN" disable="true" focusTraversable="false" mnemonicParsing="false" prefHeight="75.0" prefWidth="131.0" style="-fx-background-image: url(&quot;/Figuras/PagRec/dinheiro.jpg&quot;); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 131 87;" stylesheets="@Recebimento.css">
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btCH" disable="true" focusTraversable="false" layoutX="10.0" layoutY="37.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="131.0" style="-fx-background-image: url(&quot;/Figuras/PagRec/cheque.jpg&quot;); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 131 87;" styleClass="#cheque" stylesheets="@Recebimento.css">
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btBC" disable="true" focusTraversable="false" layoutX="10.0" layoutY="124.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="131.0" style="-fx-background-image: url(&quot;/Figuras/PagRec/banco.jpg&quot;); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 131 87;" styleClass="#banco" stylesheets="@Recebimento.css">
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </VBox>
+            <Pane prefHeight="261.0" prefWidth="314.0" style="-fx-background-color: cornsilk; -fx-border-width: 0.5; -fx-border-color: white; -fx-border-style: dashed; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;">
+               <children>
+                  <Label fx:id="lblTrocoResta" alignment="CENTER" disable="true" layoutY="210.0" prefHeight="48.0" prefWidth="252.0" style="-fx-background-color: rgba(204,255,221);" textAlignment="CENTER">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="26.0" prefWidth="252.0" style="-fx-background-color: rgba(255, 255, 255, 0.08),        rgba(0, 0, 0, 0.8),        #090a0c,        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),        linear-gradient(#242a2e, #23282e),        radial-gradient(center 50% 0%, radius 100%, rgba(0,142,148,0.9),        rgba(255,255,255,0));;" text="Entre com as Informações Abaixo" textAlignment="CENTER">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="36.0" text="Numero:" textFill="WHITE" />
+                  <TextField fx:id="numero" disable="true" layoutX="54.0" layoutY="31.0" prefHeight="26.0" prefWidth="191.0" />
+                  <Label layoutX="6.0" layoutY="66.0" text="Banco:" textFill="WHITE" />
+                  <TextField fx:id="banco" alignment="CENTER" disable="true" layoutX="54.0" layoutY="61.0" prefHeight="26.0" prefWidth="37.0" />
+                  <Label layoutX="120.0" layoutY="66.0" text="Agência:" textFill="WHITE" />
+                  <TextField fx:id="agencia" alignment="CENTER" disable="true" layoutX="177.0" layoutY="61.0" prefHeight="26.0" prefWidth="69.0" />
+                  <Label layoutX="6.0" layoutY="96.0" text="Chq Nº:" textFill="WHITE" />
+                  <TextField fx:id="nrcheque" alignment="CENTER" disable="true" layoutX="53.0" layoutY="91.0" prefHeight="26.0" prefWidth="69.0" />
+                  <Label layoutX="127.0" layoutY="97.0" text="Dt:" textFill="WHITE" />
+                  <DatePicker fx:id="predata" disable="true" layoutX="146.0" layoutY="91.0" prefHeight="26.0" prefWidth="100.0" promptText="dd/MM/yyyy" />
+                  <Label layoutX="6.0" layoutY="126.0" text="Valor Cheque:" textFill="WHITE" />
+                  <TextField fx:id="vrch" alignment="CENTER_RIGHT" disable="true" layoutX="89.0" layoutY="121.0" prefHeight="26.0" prefWidth="156.0" text="0,00" />
+                  <Label layoutX="7.0" layoutY="155.0" text="Valor Dinheiro:" textFill="WHITE" />
+                  <TextField fx:id="vrdn" alignment="CENTER_RIGHT" disable="true" layoutX="89.0" layoutY="150.0" prefHeight="26.0" prefWidth="156.0" text="0,00" />
+                  <Button fx:id="btLancar" disable="true" layoutX="48.0" layoutY="180.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" stylesheets="@../css/button.css" text="Lançar" />
+                  <Button fx:id="btCancelar" disable="true" layoutX="155.0" layoutY="180.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" stylesheets="@../css/button.css" text="Cancelar" />
+                  <Label layoutX="8.0" layoutY="211.0" text="Resta:" />
+                  <TextField fx:id="vrresta" alignment="CENTER_RIGHT" disable="true" layoutX="8.0" layoutY="227.0" prefHeight="26.0" prefWidth="114.0" style="-fx-opacity: 0.5; -fx-text-fill: red; -fx-font: bold 9pt &quot;Arial Bold&quot;;" text="0,00">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></TextField>
+                  <Label layoutX="133.0" layoutY="211.0" text="Troco:" />
+                  <TextField fx:id="vrtroco" alignment="CENTER_RIGHT" disable="true" editable="false" layoutX="133.0" layoutY="227.0" prefHeight="26.0" prefWidth="114.0" style="-fx-opacity: 0.5; -fx-text-fill: darkgreen; -fx-font: bold 9pt &quot;Arial Bold&quot;;" text="0,00" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/textfield.css" />
+   </stylesheets>
+</AnchorPane>

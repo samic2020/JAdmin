@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="546.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BancosDigital.Inter.Boletos">
+   <children>
+      <Label layoutX="24.0" layoutY="7.0" text="Referência" />
+      <VBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="23.0" prefHeight="53.0" prefWidth="174.0" style="-fx-border-color: darkgray; -fx-border-radius: 5 5 5 5; -fx-background-color: light gray;">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Mês:" />
+                  <Spinner fx:id="gMes" prefHeight="25.0" prefWidth="131.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="6.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Label text="Ano:" />
+                  <Spinner fx:id="gAno" prefHeight="25.0" prefWidth="89.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="24.0" layoutY="86.0" text="Condição" />
+      <HBox layoutX="14.0" layoutY="100.0" prefHeight="166.0" prefWidth="174.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <VBox prefHeight="140.0" prefWidth="162.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="gEmDia" mnemonicParsing="false" selected="true" text="Em Dia">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="condicao" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="gAtrasados" mnemonicParsing="false" text="Atrasados" toggleGroup="$condicao" />
+                  <Label text="Vencimento Boleto" />
+                  <DatePicker fx:id="gVencimento" />
+                  <RadioButton fx:id="gTodos" mnemonicParsing="false" text="Todos" toggleGroup="$condicao" />
+                  <RadioButton fx:id="gPorPeriodo" mnemonicParsing="false" text="Por período" toggleGroup="$condicao" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="190.0" prefWidth="0.0">
+               <children>
+                  <HBox prefHeight="53.0" prefWidth="112.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label layoutX="24.0" layoutY="292.0" text="Período" />
+      <VBox layoutX="14.0" layoutY="306.0" prefHeight="39.0" prefWidth="174.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="7.0" prefWidth="162.0">
+               <children>
+                  <Label text="Inicio:">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="gInicio" prefHeight="25.0" prefWidth="107.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="162.0">
+               <children>
+                  <Label text="Final:">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="8.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="gFinal" prefHeight="25.0" prefWidth="108.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="24.0" layoutY="380.0" text="Unitário" />
+      <HBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="394.0" prefHeight="39.0" prefWidth="174.0" style="-fx-border-color: gray; -fx-background-color: ligthgray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Label text="Contrato:">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="gContrato" prefHeight="25.0" prefWidth="93.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="15.0" layoutY="437.0" prefHeight="53.0" prefWidth="174.0">
+         <children>
+            <Button fx:id="gBtnListar" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" text="Listar Locatários" textAlignment="CENTER" />
+            <ProgressBar fx:id="gpbListar" prefHeight="7.0" prefWidth="240.0" progress="0.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="14.0" layoutY="488.0" prefHeight="39.0" prefWidth="174.0">
+         <children>
+            <Button fx:id="gGerar" mnemonicParsing="false" prefHeight="25.0" prefWidth="235.0" text="Gerar Boletos" />
+            <HBox prefHeight="33.0" prefWidth="164.0">
+               <children>
+                  <ProgressBar fx:id="gGerarBancos" prefHeight="18.0" prefWidth="82.0" progress="0.0" />
+                  <ProgressBar fx:id="gGerarBoletas" prefHeight="18.0" prefWidth="83.0" progress="0.0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox layoutX="200.0" layoutY="20.0" prefHeight="514.0" prefWidth="580.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="589.0" style="-fx-background-color: lightblue;" text="Boletos já gerados e impressos.">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="gJaImpressos" prefHeight="138.0" prefWidth="578.0">
+               <columns>
+                  <TableColumn fx:id="gJaImpressos_Contrato" prefWidth="75.0" resizable="false" text="Contrato" />
+                  <TableColumn fx:id="gJaImpressos_Nome" prefWidth="231.0" text="Nome" />
+                  <TableColumn fx:id="gJaImpressos_Vencimento" prefWidth="85.0" resizable="false" text="Vencimento" />
+                  <TableColumn fx:id="gJaImpressos_NossoNumero" prefWidth="92.0" resizable="false" text="NossoNumero" />
+                  <TableColumn fx:id="gJaImpressos_TipoEnvio" prefWidth="75.0" resizable="false" text="TipoEnvio" />
+                  <TableColumn fx:id="gJaImpressos_RgPrp" prefWidth="75.0" text="RgPrp" visible="false" />
+                  <TableColumn fx:id="gJaImpressos_RgImv" prefWidth="75.0" text="RgImv" visible="false" />
+               </columns>
+            </TableView>
+            <Label prefHeight="17.0" prefWidth="646.0" style="-fx-background-color: lightblue;" text="Boletos para impressão. ">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="gBoletos" editable="true" prefHeight="206.0" prefWidth="578.0">
+               <columns>
+                  <TableColumn fx:id="gBoletos_Contrato" prefWidth="75.0" resizable="false" text="Contrato" />
+                  <TableColumn fx:id="gBoletos_Nome" prefWidth="191.0" text="Nome" />
+                  <TableColumn fx:id="gBoletos_Vencimento" minWidth="0.0" prefWidth="92.0" resizable="false" text="Vencimento" />
+                  <TableColumn fx:id="gBoletos_Boleta" prefWidth="105.0" resizable="false" text="Boleta" />
+                  <TableColumn fx:id="gBoletos_TipoEnvio" minWidth="2.0" prefWidth="76.0" text="TipoEnvio" />
+                  <TableColumn fx:id="gBoletos_RgPrp" prefWidth="75.0" text="RgPrp" visible="false" />
+                  <TableColumn fx:id="gBoletos_RgImv" prefWidth="75.0" text="RgImv" visible="false" />
+                  <TableColumn fx:id="gBoletos_Tag" prefWidth="22.0" resizable="false" text="T" />
+               </columns>
+            </TableView>
+            <Label prefHeight="17.0" prefWidth="616.0" style="-fx-background-color: lightblue;" text="Boletos com rejeição pelo banco. Favor, corrija o erro e tente enviar novamente...">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TableView fx:id="gErros" prefHeight="117.0" prefWidth="436.0">
+               <columns>
+                  <TableColumn fx:id="gErros_Contrato" prefWidth="75.0" resizable="false" text="Contrato" />
+                  <TableColumn fx:id="gErros_Nome" prefWidth="283.0" text="Nome" />
+                  <TableColumn fx:id="gErros_Vencimento" prefWidth="79.0" resizable="false" text="Vencimento" />
+                  <TableColumn fx:id="gErros_Codigo" prefWidth="66.0" resizable="false" text="Codigo" />
+                  <TableColumn fx:id="gErros_Mensagem" prefWidth="74.0" resizable="false" text="Mensagem" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,8 @@
+.custom-window-titlebar {
+    -fx-font-family: 'Arial';
+    /* -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 5, 0.0 , 3, 3 ); */
+    -fx-font-size: 14;
+    -fx-fill: white;
+    -fx-alignment: center_right;
+    -fx-pref-height: 20;
+}

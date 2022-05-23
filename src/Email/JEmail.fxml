@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="462.0" prefWidth="600.0" style="-fx-background-color: lightgreen;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Email.JEMail">
+   <children>
+      <Pane fx:id="PanelBg" prefHeight="462.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="De:" />
+            <ComboBox fx:id="email_De" editable="true" layoutX="50.0" layoutY="10.0" prefHeight="25.0" prefWidth="534.0" promptText="Email Remetente" />
+            <Label layoutX="15.0" layoutY="47.0" text="Para:" />
+            <Label layoutX="15.0" layoutY="78.0" text="Assunto:" />
+            <TextField fx:id="email_Assunto" layoutX="73.0" layoutY="74.0" prefHeight="25.0" prefWidth="512.0" />
+            <TextArea fx:id="email_Mensagem" layoutX="15.0" layoutY="216.0" prefHeight="200.0" prefWidth="571.0" />
+            <Label layoutX="16.0" layoutY="193.0" prefHeight="17.0" prefWidth="80.0" text="Mensagem:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAnexos" layoutX="452.0" layoutY="110.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="00 Anexo(s)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEnviar" layoutX="462.0" layoutY="423.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Enviar" />
+            <TextField fx:id="email_Para" layoutX="50.0" layoutY="43.0" prefHeight="25.0" prefWidth="429.0" promptText="EMail Destinatário. Separa com ponto e virgula(;) para vários..." />
+            <Button fx:id="btnBuscar" layoutX="485.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Buscar" />
+            <ListView fx:id="email_Anexos" layoutX="14.0" layoutY="110.0" prefHeight="77.0" prefWidth="429.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="228.0" prefWidth="445.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Locatarios.Pagamentos.PagtosLocatarioController">
+   <children>
+      <TableView fx:id="pgtPagamentos" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="418.0" style="-fx-background-color: cornsilk;" stylesheets="@../../css/ptableImoveis.css">
+        <columns>
+            <TableColumn fx:id="pgtId" prefWidth="75.0" text="Id" visible="false" />
+            <TableColumn fx:id="pgtAut" prefWidth="74.0" text="Aut" />
+          <TableColumn fx:id="pgtVencto" prefWidth="85.0" text="Vencimento" />
+          <TableColumn fx:id="pgtRecto" prefWidth="85.0" text="Recebimento" />
+            <TableColumn fx:id="pgtValor" prefWidth="89.0" text="Valor" />
+            <TableColumn fx:id="pgtDataHora" minWidth="0.0" prefWidth="123.0" text="DataHora" visible="false" />
+            <TableColumn fx:id="pgtLogado" minWidth="0.0" prefWidth="89.0" text="Logado" />
+            <TableColumn fx:id="pgtLanctos" minWidth="0.0" prefWidth="1000.0" text="Lancamentos" />
+        </columns>
+      </TableView>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/textfield.css" />
+   </stylesheets>
+</AnchorPane>

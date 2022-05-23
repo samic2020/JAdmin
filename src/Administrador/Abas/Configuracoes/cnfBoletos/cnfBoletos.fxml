@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPanecnfBoletos" prefHeight="193.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.Configuracoes.cnfBoletos.cnfBoletos">
+   <children>
+      <ScrollPane prefHeight="163.0" prefWidth="724.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="743.0" style="-fx-background-color: #dddddd;">
+               <children>
+                  <Pane layoutX="2.0" layoutY="2.0" prefHeight="130.0" prefWidth="720.0" style="-fx-background-color: lightblue;">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="720.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="# - Parametros de Impressão do Boleto" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="25.0" text="Dimensoes do Logo" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="51.0" text="Largura:" />
+                        <TextField fx:id="pb_logo_width" layoutX="78.0" layoutY="46.0" prefHeight="26.0" prefWidth="86.0" />
+                        <Label layoutX="170.0" layoutY="52.0" text="Pixel(s)" />
+                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="78.0" prefHeight="16.0" prefWidth="55.0" text="Altura:" />
+                        <TextField fx:id="pb_logo_Heigth" layoutX="78.0" layoutY="73.0" prefHeight="26.0" prefWidth="86.0" />
+                        <Label layoutX="170.0" layoutY="78.0" text="Pixel(s)" />
+                        <Separator layoutX="230.0" layoutY="22.0" orientation="VERTICAL" prefHeight="104.0" prefWidth="6.0" />
+                        <Label layoutX="236.0" layoutY="25.0" text="Não Mostrar na Impressão" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="pb_logo_noprint" layoutX="248.0" layoutY="44.0" mnemonicParsing="false" text="Logo" />
+                        <CheckBox fx:id="pb_razao_noprint" layoutX="248.0" layoutY="64.0" mnemonicParsing="false" text="Razão Social" />
+                        <CheckBox fx:id="pb_cnpj_noprint" layoutX="248.0" layoutY="85.0" mnemonicParsing="false" text="CNPJ" />
+                        <CheckBox fx:id="pb_creci_noprint" layoutX="315.0" layoutY="85.0" mnemonicParsing="false" text="CRECI" />
+                        <CheckBox fx:id="pb_endereco_noprint" layoutX="248.0" layoutY="105.0" mnemonicParsing="false" text="Endereço" />
+                        <CheckBox fx:id="pb_telefone_noprint" layoutX="343.0" layoutY="105.0" mnemonicParsing="false" text="Telefone" />
+                        <Separator layoutX="434.0" layoutY="22.0" orientation="VERTICAL" prefHeight="104.0" prefWidth="6.0" />
+                        <Label layoutX="440.0" layoutY="25.0" text="Mostrar na Impressão" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="pb_copa_print" layoutX="448.0" layoutY="44.0" mnemonicParsing="false" text="Cota/Parcela" />
+                        <CheckBox fx:id="pb_qcr_print" layoutX="448.0" layoutY="67.0" mnemonicParsing="false" text="QCR" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="2.0" layoutY="136.0" prefHeight="350.0" prefWidth="718.0" style="-fx-background-color: lightblue;">
+                     <children>
+                        <Label prefHeight="16.0" prefWidth="719.0" style="-fx-background-color: darkblue; -fx-text-fill: white;" text="# - Instruções do Boleto" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="25.0" text="Linha 01:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int01" layoutX="53.0" layoutY="20.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="50.0" text="Linha 02:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int02" layoutX="53.0" layoutY="45.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="75.0" text="Linha 03:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int03" layoutX="53.0" layoutY="70.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="100.0" text="Linha 04:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int04" layoutX="53.0" layoutY="95.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="125.0" text="Linha 05:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int05" layoutX="53.0" layoutY="120.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="150.0" text="Linha 06:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int06" layoutX="53.0" layoutY="145.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="175.0" text="Linha 07:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int07" layoutX="53.0" layoutY="170.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="200.0" text="Linha 08:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int08" layoutX="53.0" layoutY="195.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="3.0" layoutY="225.0" text="Linha 09:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int09" layoutX="53.0" layoutY="220.0" prefHeight="24.0" prefWidth="662.0" />
+                        <Label layoutX="13.0" layoutY="250.0" prefHeight="15.0" prefWidth="710.0" style="-fx-text-fill: red; -fx-background-color: yellow;" text="Legenda:" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int091" editable="false" layoutX="13.0" layoutY="270.0" prefHeight="24.0" prefWidth="136.0" text="\$F{VENCIMENTO}" />
+                        <Label layoutX="155.0" layoutY="275.0" text="- Vencimento" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int0911" editable="false" layoutX="13.0" layoutY="295.0" prefHeight="24.0" prefWidth="136.0" text="\$F{CARENCIA}" />
+                        <Label layoutX="155.0" layoutY="300.0" text="- Carência" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int09111" editable="false" layoutX="13.0" layoutY="320.0" prefHeight="24.0" prefWidth="136.0" text="\$F{VENCCARENC}" />
+                        <Label layoutX="155.0" layoutY="325.0" text="- Venc + Carência" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int0912" editable="false" layoutX="270.0" layoutY="270.0" prefHeight="24.0" prefWidth="136.0" text="\$F{MULTA}" />
+                        <Label layoutX="410.0" layoutY="275.0" text="- Multa" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int09121" editable="false" layoutX="270.0" layoutY="295.0" prefHeight="24.0" prefWidth="136.0" text="\$F{ENCARGOS}" />
+                        <Label layoutX="410.0" layoutY="300.0" text="- Encargos" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int091211" editable="false" layoutX="270.0" layoutY="320.0" prefHeight="24.0" prefWidth="136.0" text="\$F{JUROS}" />
+                        <Label layoutX="410.0" layoutY="325.0" text="- Juros" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int09122" editable="false" layoutX="485.0" layoutY="270.0" prefHeight="24.0" prefWidth="136.0" text="\$F{CORRECAO}" />
+                        <Label layoutX="625.0" layoutY="275.0" text="- Correção" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int091212" editable="false" layoutX="485.0" layoutY="295.0" prefHeight="24.0" prefWidth="136.0" text="\$F{VALORBOLETA}" />
+                        <Label layoutX="625.0" layoutY="300.0" text="- Valor Boleto" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="pb_int0912111" editable="false" layoutX="485.0" layoutY="320.0" prefHeight="24.0" prefWidth="136.0" text="\$F{TXBANCO}" />
+                        <Label layoutX="625.0" layoutY="325.0" text="- Taxa do Banco" textFill="#2f00eb">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

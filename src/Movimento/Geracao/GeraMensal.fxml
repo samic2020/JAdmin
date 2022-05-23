@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="845.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Geracao.GeraMensalController">
+   <children>
+      <Pane focusTraversable="true" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tbvLista" layoutX="217.0" layoutY="9.0" prefHeight="211.0" prefWidth="617.0" style="-fx-background-color: cornsilk;">
+              <columns>
+                <TableColumn fx:id="tbvLista_contrato" prefWidth="76.0" text="Contrato" />
+                <TableColumn fx:id="tbvLista_nome" prefWidth="357.0" text="Nome" />
+                  <TableColumn fx:id="tbvLista_referencia" prefWidth="65.0" text="Ref" />
+                  <TableColumn fx:id="tbvLista_vencimento" minWidth="0.0" prefWidth="101.0" text="Vencimento" />
+              </columns>
+            </TableView>
+            <TitledPane animated="false" collapsible="false" layoutX="9.0" layoutY="8.0" style="-fx-background-color: #dddddd;" text="Opções">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                     <children>
+                        <RadioButton fx:id="opc_todos" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" selected="true" style="-fx-text-fill: Black; -fx-effect: dropshadow( one-pass-box , rgba(255, 255, 255, 0.6), 0, 0.0 , 0 , 1 );" text="Todos">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="opcoes" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="opc_periodo" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" style="-fx-text-fill: black; -fx-effect: dropshadow( one-pass-box , rgba(255, 255, 255, 0.6), 0, 0.0 , 0 , 1 );" text="Por Periodo" toggleGroup="$opcoes" />
+                        <Label layoutX="14.0" layoutY="61.0" text="Periodo:" />
+                        <Label layoutX="14.0" layoutY="83.0" text="Dt.Inicial:" />
+                        <DatePicker fx:id="opc_periodo_dtinicial" layoutX="76.0" layoutY="78.0" prefHeight="26.0" prefWidth="120.0" />
+                        <Label layoutX="14.0" layoutY="111.0" text="Dt.Final:" />
+                        <DatePicker fx:id="opc_periodo_dtfinal" layoutX="76.0" layoutY="106.0" prefHeight="26.0" prefWidth="120.0" />
+                        <Button fx:id="btnListar" layoutX="15.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="180.0" text="Listar" />
+                        <Button fx:id="btnGerar" layoutX="16.0" layoutY="172.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="178.0" text="Gerar" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <CheckBox fx:id="selectAll" layoutX="632.0" layoutY="226.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="202.0" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Seleciona Todos na Lista" />
+            <Label layoutX="370.0" layoutY="227.0" text="Buscar:" textFill="WHITE" />
+            <TextField fx:id="buscar" layoutX="419.0" layoutY="222.0" prefHeight="26.0" prefWidth="202.0" />
+            <Button fx:id="btnListarBloq" disable="true" layoutX="217.0" layoutY="223.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" text="Bloqueados" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/label.css" />
+      <URL value="@../../css/ptableImoveis.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/checkbox.css" />
+   </stylesheets>
+</AnchorPane>

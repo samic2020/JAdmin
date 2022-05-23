@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.AutoCompleteTextField?>-->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import masktextfield.MaskTextField?>
+<?import java.net.URL?>
+<AnchorPane fx:id="tela_segdep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="710.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Seguradoras.SeguradoraController">
+   <children>
+      <Label layoutX="14.0" layoutY="19.0" text="Codigo:" />
+      <MaskTextField fx:id="sd_codigo" layoutX="60.0" layoutY="14.0" mask="NNNNNN" prefHeight="22.0" prefWidth="82.0" promptText="código" />
+      <Label layoutX="159.0" layoutY="20.0" text="Nome:" />
+      <TextField fx:id="sd_nome" layoutX="199.0" layoutY="15.0" prefHeight="24.0" prefWidth="499.0" promptText="Entre com o nome da Seguradora...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="14.0" layoutY="45.0" text="Endereço:" />
+      <TextField fx:id="sd_endereco" editable="false" layoutX="87.0" layoutY="42.0" prefHeight="20.0" prefWidth="336.0" promptText="Entre com o endereço da Seguradora...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="sd_btn_endereco" layoutX="425.0" layoutY="42.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="4.0" text="Button">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="463.0" layoutY="48.0" text="Nº:" />
+      <TextField fx:id="sd_numero" layoutX="484.0" layoutY="43.0" prefHeight="20.0" prefWidth="57.0" promptText="Número">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="549.0" layoutY="47.0" text="Coplto:" />
+      <TextField fx:id="sd_complemento" layoutX="596.0" layoutY="43.0" prefHeight="20.0" prefWidth="101.0" promptText="Complemento...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="15.0" layoutY="74.0" text="Bairro:" />
+      <TextField fx:id="sd_bairro" editable="false" layoutX="60.0" layoutY="69.0" prefHeight="20.0" prefWidth="210.0" promptText="Bairro...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="282.0" layoutY="74.0" text="Cidade:" />
+      <TextField fx:id="sd_cidade" editable="false" layoutX="326.0" layoutY="69.0" prefHeight="20.0" prefWidth="177.0" promptText="Cidade...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="510.0" layoutY="77.0" text="Uf:" />
+      <TextField fx:id="sd_estado" editable="false" layoutX="527.0" layoutY="70.0" prefHeight="25.0" prefWidth="42.0" promptText="Estado...">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="575.0" layoutY="75.0" text="Cep:" />
+      <MaskTextField fx:id="sd_cep" layoutX="604.0" layoutY="70.0" mask="NNNNN-NNN" prefHeight="25.0" prefWidth="95.0" promptText="Cep..." />
+      <MenuButton fx:id="sd_btn_telcontato" layoutX="8.0" layoutY="97.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Tel.:">
+         <items>
+            <MenuItem fx:id="adc_telcontato" mnemonicParsing="false" text="Adicionar" />
+            <MenuItem fx:id="del_telcontato" mnemonicParsing="false" text="Excluir" />
+         </items>
+      </MenuButton>
+      <ComboBox fx:id="sd_telcontato" layoutX="84.0" layoutY="97.0" prefHeight="25.0" prefWidth="239.0" promptText="Telefones..." />
+      <Label layoutX="483.0" layoutY="103.0" text="CPF/CNPJ:" />
+      <TextField fx:id="sd_cpf_cnpj" layoutX="549.0" layoutY="98.0" prefHeight="25.0" prefWidth="150.0" promptText="Cpf ou Cnpj do Proprietário..." />
+      <Label layoutX="17.0" layoutY="131.0" text="Corretor:" />
+      <TextField fx:id="sd_representante" layoutX="76.0" layoutY="126.0" prefHeight="25.0" prefWidth="449.0" promptText="Quando Espólio entre com o nome do Representante..." />
+      <Label layoutX="538.0" layoutY="131.0" text="Dt.Nasc.:" />
+      <DatePicker fx:id="sd_repdtnasc" layoutX="588.0" layoutY="126.0" prefHeight="24.0" prefWidth="110.0" />
+      <MenuButton fx:id="sd_btn_banco" layoutX="9.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="Banco:">
+         <items>
+            <MenuItem fx:id="adcBancos" mnemonicParsing="false" text="Adicionar" />
+            <MenuItem fx:id="delBancos" mnemonicParsing="false" text="Excluir" />
+         </items>
+      </MenuButton>
+      <ComboBox fx:id="sd_banco" layoutX="91.0" layoutY="155.0" prefHeight="26.0" prefWidth="605.0" promptText="Dados Bancários..." />
+      <MenuButton fx:id="sd_btn_email" layoutX="8.0" layoutY="185.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: transparent;" text="E-Mail:">
+         <items>
+            <MenuItem fx:id="adc_btn_email" mnemonicParsing="false" text="Adicionar" />
+            <MenuItem fx:id="del_btn_email" mnemonicParsing="false" text="Excluir" />
+         </items>
+      </MenuButton>
+      <ComboBox fx:id="sd_email" layoutX="91.0" layoutY="185.0" prefHeight="26.0" prefWidth="605.0" promptText="Emails... (O primeiro cadastrado será o principal)" />
+      <Button fx:id="sd_btIncluir" layoutX="15.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Incluir" />
+      <Button fx:id="sd_btExcluir" layoutX="225.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Excluir" />
+      <Button fx:id="sd_btPrevious" layoutX="365.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" text="&lt;" />
+      <Button fx:id="sd_btNext" layoutX="412.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="42.0" text="&gt;" />
+      <Button fx:id="sd_btGravar" layoutX="488.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Gravar" />
+      <Button fx:id="sd_btRetornar" layoutX="594.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Retornar" />
+      <Separator layoutX="16.0" layoutY="220.0" prefHeight="3.0" prefWidth="682.0" />
+      <Label layoutX="16.0" layoutY="231.0" text="Bloquear recebimentos com" />
+      <ComboBox fx:id="blq_diasmeses" layoutX="244.0" layoutY="226.0" prefHeight="24.0" prefWidth="150.0" promptText="Dias / Meses" />
+      <TextField fx:id="blq_numero" layoutX="170.0" layoutY="226.0" prefHeight="24.0" prefWidth="63.0" />
+      <Button fx:id="sd_btAlterar" layoutX="120.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" text="Alterar" />
+      <!--<AutoCompleteTextField layoutX="440.0" layoutY="225.0" />-->
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/button.css" />
+      <URL value="@../css/menubutton.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,15 @@
+.table-view .column-header-background #tipomulta{
+/*
+    -fx-border-color: black;
+*/
+    -fx-border-width: 5;
+    -fx-base: red;
+}
+
+.table-view .column-header-background #percadm{
+    -fx-base: green;
+}
+
+.table-view .column-header-background #multarescom{
+    -fx-base: yellow;
+}

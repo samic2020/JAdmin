@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.HTMLEditor?>
+
+
+<AnchorPane id="AnchorPane" fx:id="anchorPaneEmail" prefHeight="546.0" prefWidth="791.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="BancosDigital.Inter.Email">
+   <children>
+      <Pane layoutX="613.0" layoutY="14.0" prefHeight="234.0" prefWidth="164.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox layoutY="-7.0" prefHeight="90.0" prefWidth="163.0">
+               <children>
+                  <HBox prefHeight="16.0" prefWidth="190.0">
+                     <children>
+                        <Button fx:id="ebtnListar" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Listar Boletas" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="153.0">
+                     <children>
+                        <CheckBox fx:id="eSys" mnemonicParsing="false" text="Sem envio - Usuário Sys" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="54.0" prefWidth="163.0">
+                     <children>
+                        <Button fx:id="ebtnEnviarTodos" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Enviar Todas" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="190.0">
+                     <children>
+                        <Button fx:id="eEnviarSel" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Enviar Selecionadas" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="81.0" prefWidth="171.0">
+                     <children>
+                        <VBox prefHeight="43.0" prefWidth="158.0">
+                           <children>
+                              <Button fx:id="eEditar" mnemonicParsing="false" prefHeight="25.0" prefWidth="196.0" text="Editar Cadastro" />
+                              <ProgressBar fx:id="epgListar" prefWidth="200.0" progress="0.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="264.0" prefHeight="268.0" prefWidth="762.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <HBox prefHeight="34.0" prefWidth="765.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="46.0" text="Assunto:" />
+                  <TextField fx:id="eAssunto" prefHeight="25.0" prefWidth="698.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="5.0" layoutY="35.0" prefHeight="232.0" prefWidth="755.0">
+               <children>
+                  <HTMLEditor fx:id="eBody" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="222.0" prefWidth="768.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView fx:id="eEnvio" accessibleRole="IMAGE_VIEW" fixedCellSize="0.0" layoutX="14.0" layoutY="14.0" prefHeight="234.0" prefWidth="593.0">
+         <columns>
+            <TableColumn fx:id="eEnvio_Contrato" prefWidth="75.0" text="Contrato" />
+            <TableColumn fx:id="eEnvio_Nome" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="eEnvio_Vencimento" prefWidth="75.0" text="Vencimento" />
+            <TableColumn fx:id="eEnvio_Boleta" prefWidth="75.0" text="Boleta" />
+            <TableColumn fx:id="eEnvio_NossoNumero" prefWidth="75.0" text="NossoNumero" />
+            <TableColumn fx:id="eEnvio_FileName" prefWidth="75.0" text="FileName" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

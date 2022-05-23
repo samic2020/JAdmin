@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneContasAdm" minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="772.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" stylesheets="@../../../css/label.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.ContasAdmin.ContasAdmin">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Contas Fixas do Sistema: Permitido apenas a mudança do nome da conta" textFill="WHITE" />
+      <TableView fx:id="ca_contas" layoutX="14.0" layoutY="37.0" prefHeight="110.0" prefWidth="748.0">
+         <columns>
+            <TableColumn fx:id="ca_contas_id" editable="false" prefWidth="75.0" text="id" visible="false" />
+            <TableColumn fx:id="ca_contas_codigo" editable="false" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="ca_contas_descricao" prefWidth="676.0" text="Descriçao" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="155.0" text="Contas da Administradora" textFill="WHITE" />
+      <TableView fx:id="ac_contas" layoutX="14.0" layoutY="171.0" prefHeight="153.0" prefWidth="747.0">
+         <columns>
+            <TableColumn fx:id="ac_contas_id" editable="false" prefWidth="75.0" text="id" visible="false" />
+            <TableColumn fx:id="ac_contas_codigo" editable="false" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="ac_contas_descricao" prefWidth="676.0" text="Descriçao" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import masktextfield.MaskTextField?>
+<?import java.net.*?>
+<AnchorPane id="AnchorPane" fx:id="l_anchorPane" prefHeight="564.0" prefWidth="992.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Locatarios.PreContrato.PreLocatario">
+   <stylesheets>
+      <URL value="@../../css/label.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/textarea.css" />
+      <URL value="@../../css/combobox.css" />
+      <URL value="@../../css/menubutton.css" />
+   </stylesheets>
+   <children>
+      <Pane prefHeight="567.0" prefWidth="992.0" style="-fx-background-color: cornsilk;">
+         <children>
+            <Pane layoutX="9.0" layoutY="6.0" prefHeight="57.0" prefWidth="819.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-background-color: cornsilk;">
+               <children>
+                  <Label layoutX="14.0" layoutY="8.0" text="Proprietario:" />
+                  <TextField fx:id="l_rgprp" editable="false" layoutX="90.0" layoutY="4.0" prefHeight="24.0" prefWidth="65.0" promptText="999999" />
+                  <Label layoutX="170.0" layoutY="8.0" text="Imovel:" />
+                  <TextField fx:id="l_rgimv" editable="false" layoutX="220.0" layoutY="4.0" prefHeight="24.0" prefWidth="65.0" promptText="999999" />
+                  <Label layoutX="303.0" layoutY="8.0" text="Tipo Imovel:" />
+                  <TextField fx:id="l_tpimovel" editable="false" layoutX="371.0" layoutY="4.0" prefHeight="24.0" prefWidth="158.0" />
+                  <Label layoutX="646.0" layoutY="8.0" prefHeight="15.0" prefWidth="75.0" text="Pre-Contrato:" />
+                  <TextField fx:id="l_contrato" layoutX="723.0" layoutY="4.0" prefHeight="24.0" prefWidth="82.0" promptText="999999" />
+                  <RadioButton fx:id="l_fisica" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" selected="true" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Fisica" visible="false">
+                      <toggleGroup>
+                          <ToggleGroup fx:id="l_gfisjur" />
+                      </toggleGroup>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="l_juridica" layoutX="92.0" layoutY="36.0" mnemonicParsing="false" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Juridica" toggleGroup="$l_gfisjur" visible="false">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="15.0" layoutY="33.0" text="Cpf/Cnpj:" />
+                  <MaskTextField fx:id="l_cpfcnpj" layoutX="79.0" layoutY="29.0" />
+                  <Label layoutX="585.0" layoutY="33.0" text="Rg/Insc.:" />
+                  <TextField fx:id="l_rginsc" layoutX="638.0" layoutY="29.0" prefHeight="24.0" prefWidth="167.0" />
+               </children>
+            </Pane>
+            <TabPane fx:id="l_tabfisjur" layoutY="55.0" prefHeight="351.0" prefWidth="839.0" style="-fx-background-insets: 10 10 10 10; -fx-border-insets: 10 10 10 10; -fx-border-image-insets: 10 10 10 10; -fx-tab-min-height: -1; -fx-tab-max-height: -1; -fx-background-color: cornsilk;" stylesheets="@../../css/tabpane.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="l_tabFisica" text="Fisica">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="370.0" prefWidth="817.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="10.0" text="Nome:" />
+                              <TextField fx:id="l_f_nome" layoutX="54.0" layoutY="6.0" prefHeight="24.0" prefWidth="419.0" />
+                              <Label layoutX="483.0" layoutY="11.0" text="Sexo:" />
+                              <ComboBox fx:id="l_f_sexo" layoutX="521.0" layoutY="6.0" prefHeight="25.0" prefWidth="52.0" />
+                              <Label layoutX="600.0" layoutY="10.0" text="Dt.Nascimento:" />
+                              <DatePicker fx:id="l_f_dtnasc" layoutX="692.0" layoutY="6.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+                              <Label layoutX="14.0" layoutY="39.0" text="Nacionalidade:" />
+                              <TextField fx:id="l_f_nacionalidade" layoutX="99.0" layoutY="35.0" prefHeight="24.0" prefWidth="167.0" />
+                              <Label layoutX="275.0" layoutY="39.0" text="Estado Civil:" />
+                              <ComboBox fx:id="l_f_estcivil" layoutX="344.0" layoutY="34.0" prefHeight="24.0" prefWidth="145.0" />
+                              <MenuButton fx:id="l_f_tel_menu" layoutX="507.0" layoutY="35.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+                                <items>
+                                  <MenuItem fx:id="l_f_teladc" mnemonicParsing="false" text="Adicionar" />
+                                  <MenuItem fx:id="l_f_teldel" mnemonicParsing="false" text="Excluir" />
+                                </items>
+                              </MenuButton>
+                              <ComboBox fx:id="l_f_tel" layoutX="608.0" layoutY="35.0" prefHeight="24.0" prefWidth="197.0" />
+                              <Label layoutX="14.0" layoutY="67.0" text="Mae:" />
+                              <TextField fx:id="l_f_mae" layoutX="48.0" layoutY="63.0" prefHeight="24.0" prefWidth="365.0" />
+                              <Label layoutX="430.0" layoutY="67.0" text="Pai:" />
+                              <TextField fx:id="l_f_pai" layoutX="454.0" layoutY="63.0" prefHeight="24.0" prefWidth="350.0" />
+                              <Label layoutX="14.0" layoutY="95.0" text="Empresa:" />
+                              <TextField fx:id="l_f_empresa" layoutX="69.0" layoutY="91.0" prefHeight="24.0" prefWidth="532.0" />
+                              <Label layoutX="613.0" layoutY="95.0" text="Dt.Admissao:" />
+                              <DatePicker fx:id="l_f_dtadmissao" layoutX="692.0" layoutY="91.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+                              <Label layoutX="15.0" layoutY="123.0" text="Endereço:" />
+                              <TextField fx:id="l_f_endereco" editable="false" layoutX="70.0" layoutY="119.0" prefHeight="24.0" prefWidth="346.0" />
+                              <Button fx:id="l_f_btFindEndereco" layoutX="417.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" />
+                              <Label layoutX="454.0" layoutY="123.0" text="Numero:" />
+                              <TextField fx:id="l_f_numero" layoutX="505.0" layoutY="119.0" prefHeight="24.0" prefWidth="88.0" />
+                              <Label layoutX="601.0" layoutY="123.0" text="Complto:" />
+                              <TextField fx:id="l_f_cplto" layoutX="652.0" layoutY="119.0" prefHeight="24.0" prefWidth="151.0" />
+                              <Label layoutX="14.0" layoutY="151.0" text="Bairro:" />
+                              <TextField fx:id="l_f_bairro" editable="false" layoutX="53.0" layoutY="147.0" prefHeight="24.0" prefWidth="215.0" />
+                              <Label layoutX="286.0" layoutY="151.0" text="Cidade:" />
+                              <TextField fx:id="l_f_cidade" editable="false" layoutX="329.0" layoutY="147.0" prefHeight="24.0" prefWidth="215.0" />
+                              <Label layoutX="556.0" layoutY="151.0" text="Estado:" />
+                              <TextField fx:id="l_f_estado" editable="false" layoutX="600.0" layoutY="147.0" prefHeight="24.0" prefWidth="39.0" />
+                              <Label layoutX="658.0" layoutY="151.0" text="Cep:" />
+                              <MaskTextField fx:id="l_f_cep" layoutX="686.0" layoutY="147.0" mask="NNNNN-NNN" prefHeight="24.0" prefWidth="114.0" />
+                              <Label layoutX="15.0" layoutY="179.0" text="Cargo:" />
+                              <TextField fx:id="l_f_cargo" layoutX="54.0" layoutY="175.0" prefHeight="24.0" prefWidth="555.0" />
+                              <Label layoutX="626.0" layoutY="179.0" text="Salario:" />
+                              <TextField fx:id="l_f_salario" layoutX="673.0" layoutY="175.0" prefHeight="24.0" prefWidth="128.0" />
+                              <Label layoutX="15.0" layoutY="206.0" text="Conjugue:" />
+                              <TextField fx:id="l_f_conjugue" layoutX="72.0" layoutY="202.0" prefHeight="24.0" prefWidth="521.0" />
+                              <Label layoutX="601.0" layoutY="210.0" text="Dt.Nascimento:" />
+                              <DatePicker fx:id="l_f_conjuguedtnasc" layoutX="689.0" layoutY="202.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+                              <Label layoutX="15.0" layoutY="235.0" text="Sexo:" />
+                              <ComboBox fx:id="l_f_conjuguesexo" layoutX="53.0" layoutY="230.0" prefHeight="24.0" prefWidth="52.0" />
+                              <Label layoutX="161.0" layoutY="235.0" text="Cpf:" />
+                              <TextField fx:id="l_f_conjuguecpf" layoutX="188.0" layoutY="231.0" prefHeight="24.0" prefWidth="167.0" />
+                              <Label layoutX="399.0" layoutY="235.0" text="RG:" />
+                              <TextField fx:id="l_f_conjuguerg" layoutX="424.0" layoutY="231.0" prefHeight="24.0" prefWidth="167.0" />
+                              <Label layoutX="626.0" layoutY="235.0" text="Salario:" />
+                              <TextField fx:id="l_f_conjuguesalario" layoutX="673.0" layoutY="231.0" prefHeight="24.0" prefWidth="128.0" />
+                              <Label layoutX="14.0" layoutY="263.0" text="Empresa:" />
+                              <TextField fx:id="l_f_conjugueempresa" layoutX="67.0" layoutY="259.0" prefHeight="24.0" prefWidth="423.0" />
+                              <MenuButton fx:id="l_f_conjuguetelefone_menu" layoutX="503.0" layoutY="258.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+                                 <items>
+                                    <MenuItem fx:id="l_f_conjugueteladc" mnemonicParsing="false" text="Adicionar" />
+                                    <MenuItem fx:id="l_f_conjugueteldel" mnemonicParsing="false" text="Excluir" />
+                                 </items>
+                              </MenuButton>
+                              <ComboBox fx:id="l_f_conjuguetelefone" layoutX="604.0" layoutY="258.0" prefHeight="24.0" prefWidth="197.0" />
+                              <MenuButton fx:id="l_f_email_menu" layoutX="12.0" layoutY="290.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="E-Mail(s):">
+                                 <items>
+                                    <MenuItem fx:id="l_f_emailadc" mnemonicParsing="false" text="Adicionar" />
+                                    <MenuItem fx:id="l_f_emaildel" mnemonicParsing="false" text="Excluir" />
+                                 </items>
+                              </MenuButton>
+                              <ComboBox fx:id="l_f_email" layoutX="101.0" layoutY="290.0" prefHeight="25.0" prefWidth="698.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="l_tabJuridica" text="Juridica">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <Label layoutX="13.0" layoutY="13.0" text="Razao:" />
+                              <TextField fx:id="l_j_razao" layoutX="54.0" layoutY="8.0" prefHeight="24.0" prefWidth="749.0" />
+                              <Label layoutX="14.0" layoutY="40.0" text="Fantasia:" />
+                              <TextField fx:id="l_j_fantasia" layoutX="66.0" layoutY="36.0" prefHeight="24.0" prefWidth="737.0" />
+                              <Label layoutX="15.0" layoutY="68.0" text="Endereço:" />
+                              <TextField fx:id="l_j_endereco" editable="false" layoutX="70.0" layoutY="64.0" prefHeight="24.0" prefWidth="346.0" />
+                              <Button fx:id="l_j_btFindEndereco" layoutX="417.0" layoutY="64.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" />
+                              <Label layoutX="454.0" layoutY="68.0" text="Numero:" />
+                              <TextField fx:id="l_j_numero" layoutX="505.0" layoutY="64.0" prefHeight="24.0" prefWidth="88.0" />
+                              <Label layoutX="601.0" layoutY="68.0" text="Complto:" />
+                              <TextField fx:id="l_j_cplto" layoutX="652.0" layoutY="64.0" prefHeight="24.0" prefWidth="151.0" />
+                              <Label layoutX="14.0" layoutY="96.0" text="Bairro:" />
+                              <TextField fx:id="l_j_bairro" editable="false" layoutX="53.0" layoutY="92.0" prefHeight="24.0" prefWidth="215.0" />
+                              <Label layoutX="286.0" layoutY="96.0" text="Cidade:" />
+                              <TextField fx:id="l_j_cidade" editable="false" layoutX="329.0" layoutY="92.0" prefHeight="24.0" prefWidth="215.0" />
+                              <Label layoutX="556.0" layoutY="96.0" text="Estado:" />
+                              <TextField fx:id="l_j_estado" editable="false" layoutX="600.0" layoutY="92.0" prefHeight="24.0" prefWidth="39.0" />
+                              <Label layoutX="658.0" layoutY="96.0" text="Cep:" />
+                              <MaskTextField fx:id="l_j_cep" layoutX="692.0" layoutY="92.0" mask="NNNNN-NNN" prefHeight="24.0" prefWidth="111.0" />
+                              <Label layoutX="14.0" layoutY="124.0" text="Dt.Ctr.Social:" />
+                              <DatePicker fx:id="l_j_dtctrosocial" layoutX="91.0" layoutY="120.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+                              <MenuButton fx:id="l_j_tel_menu" layoutX="504.0" layoutY="119.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Telefone(s):">
+                                 <items>
+                                    <MenuItem fx:id="l_j_teladc" mnemonicParsing="false" text="Adicionar" />
+                                    <MenuItem fx:id="l_j_teldel" mnemonicParsing="false" text="Excluir" />
+                                 </items>
+                              </MenuButton>
+                              <ComboBox fx:id="l_j_tel" layoutX="605.0" layoutY="119.0" prefHeight="25.0" prefWidth="197.0" />
+                              <MenuButton fx:id="l_j_email_menu" layoutX="15.0" layoutY="149.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="E-Mail(s):">
+                                 <items>
+                                    <MenuItem fx:id="l_j_emailadc" mnemonicParsing="false" text="Adicionar" />
+                                    <MenuItem fx:id="l_j_emaildel" mnemonicParsing="false" text="Excluir" />
+                                 </items>
+                              </MenuButton>
+                              <ComboBox fx:id="l_j_email" layoutX="104.0" layoutY="149.0" prefHeight="25.0" prefWidth="698.0" />
+                              <Pane layoutX="15.0" layoutY="179.0" prefHeight="131.0" prefWidth="786.0" style="-fx-border-color: Black; -fx-border-radius: 10 10 10 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="15.0" prefWidth="785.0" text="Sócios" textAlignment="CENTER" />
+                                    <TableView fx:id="l_j_socios" layoutX="10.0" layoutY="17.0" prefHeight="101.0" prefWidth="763.0" stylesheets="@../../css/ptableImoveis.css">
+                                      <columns>
+                                        <TableColumn fx:id="l_j_socioscpfcnpj" prefWidth="150.0" text="CPF" />
+                                        <TableColumn fx:id="l_j_sociosnome" minWidth="0.0" prefWidth="579.0" text="Nome" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <TabPane layoutY="390.0" prefHeight="146.0" prefWidth="839.0" stylesheets="@../../css/tabpane.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Seguradora/Deposito">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <RadioButton fx:id="deposito" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Depósito">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="depseg" />
+                                 </toggleGroup></RadioButton>
+                              <Label layoutX="143.0" layoutY="9.0" text="Valor do Deposito:" />
+                              <TextField fx:id="vrdeposito" alignment="CENTER_RIGHT" disable="true" layoutX="256.0" layoutY="4.0" prefHeight="24.0" prefWidth="117.0" text="0,00" />
+                              <RadioButton fx:id="seguradora" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Seguradora" textFill="WHITE" toggleGroup="$depseg" />
+                              <ComboBox fx:id="nmseguradora" disable="true" layoutX="143.0" layoutY="32.0" prefHeight="22.0" prefWidth="409.0" />
+                              <Label layoutX="15.0" layoutY="65.0" text="Nº Apolice:" />
+                              <TextField fx:id="nroapolice" disable="true" layoutX="85.0" layoutY="60.0" prefHeight="24.0" prefWidth="243.0" />
+                              <Label layoutX="343.0" layoutY="65.0" text="Data:" />
+                              <DatePicker fx:id="dtapolice" disable="true" layoutX="375.0" layoutY="60.0" prefHeight="24.0" prefWidth="145.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Fiadores">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <TableView fx:id="l_fiadores" layoutX="7.0" layoutY="5.0" prefHeight="81.0" prefWidth="800.0" style="-fx-background-color: cornsilk;" stylesheets="@../../css/ptableImoveis.css">
+                                 <columns>
+                                    <TableColumn fx:id="l_fiadorescpfcnpj" prefWidth="150.0" text="CPF/CNPJ" />
+                                    <TableColumn fx:id="l_fiadoresnome" minWidth="0.0" prefWidth="613.0" text="Nome" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Locação">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                           <children>
+                              <Label layoutX="8.0" layoutY="17.0" text="Dt.Inicio:" />
+                              <DatePicker fx:id="ct_dtinicio" layoutX="61.0" layoutY="13.0" prefHeight="24.0" prefWidth="140.0" promptText="ct_dtinicio" />
+                              <Label layoutX="216.0" layoutY="17.0" text="Dt.Termino:" />
+                              <DatePicker fx:id="ct_dtfim" layoutX="284.0" layoutY="13.0" prefHeight="24.0" prefWidth="140.0" promptText="ct_dtfim" />
+                              <Label layoutX="14.0" layoutY="51.0" text="Vr.Mensal:" />
+                              <TextField fx:id="ct_aluguel" alignment="CENTER_RIGHT" layoutX="78.0" layoutY="47.0" prefHeight="24.0" prefWidth="117.0" promptText="0,00" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Locadores Adicionais">
+                      <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: cornsilk;">
+                              <children>
+                                  <TableView fx:id="l_adicionais" layoutX="7.0" layoutY="5.0" prefHeight="81.0" prefWidth="800.0" style="-fx-background-color: cornsilk;" stylesheets="@../../css/ptableImoveis.css">
+                                      <columns>
+                                    <TableColumn fx:id="l_adcid" editable="false" prefWidth="75.0" sortable="false" text="Id" visible="false" />
+                                          <TableColumn fx:id="l_adccpfcnpj" prefWidth="150.0" text="CPF/CNPJ" />
+                                          <TableColumn fx:id="l_adcnome" minWidth="0.0" prefWidth="613.0" text="Nome" />
+                                      </columns>
+                                  </TableView>
+                              </children>
+                          </AnchorPane>
+                      </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label layoutX="14.0" layoutY="536.0" text="Nome do Documento:" />
+            <TextField fx:id="nm_contrato" editable="false" layoutX="167.0" layoutY="531.0" prefHeight="26.0" prefWidth="621.0" promptText="Selecione o arquivo para imprimir o contrato..." />
+            <Button fx:id="btFindCtro" layoutX="794.0" layoutY="531.0" mnemonicParsing="false" text="..." />
+         </children></Pane>
+      <Pane layoutX="848.0" layoutY="14.0" prefHeight="548.0" prefWidth="131.0" style="-fx-border-color: gray; -fx-border-radius: 20 0 20 0; -fx-background-radius: 20 0 20 0; -fx-linear-gradient: bottom, #b6ebf7, #fff 50%; -fx-background-color: cornsilk;" stylesheets="@../../css/fundo.css">
+         <children>
+            <Button fx:id="l_btIncluir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Incluir" />
+            <Button fx:id="l_btExcluir" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Excluir" />
+            <Button fx:id="l_btPrevious" layoutX="15.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.0" stylesheets="@../../css/button.css" text="&lt;" />
+            <Button fx:id="l_btNext" layoutX="68.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="47.0" stylesheets="@../../css/button.css" text="&gt;" />
+            <Button fx:id="l_btGravar" layoutX="12.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Gravar" />
+            <Button fx:id="l_btRetornar" layoutX="12.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Retornar" />
+            <Button fx:id="l_btPrint" disable="true" layoutX="14.0" layoutY="464.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Imprimir" />
+            <Button fx:id="l_btConcretizar" layoutX="16.0" layoutY="500.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Concretizar" />
+            <Button fx:id="l_btAlterar" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Alterar" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

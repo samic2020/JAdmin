@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DirfProp" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d2ec506-3029-47e5-8181-5a6db28c8186">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="ano" class="java.lang.String"/>
+	<field name="p_registro" class="java.lang.String"/>
+	<field name="p_nome" class="java.lang.String"/>
+	<field name="p_cpfcnpj" class="java.lang.String"/>
+	<field name="p_urbrural" class="java.lang.String"/>
+	<field name="i_registro" class="java.lang.String"/>
+	<field name="i_endereco" class="java.lang.String"/>
+	<field name="i_cep" class="java.lang.String"/>
+	<field name="i_codmun" class="java.lang.String"/>
+	<field name="i_estado" class="java.lang.String"/>
+	<field name="l_registro" class="java.lang.String"/>
+	<field name="l_nome" class="java.lang.String"/>
+	<field name="l_cpfcnpj" class="java.lang.String"/>
+	<field name="l_contrato" class="java.lang.String"/>
+	<field name="jan_al_nm" class="java.lang.String"/>
+	<field name="jan_al_vr" class="java.math.BigDecimal"/>
+	<field name="jan_cm_nm" class="java.lang.String"/>
+	<field name="jan_cm_vr" class="java.math.BigDecimal"/>
+	<field name="jan_ir_nm" class="java.lang.String"/>
+	<field name="jan_ir_vr" class="java.math.BigDecimal"/>
+	<field name="jan_m_dc" class="java.math.BigDecimal"/>
+	<field name="jan_m_df" class="java.math.BigDecimal"/>
+	<field name="jan_mu_nm" class="java.lang.String"/>
+	<field name="jan_mu_vr" class="java.math.BigDecimal"/>
+	<field name="jan_ju_nm" class="java.lang.String"/>
+	<field name="jan_ju_vr" class="java.math.BigDecimal"/>
+	<field name="jan_co_nm" class="java.lang.String"/>
+	<field name="jan_co_vr" class="java.math.BigDecimal"/>
+	<field name="jan_ep_nm" class="java.lang.String"/>
+	<field name="jan_ep_vr" class="java.math.BigDecimal"/>
+	<field name="jan_m_tx" class="java.math.BigDecimal"/>
+	<field name="jan_m_01" class="java.math.BigDecimal"/>
+	<field name="jan_m_02" class="java.math.BigDecimal"/>
+	<field name="jan_m_03" class="java.math.BigDecimal"/>
+	<field name="fev_al_nm" class="java.lang.String"/>
+	<field name="fev_al_vr" class="java.math.BigDecimal"/>
+	<field name="fev_cm_nm" class="java.lang.String"/>
+	<field name="fev_cm_vr" class="java.math.BigDecimal"/>
+	<field name="fev_ir_nm" class="java.lang.String"/>
+	<field name="fev_ir_vr" class="java.math.BigDecimal"/>
+	<field name="fev_m_dc" class="java.math.BigDecimal"/>
+	<field name="fev_m_df" class="java.math.BigDecimal"/>
+	<field name="fev_mu_nm" class="java.lang.String"/>
+	<field name="fev_mu_vr" class="java.math.BigDecimal"/>
+	<field name="fev_ju_nm" class="java.lang.String"/>
+	<field name="fev_ju_vr" class="java.math.BigDecimal"/>
+	<field name="fev_co_nm" class="java.lang.String"/>
+	<field name="fev_co_vr" class="java.math.BigDecimal"/>
+	<field name="fev_ep_nm" class="java.lang.String"/>
+	<field name="fev_ep_vr" class="java.math.BigDecimal"/>
+	<field name="fev_m_tx" class="java.math.BigDecimal"/>
+	<field name="fev_m_01" class="java.math.BigDecimal"/>
+	<field name="fev_m_02" class="java.math.BigDecimal"/>
+	<field name="fev_m_03" class="java.math.BigDecimal"/>
+	<field name="mar_al_nm" class="java.lang.String"/>
+	<field name="mar_al_vr" class="java.math.BigDecimal"/>
+	<field name="mar_cm_nm" class="java.lang.String"/>
+	<field name="mar_cm_vr" class="java.math.BigDecimal"/>
+	<field name="mar_ir_nm" class="java.lang.String"/>
+	<field name="mar_ir_vr" class="java.math.BigDecimal"/>
+	<field name="mar_m_dc" class="java.math.BigDecimal"/>
+	<field name="mar_m_df" class="java.math.BigDecimal"/>
+	<field name="mar_mu_nm" class="java.lang.String"/>
+	<field name="mar_mu_vr" class="java.math.BigDecimal"/>
+	<field name="mar_ju_nm" class="java.lang.String"/>
+	<field name="mar_ju_vr" class="java.math.BigDecimal"/>
+	<field name="mar_co_nm" class="java.lang.String"/>
+	<field name="mar_co_vr" class="java.math.BigDecimal"/>
+	<field name="mar_ep_nm" class="java.lang.String"/>
+	<field name="mar_ep_vr" class="java.math.BigDecimal"/>
+	<field name="mar_m_tx" class="java.math.BigDecimal"/>
+	<field name="mar_m_01" class="java.math.BigDecimal"/>
+	<field name="mar_m_02" class="java.math.BigDecimal"/>
+	<field name="mar_m_03" class="java.math.BigDecimal"/>
+	<field name="abr_al_nm" class="java.lang.String"/>
+	<field name="abr_al_vr" class="java.math.BigDecimal"/>
+	<field name="abr_cm_nm" class="java.lang.String"/>
+	<field name="abr_cm_vr" class="java.math.BigDecimal"/>
+	<field name="abr_ir_nm" class="java.lang.String"/>
+	<field name="abr_ir_vr" class="java.math.BigDecimal"/>
+	<field name="abr_m_dc" class="java.math.BigDecimal"/>
+	<field name="abr_m_df" class="java.math.BigDecimal"/>
+	<field name="abr_mu_nm" class="java.lang.String"/>
+	<field name="abr_mu_vr" class="java.math.BigDecimal"/>
+	<field name="abr_ju_nm" class="java.lang.String"/>
+	<field name="abr_ju_vr" class="java.math.BigDecimal"/>
+	<field name="abr_co_nm" class="java.lang.String"/>
+	<field name="abr_co_vr" class="java.math.BigDecimal"/>
+	<field name="abr_ep_nm" class="java.lang.String"/>
+	<field name="abr_ep_vr" class="java.math.BigDecimal"/>
+	<field name="abr_m_tx" class="java.math.BigDecimal"/>
+	<field name="abr_m_01" class="java.math.BigDecimal"/>
+	<field name="abr_m_02" class="java.math.BigDecimal"/>
+	<field name="abr_m_03" class="java.math.BigDecimal"/>
+	<field name="mai_al_nm" class="java.lang.String"/>
+	<field name="mai_al_vr" class="java.math.BigDecimal"/>
+	<field name="mai_cm_nm" class="java.lang.String"/>
+	<field name="mai_cm_vr" class="java.math.BigDecimal"/>
+	<field name="mai_ir_nm" class="java.lang.String"/>
+	<field name="mai_ir_vr" class="java.math.BigDecimal"/>
+	<field name="mai_m_dc" class="java.math.BigDecimal"/>
+	<field name="mai_m_df" class="java.math.BigDecimal"/>
+	<field name="mai_mu_nm" class="java.lang.String"/>
+	<field name="mai_mu_vr" class="java.math.BigDecimal"/>
+	<field name="mai_ju_nm" class="java.lang.String"/>
+	<field name="mai_ju_vr" class="java.math.BigDecimal"/>
+	<field name="mai_co_nm" class="java.lang.String"/>
+	<field name="mai_co_vr" class="java.math.BigDecimal"/>
+	<field name="mai_ep_nm" class="java.lang.String"/>
+	<field name="mai_ep_vr" class="java.math.BigDecimal"/>
+	<field name="mai_m_tx" class="java.math.BigDecimal"/>
+	<field name="mai_m_01" class="java.math.BigDecimal"/>
+	<field name="mai_m_02" class="java.math.BigDecimal"/>
+	<field name="mai_m_03" class="java.math.BigDecimal"/>
+	<field name="jun_al_nm" class="java.lang.String"/>
+	<field name="jun_al_vr" class="java.math.BigDecimal"/>
+	<field name="jun_cm_nm" class="java.lang.String"/>
+	<field name="jun_cm_vr" class="java.math.BigDecimal"/>
+	<field name="jun_ir_nm" class="java.lang.String"/>
+	<field name="jun_ir_vr" class="java.math.BigDecimal"/>
+	<field name="jun_m_dc" class="java.math.BigDecimal"/>
+	<field name="jun_m_df" class="java.math.BigDecimal"/>
+	<field name="jun_mu_nm" class="java.lang.String"/>
+	<field name="jun_mu_vr" class="java.math.BigDecimal"/>
+	<field name="jun_ju_nm" class="java.lang.String"/>
+	<field name="jun_ju_vr" class="java.math.BigDecimal"/>
+	<field name="jun_co_nm" class="java.lang.String"/>
+	<field name="jun_co_vr" class="java.math.BigDecimal"/>
+	<field name="jun_ep_nm" class="java.lang.String"/>
+	<field name="jun_ep_vr" class="java.math.BigDecimal"/>
+	<field name="jun_m_tx" class="java.math.BigDecimal"/>
+	<field name="jun_m_01" class="java.math.BigDecimal"/>
+	<field name="jun_m_02" class="java.math.BigDecimal"/>
+	<field name="jun_m_03" class="java.math.BigDecimal"/>
+	<field name="jul_al_nm" class="java.lang.String"/>
+	<field name="jul_al_vr" class="java.math.BigDecimal"/>
+	<field name="jul_cm_nm" class="java.lang.String"/>
+	<field name="jul_cm_vr" class="java.math.BigDecimal"/>
+	<field name="jul_ir_nm" class="java.lang.String"/>
+	<field name="jul_ir_vr" class="java.math.BigDecimal"/>
+	<field name="jul_m_dc" class="java.math.BigDecimal"/>
+	<field name="jul_m_df" class="java.math.BigDecimal"/>
+	<field name="jul_mu_nm" class="java.lang.String"/>
+	<field name="jul_mu_vr" class="java.math.BigDecimal"/>
+	<field name="jul_ju_nm" class="java.lang.String"/>
+	<field name="jul_ju_vr" class="java.math.BigDecimal"/>
+	<field name="jul_co_nm" class="java.lang.String"/>
+	<field name="jul_co_vr" class="java.math.BigDecimal"/>
+	<field name="jul_ep_nm" class="java.lang.String"/>
+	<field name="jul_ep_vr" class="java.math.BigDecimal"/>
+	<field name="jul_m_tx" class="java.math.BigDecimal"/>
+	<field name="jul_m_01" class="java.math.BigDecimal"/>
+	<field name="jul_m_02" class="java.math.BigDecimal"/>
+	<field name="jul_m_03" class="java.math.BigDecimal"/>
+	<field name="ago_al_nm" class="java.lang.String"/>
+	<field name="ago_al_vr" class="java.math.BigDecimal"/>
+	<field name="ago_cm_nm" class="java.lang.String"/>
+	<field name="ago_cm_vr" class="java.math.BigDecimal"/>
+	<field name="ago_ir_nm" class="java.lang.String"/>
+	<field name="ago_ir_vr" class="java.math.BigDecimal"/>
+	<field name="ago_m_dc" class="java.math.BigDecimal"/>
+	<field name="ago_m_df" class="java.math.BigDecimal"/>
+	<field name="ago_mu_nm" class="java.lang.String"/>
+	<field name="ago_mu_vr" class="java.math.BigDecimal"/>
+	<field name="ago_ju_nm" class="java.lang.String"/>
+	<field name="ago_ju_vr" class="java.math.BigDecimal"/>
+	<field name="ago_co_nm" class="java.lang.String"/>
+	<field name="ago_co_vr" class="java.math.BigDecimal"/>
+	<field name="ago_ep_nm" class="java.lang.String"/>
+	<field name="ago_ep_vr" class="java.math.BigDecimal"/>
+	<field name="ago_m_tx" class="java.math.BigDecimal"/>
+	<field name="ago_m_01" class="java.math.BigDecimal"/>
+	<field name="ago_m_02" class="java.math.BigDecimal"/>
+	<field name="ago_m_03" class="java.math.BigDecimal"/>
+	<field name="set_al_nm" class="java.lang.String"/>
+	<field name="set_al_vr" class="java.math.BigDecimal"/>
+	<field name="set_cm_nm" class="java.lang.String"/>
+	<field name="set_cm_vr" class="java.math.BigDecimal"/>
+	<field name="set_ir_nm" class="java.lang.String"/>
+	<field name="set_ir_vr" class="java.math.BigDecimal"/>
+	<field name="set_m_dc" class="java.math.BigDecimal"/>
+	<field name="set_m_df" class="java.math.BigDecimal"/>
+	<field name="set_mu_nm" class="java.lang.String"/>
+	<field name="set_mu_vr" class="java.math.BigDecimal"/>
+	<field name="set_ju_nm" class="java.lang.String"/>
+	<field name="set_ju_vr" class="java.math.BigDecimal"/>
+	<field name="set_co_nm" class="java.lang.String"/>
+	<field name="set_co_vr" class="java.math.BigDecimal"/>
+	<field name="set_ep_nm" class="java.lang.String"/>
+	<field name="set_ep_vr" class="java.math.BigDecimal"/>
+	<field name="set_m_tx" class="java.math.BigDecimal"/>
+	<field name="set_m_01" class="java.math.BigDecimal"/>
+	<field name="set_m_02" class="java.math.BigDecimal"/>
+	<field name="set_m_03" class="java.math.BigDecimal"/>
+	<field name="out_al_nm" class="java.lang.String"/>
+	<field name="out_al_vr" class="java.math.BigDecimal"/>
+	<field name="out_cm_nm" class="java.lang.String"/>
+	<field name="out_cm_vr" class="java.math.BigDecimal"/>
+	<field name="out_ir_nm" class="java.lang.String"/>
+	<field name="out_ir_vr" class="java.math.BigDecimal"/>
+	<field name="out_m_dc" class="java.math.BigDecimal"/>
+	<field name="out_m_df" class="java.math.BigDecimal"/>
+	<field name="out_mu_nm" class="java.lang.String"/>
+	<field name="out_mu_vr" class="java.math.BigDecimal"/>
+	<field name="out_ju_nm" class="java.lang.String"/>
+	<field name="out_ju_vr" class="java.math.BigDecimal"/>
+	<field name="out_co_nm" class="java.lang.String"/>
+	<field name="out_co_vr" class="java.math.BigDecimal"/>
+	<field name="out_ep_nm" class="java.lang.String"/>
+	<field name="out_ep_vr" class="java.math.BigDecimal"/>
+	<field name="out_m_tx" class="java.math.BigDecimal"/>
+	<field name="out_m_01" class="java.math.BigDecimal"/>
+	<field name="out_m_02" class="java.math.BigDecimal"/>
+	<field name="out_m_03" class="java.math.BigDecimal"/>
+	<field name="nov_al_nm" class="java.lang.String"/>
+	<field name="nov_al_vr" class="java.math.BigDecimal"/>
+	<field name="nov_cm_nm" class="java.lang.String"/>
+	<field name="nov_cm_vr" class="java.math.BigDecimal"/>
+	<field name="nov_ir_nm" class="java.lang.String"/>
+	<field name="nov_ir_vr" class="java.math.BigDecimal"/>
+	<field name="nov_m_dc" class="java.math.BigDecimal"/>
+	<field name="nov_m_df" class="java.math.BigDecimal"/>
+	<field name="nov_mu_nm" class="java.lang.String"/>
+	<field name="nov_mu_vr" class="java.math.BigDecimal"/>
+	<field name="nov_ju_nm" class="java.lang.String"/>
+	<field name="nov_ju_vr" class="java.math.BigDecimal"/>
+	<field name="nov_co_nm" class="java.lang.String"/>
+	<field name="nov_co_vr" class="java.math.BigDecimal"/>
+	<field name="nov_ep_nm" class="java.lang.String"/>
+	<field name="nov_ep_vr" class="java.math.BigDecimal"/>
+	<field name="nov_m_tx" class="java.math.BigDecimal"/>
+	<field name="nov_m_01" class="java.math.BigDecimal"/>
+	<field name="nov_m_02" class="java.math.BigDecimal"/>
+	<field name="nov_m_03" class="java.math.BigDecimal"/>
+	<field name="dez_al_nm" class="java.lang.String"/>
+	<field name="dez_al_vr" class="java.math.BigDecimal"/>
+	<field name="dez_cm_nm" class="java.lang.String"/>
+	<field name="dez_cm_vr" class="java.math.BigDecimal"/>
+	<field name="dez_ir_nm" class="java.lang.String"/>
+	<field name="dez_ir_vr" class="java.math.BigDecimal"/>
+	<field name="dez_m_dc" class="java.math.BigDecimal"/>
+	<field name="dez_m_df" class="java.math.BigDecimal"/>
+	<field name="dez_mu_nm" class="java.lang.String"/>
+	<field name="dez_mu_vr" class="java.math.BigDecimal"/>
+	<field name="dez_ju_nm" class="java.lang.String"/>
+	<field name="dez_ju_vr" class="java.math.BigDecimal"/>
+	<field name="dez_co_nm" class="java.lang.String"/>
+	<field name="dez_co_vr" class="java.math.BigDecimal"/>
+	<field name="dez_ep_nm" class="java.lang.String"/>
+	<field name="dez_ep_vr" class="java.math.BigDecimal"/>
+	<field name="dez_m_tx" class="java.math.BigDecimal"/>
+	<field name="dez_m_01" class="java.math.BigDecimal"/>
+	<field name="dez_m_02" class="java.math.BigDecimal"/>
+	<field name="dez_m_03" class="java.math.BigDecimal"/>
+	<variable name="totAL" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_al_vr}.add($F{fev_al_vr}).add($F{mar_al_vr}).add($F{abr_al_vr}).add($F{mai_al_vr}).add($F{jun_al_vr}).add($F{jul_al_vr}).add($F{ago_al_vr}).add($F{set_al_vr}).add($F{out_al_vr}).add($F{nov_al_vr}).add($F{dez_al_vr})]]></variableExpression>
+	</variable>
+	<variable name="totDF" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_m_df}.add($F{fev_m_df}).add($F{mar_m_df}).add($F{abr_m_df}).add($F{mai_m_df}).add($F{jun_m_df}).add($F{jul_m_df}).add($F{ago_m_df}).add($F{set_m_df}).add($F{out_m_df}).add($F{nov_m_df}).add($F{dez_m_df})]]></variableExpression>
+	</variable>
+	<variable name="totDC" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_m_dc}.add($F{fev_m_dc}).add($F{mar_m_dc}).add($F{abr_m_dc}).add($F{mai_m_dc}).add($F{jun_m_dc}).add($F{jul_m_dc}).add($F{ago_m_dc}).add($F{nov_m_dc}).add($F{dez_m_dc})]]></variableExpression>
+	</variable>
+	<variable name="totMU" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_mu_vr}.add($F{fev_mu_vr}).add($F{mar_mu_vr}).add($F{abr_mu_vr}).add($F{mai_mu_vr}).add($F{jun_mu_vr}).add($F{jul_mu_vr}).add($F{ago_mu_vr}).add($F{set_mu_vr}).add($F{out_mu_vr}).add($F{nov_mu_vr}).add($F{dez_mu_vr})]]></variableExpression>
+	</variable>
+	<variable name="totJU" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_ju_vr}.add($F{fev_ju_vr}).add($F{mar_ju_vr}).add($F{abr_ju_vr}).add($F{mai_ju_vr}).add($F{jun_ju_vr}).add($F{jul_ju_vr}).add($F{ago_ju_vr}).add($F{set_ju_vr}).add($F{out_ju_vr}).add($F{nov_ju_vr}).add($F{dez_ju_vr})]]></variableExpression>
+	</variable>
+	<variable name="totCO" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_co_vr}.add($F{fev_co_vr}).add($F{mar_co_vr}).add($F{abr_co_vr}).add($F{mai_co_vr}).add($F{jun_co_vr}).add($F{jul_co_vr}).add($F{ago_co_vr}).add($F{set_co_vr}).add($F{out_co_vr}).add($F{nov_co_vr}).add($F{dez_co_vr})]]></variableExpression>
+	</variable>
+	<variable name="totIR" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_ir_vr}.add($F{fev_ir_vr}).add($F{mar_ir_vr}).add($F{abr_ir_vr}).add($F{mai_ir_vr}).add($F{jun_ir_vr}).add($F{jul_ir_vr}).add($F{ago_ir_vr}).add($F{set_ir_vr}).add($F{out_ir_vr}).add($F{nov_ir_vr}).add($F{dez_ir_vr})]]></variableExpression>
+	</variable>
+	<variable name="totCM" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_cm_vr}.add($F{fev_cm_vr}).add($F{mar_cm_vr}).add($F{abr_cm_vr}).add($F{mai_cm_vr}).add($F{jun_cm_vr}).add($F{jul_cm_vr}).add($F{ago_cm_vr}).add($F{set_cm_vr}).add($F{out_cm_vr}).add($F{nov_cm_vr}).add($F{dez_cm_vr})]]></variableExpression>
+	</variable>
+	<variable name="totTX" class="java.math.BigDecimal">
+		<variableExpression><![CDATA[$F{jan_m_tx}.add($F{fev_m_tx}).add($F{mar_m_tx}).add($F{abr_m_tx}).add($F{mai_m_tx}).add($F{jun_m_tx}).add($F{jul_m_tx}).add($F{ago_m_tx}).add($F{set_m_tx}).add($F{out_m_tx}).add($F{nov_m_tx}).add($F{dez_m_tx})]]></variableExpression>
+	</variable>
+	<group name="Group1" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{p_nome}]]></groupExpression>
+		<groupHeader>
+			<band height="38">
+				<textField>
+					<reportElement x="65" y="0" width="50" height="14" uuid="f9dcafb0-52fe-4eac-a2f5-cd6e3eecb5b3"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{p_registro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="65" height="14" uuid="7049e1e9-faab-49d9-8c6c-08868a0f33e5"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Proprietário:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="118" y="0" width="32" height="14" uuid="cb2fd7e6-f4e0-409c-9388-15dba2fab3b1"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nome:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="150" y="0" width="400" height="14" uuid="d270a392-75e1-4c47-a491-df2c067b557c"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{p_nome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="14" width="139" height="14" uuid="bae608e1-5a46-4ce9-a6ba-f24d8e09ebbb"/>
+					<textFieldExpression><![CDATA[$F{p_cpfcnpj}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="310" y="14" width="50" height="14" uuid="82a51dcb-5664-4725-8587-c3285fe6c997"/>
+					<textFieldExpression><![CDATA[$F{p_urbrural}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="14" width="50" height="14" uuid="7e1baa74-c53b-4475-b007-14ef1354b79c"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cpf/Cnpj:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="14" width="69" height="14" uuid="4a79c9ec-bb60-414d-8cab-54adc8b543ad"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Urbano/Rural:]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="800" height="20" uuid="246dc182-2066-4c27-9352-379b37db4fb3"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Rendimentos para Lançamento do I.R.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="20" width="800" height="23" uuid="40c3e863-f608-4b74-96fb-358d4c1b776a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ano Base: " + $F{ano}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="43" width="800" height="1" uuid="62291c53-38f0-4f91-92d3-ab4e0062722a"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="305" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="0" width="70" height="14" uuid="ba814b26-5a12-40a0-956a-d0750291955c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{i_registro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="14" uuid="cdc55767-b1e5-4eb7-8896-4624a82a0e4b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Imóvel:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="0" width="374" height="14" uuid="7f7378f7-f083-47b3-bcfa-7972da1514ba"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{i_endereco}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="0" width="50" height="14" uuid="40598c21-f069-4895-856e-251c069c4d2e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Endereco:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="14" width="80" height="14" uuid="976a61af-19e1-4d53-ac47-3b63c95d2104"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{i_cep}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="14" width="30" height="14" uuid="7ddadf16-a81b-477b-8be3-d5d3bb8b422c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Cep:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="14" width="80" height="14" uuid="44fd2d25-a57d-413f-871a-0765dc4a68f9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{i_codmun}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="14" width="50" height="14" uuid="31f9b71f-282e-4d8b-a546-ef4843428971"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Cod.Mun.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="309" y="14" width="61" height="14" uuid="d2ee37f2-912f-4e75-b85e-fd5270c6e297"/>
+				<textFieldExpression><![CDATA[$F{i_estado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="270" y="14" width="39" height="14" uuid="d0547ff8-9936-426d-a182-79309999e1fc"/>
+				<text><![CDATA[Estado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="40" width="60" height="14" uuid="1e1d5db4-8330-403a-86c8-77aa58df3979"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{l_registro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="50" height="14" uuid="651a62ec-7284-47ee-bc37-dd6c031fef3e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Locatário:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="40" width="394" height="14" uuid="49363d13-dd21-424c-b426-00e8df250baa"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{l_nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="120" y="40" width="30" height="14" uuid="32795268-2c34-47b3-b46d-091f19a094d2"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="54" width="140" height="14" uuid="5b796c4e-6c9a-4337-9b31-47ffa23c6e24"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{l_cpfcnpj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="54" width="50" height="14" uuid="d1ca8ab6-7152-4997-9aa3-7a9db064ce76"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Cpf/Cnpj:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="54" width="84" height="14" uuid="b6921fdd-3c04-4921-bd68-3f7c685ae426"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{l_contrato}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="378" y="54" width="82" height="14" uuid="2f30f4f6-b264-4b60-afc6-4c5c38b5ad47"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data do Contrato:]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="420" y="80" width="60" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="9257edfe-3905-4ac8-a53a-fb49af733c7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_co_nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="480" y="80" width="70" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="fb75dd43-6ce7-4982-9709-05c083a5f906">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_ir_nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="550" y="80" width="90" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="b557b1b8-2443-4b8f-9bad-e041742c404c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_cm_nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="360" y="80" width="60" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="8d2bb317-0882-407a-8e55-3179da0653aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_ju_nm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="300" y="80" width="60" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="c1576d1d-ba25-4b59-9861-9ea5582d88dc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_mu_nm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="80" width="80" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="a36b3e55-140d-4049-b0ba-356965731dec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desconto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="140" y="80" width="80" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="2917ae12-f701-4a26-9dd7-5b7389c6f4ee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Diferença]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="60" y="80" width="80" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="943c99bf-e6b5-4860-a415-bb3d099a8735">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jan_al_nm}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="80" width="60" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="46a411f3-eff5-42c5-b8ab-f580aa6ffd83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mês]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="60" height="14" uuid="4c7961b2-409d-4855-ae22-aa2bac479ff3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Janeiro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="100" width="80" height="14" uuid="beca00b1-d60b-4b41-a97e-c2ed197f110f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="100" width="80" height="14" uuid="9ac7debf-cfaf-4cd5-879b-be73a1e550d2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="100" width="80" height="14" uuid="c6edfe79-e6a6-459c-84c4-ef9f4e48e0a6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="100" width="60" height="14" uuid="581166da-9fc3-43de-8f7b-6193fe8ce4ce"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="100" width="60" height="14" uuid="d2945d6b-0b8f-4cc6-8c30-e36e94c59dcb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="100" width="60" height="14" uuid="24e8a6a9-5bef-4d69-816d-e2f8434464c2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="100" width="70" height="14" uuid="e7963b1f-25fc-481f-af5a-f34443d72feb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="114" width="60" height="14" uuid="0283c6e8-3499-410d-8882-a966a4984dc5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Fevereiro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="114" width="80" height="14" uuid="d9c38dfb-9afa-43d4-a9c6-7e3a7581b3ea"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="114" width="80" height="14" uuid="4e3557ed-b242-486b-b529-c9b4773fdcda"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="114" width="80" height="14" uuid="5968b09f-d08e-49dc-8dff-77e3742a7880"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="114" width="60" height="14" uuid="fdddca25-bcee-44de-b0c8-f19e0b0b9247"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="114" width="60" height="14" uuid="1a2ffbf1-3c37-40e3-a05d-db10d78de685"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="114" width="60" height="14" uuid="6db6d9c9-3bc0-4f67-97aa-99741150dffb"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="114" width="70" height="14" uuid="e899d00b-330c-4610-a750-2ef388a2cc01"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="128" width="60" height="14" uuid="ceadf215-69a9-4b45-b017-6e6e64eb5b91">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Março]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="128" width="80" height="14" uuid="9f5150bf-f9cb-43ae-b46b-f8e5d138999b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="128" width="80" height="14" uuid="dd5b404b-50de-42bc-ac61-318535c5b094"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="128" width="80" height="14" uuid="326f8649-963f-4524-b098-e82892cd0a07"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="128" width="60" height="14" uuid="af8638de-3b80-44ac-ae8f-908dfbfc2b47"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="128" width="60" height="14" uuid="35518e46-ebe9-43d5-8c2e-67bbcfd32e0a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="128" width="60" height="14" uuid="08730028-d8e7-45a6-a2d4-b0620125cde0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="128" width="70" height="14" uuid="8646ed22-1bc7-4df3-8919-7c1081d4dc72"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="142" width="60" height="14" uuid="c0042f67-e765-48d5-9c6b-000bdfecc355">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Abril]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="142" width="80" height="14" uuid="307156d1-1af6-47e7-86b6-360327e5248f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="142" width="80" height="14" uuid="39ec6b49-9708-48de-8453-93eb9b122aa2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="142" width="80" height="14" uuid="f12de4f7-52e0-478e-927a-70a2bea40cdf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="142" width="60" height="14" uuid="92f32ef5-f45b-4b05-9ce2-ed97ef1f65a5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="142" width="60" height="14" uuid="9e2a6186-65ee-43e8-a920-518c07685fd4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="142" width="60" height="14" uuid="2291205b-3b80-4c05-a421-2940e3a91b2f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="142" width="70" height="14" uuid="24134677-50e9-4fc9-b7cc-acd9e7daf643"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="156" width="60" height="14" uuid="5147a9e2-6bdf-44f7-8b68-120e6d458a57">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Maio]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="156" width="80" height="14" uuid="c6f6447d-dae3-449d-b564-4e74e4d16bda"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="156" width="80" height="14" uuid="239c3341-9e64-404a-9a02-f8ce7c732cc9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="156" width="80" height="14" uuid="c15e739c-ebf8-4033-a01d-8654ca45c732"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="156" width="60" height="14" uuid="08360859-a030-42cb-bf41-ca07742ca204"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="156" width="60" height="14" uuid="5573aaaf-59be-4b7f-a9f6-740c5865d5c2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="156" width="60" height="14" uuid="01aa68ef-cad5-4256-8ae8-5f11f8cc2d61"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="156" width="70" height="14" uuid="34419e4a-c058-4745-82aa-c9676c966c73"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="170" width="60" height="14" uuid="88e923b6-e2b9-4bb9-a854-fd879cc94619">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Junho]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="170" width="80" height="14" uuid="c05fc25f-646c-418b-a682-eeb66ee99acc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="170" width="80" height="14" uuid="c7759648-0fa0-45df-8bdd-e47d9b61d909"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="170" width="80" height="14" uuid="07114e17-6f84-4667-800b-4a473081d6ce"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="170" width="60" height="14" uuid="08ee8bfd-0e96-4841-8ec7-ae14579394e0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="170" width="60" height="14" uuid="a556d86b-ad7b-4f9a-a9f2-fd917f6bb896"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="170" width="60" height="14" uuid="cf561700-3e19-4645-8ac6-b494cf63e7bc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="170" width="70" height="14" uuid="844ea329-83f7-40a4-8431-0a624ded87ff"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="184" width="60" height="14" uuid="3e902dbf-2795-4b61-ae17-ed47b7834674">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Julho]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="184" width="80" height="14" uuid="7b067cba-18e8-4028-8504-4205867c6681"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="184" width="80" height="14" uuid="a3e2e702-2a88-4431-8b6f-2d6a105ce364"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="184" width="80" height="14" uuid="7d088676-246f-4a5b-b80d-1e2f703dd77a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="184" width="60" height="14" uuid="6f0b2bc7-c27e-4466-9080-74e24a14fb2d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="184" width="60" height="14" uuid="7bf5ad2b-6097-4f4e-91e9-900894ba088e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="184" width="60" height="14" uuid="756309b0-29ef-4e1a-8b75-015edf9b9c91"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="184" width="70" height="14" uuid="3b5cf96a-a085-4ae0-978d-ab407b3ddc13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="198" width="60" height="14" uuid="e16061a5-9d54-435e-b1c7-94aba791e8aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Agosto]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="198" width="80" height="14" uuid="abf2f0f5-dc85-4626-a222-d7d8d8ad8ea3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="198" width="80" height="14" uuid="ad6974bc-8540-4cb9-ac70-8e4a856e41b3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="198" width="80" height="14" uuid="59156a4c-0004-42c4-9a42-06772fe16d4e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="198" width="60" height="14" uuid="13c2a7ef-adde-4557-9bda-361705c0ddf4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="198" width="60" height="14" uuid="08a9bee3-0364-47a1-83be-100983f429cf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="198" width="60" height="14" uuid="3e4b540a-13c6-4007-ac0b-9b435a632735"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="198" width="70" height="14" uuid="3459e987-fbe0-4932-891d-387b8a57acf7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="212" width="60" height="14" uuid="c27cd48d-2bfa-4b6b-bdd4-d431b25eb858">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Setembro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="212" width="80" height="14" uuid="15f39b03-8b12-4c02-bc09-361043635007"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="212" width="80" height="14" uuid="0a0a8dde-0f0f-4cae-b5c9-2515922cd4ad"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="212" width="80" height="14" uuid="fa6bed12-efb5-4176-8e14-3e3ef3e917c2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="212" width="60" height="14" uuid="25e84bb7-94c7-45e2-b719-7685a8d32502"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="212" width="60" height="14" uuid="bf805a14-c62f-4099-9610-a436cdc78fff"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="212" width="60" height="14" uuid="ac20afe0-7ced-42b9-a314-0c6a2001debf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="212" width="70" height="14" uuid="10439b29-1df0-49d2-a46e-180c4d98290a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="226" width="60" height="14" uuid="f5010abf-7730-44ae-a3ae-4abf8a449cdb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Outubro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="226" width="80" height="14" uuid="f58ed754-b3e0-440a-af3f-28a69584edd3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="226" width="80" height="14" uuid="df5c8b70-7f12-4113-b117-6be673e3c925"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="226" width="80" height="14" uuid="a1a750c6-61f8-449e-bd41-59b2cdb2efd8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="226" width="60" height="14" uuid="a6fdbd61-d8b5-4c43-851e-553ade3527de"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="226" width="60" height="14" uuid="76d64cf1-298f-4c97-a35a-43a988271fb5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="226" width="60" height="14" uuid="807b6ddb-0626-4ff4-ad7f-747946804587"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="226" width="70" height="14" uuid="12affe75-597d-4c05-bd34-17ba02cf3ffc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="240" width="60" height="14" uuid="53f90bf3-c1e7-4139-beaa-8fb504c1852e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Novembro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="240" width="80" height="14" uuid="beebb67e-c6b3-4be1-b348-d07b01c25156"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="240" width="80" height="14" uuid="f589bf2f-96ee-4948-a9e8-95dbf61503da"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="240" width="80" height="14" uuid="83a3949f-c160-4b23-9267-f6cb4ea82103"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="240" width="60" height="14" uuid="995b280d-1607-4356-b512-369301ada6b3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="240" width="60" height="14" uuid="800be747-2ae3-4f73-a7b7-2ec8b4f3abc6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="240" width="60" height="14" uuid="2985c9b5-8018-4941-a032-73cddb22f7c5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="240" width="70" height="14" uuid="421f2066-c531-447f-91f1-5b9bba301a11"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="254" width="60" height="14" uuid="c30fde21-eb03-4dff-9c65-e18ccb80383d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Dezembro]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="254" width="80" height="14" uuid="4004adc1-dcf3-4a5b-9399-3f0b8c5bf5c5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_al_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="254" width="80" height="14" uuid="d907b779-eb0c-48ab-b111-5f1c57e08a7d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_m_df}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="254" width="80" height="14" uuid="28b82262-1777-485c-93db-5ab1ed2dd467"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_m_dc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="300" y="254" width="60" height="14" uuid="13a87377-67f4-4b44-bf88-d4e99e8bf9e6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_mu_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="254" width="60" height="14" uuid="fa1663c0-0e86-4215-ae77-ec19b0239675"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_ju_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="254" width="60" height="14" uuid="4da4f0fe-8bab-4d89-bd7b-365dc6d035b1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_co_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="254" width="70" height="14" uuid="91eb41b3-f4f0-4e4f-a82a-28383714887d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_ir_vr}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="268" width="60" height="14" uuid="518256e8-8e47-42d8-b869-8df32ffb8fed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Totais]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="60" y="268" width="80" height="14" uuid="8d4cd579-7231-485b-b18d-001aa32fa2df"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="140" y="268" width="80" height="14" uuid="1599d368-5d5a-41ef-8c21-984545080c19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totDF}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="220" y="268" width="81" height="14" uuid="73e74caa-292e-4c4f-850e-c96b6bee99c9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totDC}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement mode="Transparent" x="300" y="268" width="60" height="14" forecolor="#050505" uuid="648b2841-3fd4-4d80-ba3b-4a4f4f2ef633"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totMU}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="360" y="268" width="60" height="14" uuid="8f56f200-97cc-4e0c-9b8c-6a360e3e671d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totJU}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="420" y="268" width="60" height="14" uuid="888625f8-6da3-448e-aa67-ba870ea0bfd3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totCO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="480" y="268" width="70" height="13" uuid="20b42d25-b7cf-4fd9-b569-f2d0bf8ab793"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totIR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="100" width="90" height="14" uuid="ce015ac3-9f09-42f1-8edf-43cc673089ab"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="114" width="90" height="14" uuid="12b2bafc-c570-4905-8411-cfb04e457f3b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="128" width="90" height="14" uuid="166a8c4b-d70f-4e8c-9bed-7a04d7f8c2a3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="142" width="90" height="14" uuid="3e9e9a17-c54b-4f2f-ad34-ce55224ea1e9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="156" width="90" height="14" uuid="dbe328f2-20f4-41c2-a6d0-67bddbf8acf0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="170" width="90" height="14" uuid="0bd08b5a-2c1c-4d99-8c75-4ee243457514"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="184" width="90" height="14" uuid="549ecd18-f705-4372-aece-dd37ade5d987"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="200" width="90" height="14" uuid="0cc01090-57ca-446a-bff5-ed503432a217"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="214" width="90" height="14" uuid="e39d0a42-f414-4fa9-9e3d-3e1a937d3f61"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="230" width="90" height="14" uuid="66aa3303-cac2-4d77-9771-1a06ef9a47fa"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="240" width="90" height="14" uuid="9f44fa77-fd3d-4ca7-a74f-14b07e729b47"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="254" width="90" height="14" uuid="c28efe7e-26d8-442e-9089-9ad1904819b6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_cm_vr}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="550" y="267" width="90" height="14" uuid="fc7939f5-d985-4610-9d04-6c317b140fa1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totCM}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="289" width="800" height="1" uuid="0e35a50e-d152-4a6b-8c25-76d9e3b454b9"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="640" y="80" width="80" height="20" forecolor="#FFFFFF" backcolor="#050505" uuid="fb566334-688f-4847-b903-59d360c7aff2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Taxas]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="100" width="80" height="14" uuid="a210b967-0eb0-451b-bc0a-dc80061df0b3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jan_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="114" width="80" height="14" uuid="e4670581-a1ae-424b-88cd-5b3df05db560"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fev_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="128" width="80" height="14" uuid="e78da002-063b-4a30-8fbb-70537578e628"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mar_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="141" width="80" height="14" uuid="23233b72-985f-4f0c-adcd-61843d837a26"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{abr_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="156" width="80" height="14" uuid="20aa926e-0e1c-4047-8602-9d5250f2a39a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mai_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="170" width="80" height="14" uuid="8085ac93-194d-4d43-b7f1-7070e64c5c1c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jun_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="184" width="80" height="14" uuid="b38a01d0-6341-4400-b9d8-2f6ebd8142f3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{jul_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="198" width="80" height="14" uuid="10265e0b-f2be-4778-834f-a3acf9901544"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ago_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="212" width="80" height="14" uuid="17ea1b0b-fd30-4af4-9970-44fcbe93f4e3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{set_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="225" width="80" height="14" uuid="ec3af765-1415-4dbf-9b2d-2f6312583b91"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{out_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="240" width="80" height="14" uuid="8574aba2-46ac-42e2-b37b-f3e347fcebbe"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nov_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="254" width="80" height="14" uuid="eda9f83e-46ee-4369-8f69-513139dc7541"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dez_m_tx}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;(-#,##0.00)">
+				<reportElement x="640" y="268" width="80" height="14" uuid="23c7e0f8-8b2f-473c-b0f9-0a5902f58c18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totTX}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="260" y="5" width="100" height="19" uuid="c7d79a83-9b2b-40bc-a53b-bc21548ffe82"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="360" y="5" width="100" height="19" uuid="89bca40c-22fb-4e53-89c5-a8f86f99ed67"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="610" y="6" width="190" height="16" uuid="ec8c45fd-b9aa-4fa3-8a17-ac6aa4c4ddd4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="3" width="800" height="1" uuid="f33c0592-9c15-4863-a383-f71f58fa7f22"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="642.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imoveis.Visita.VisitaImovelController">
+   <children>
+      <Pane prefHeight="355.0" prefWidth="641.0" style="-fx-background-color: cornsilk;">
+         <children>
+            <Label layoutX="4.0" layoutY="10.0" text="Imovel:" />
+            <TextField fx:id="v_rgimv" layoutX="60.0" layoutY="5.0" prefHeight="26.0" prefWidth="87.0" />
+            <Label layoutX="170.0" layoutY="10.0" text="Endereço:" />
+            <TextField fx:id="v_endereco" layoutX="231.0" layoutY="5.0" prefHeight="26.0" prefWidth="400.0" />
+            <Button fx:id="v_btnSaida" disable="true" layoutX="202.0" layoutY="37.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Saida da Chave" />
+            <Button fx:id="v_btnDevolucao" disable="true" layoutX="325.0" layoutY="37.0" mnemonicParsing="false" text="Devoluçao da Chave" />
+            <Separator layoutX="4.0" layoutY="69.0" prefHeight="3.0" prefWidth="627.0" />
+            <Label layoutX="5.0" layoutY="81.0" text="Data/Hora Saida:" />
+            <Label layoutX="357.0" layoutY="81.0" text="Data/Hora Devoluçao:" />
+            <Label layoutX="5.0" layoutY="108.0" text="Nome:" />
+            <TextField fx:id="v_nome" editable="false" layoutX="55.0" layoutY="103.0" prefHeight="26.0" prefWidth="577.0" />
+            <Label layoutX="8.0" layoutY="135.0" text="Documento:" />
+            <TextField fx:id="v_documento" editable="false" layoutX="76.0" layoutY="130.0" prefHeight="26.0" prefWidth="198.0" />
+            <Label layoutX="313.0" layoutY="135.0" text="Telefone(s):" />
+            <ComboBox fx:id="v_telefones" layoutX="381.0" layoutY="130.0" prefHeight="26.0" prefWidth="198.0" />
+            <Button fx:id="v_tel_adc" disable="true" layoutX="581.0" layoutY="131.0" mnemonicParsing="false" text="+" />
+            <Button fx:id="v_tel_del" disable="true" layoutX="608.0" layoutY="131.0" mnemonicParsing="false" text="-" />
+            <Button fx:id="v_btnRetornar" layoutX="565.0" layoutY="323.0" mnemonicParsing="false" text="Retornar" />
+            <Button fx:id="v_btnGravar" disable="true" layoutX="506.0" layoutY="323.0" mnemonicParsing="false" text="Gravar" />
+            <TextField fx:id="v_dthrSaida" editable="false" layoutX="100.0" layoutY="76.0" prefHeight="26.0" prefWidth="152.0" />
+            <TextField fx:id="v_dthrDevolucao" editable="false" layoutX="479.0" layoutY="76.0" prefHeight="26.0" prefWidth="152.0" />
+            <StackPane fx:id="BorderedTitledPane" alignment="CENTER_LEFT" layoutX="2.0" layoutY="168.0" prefHeight="155.0" prefWidth="635.0" style="-fx-content-display: top; -fx-border-insets: 10 5 5 5; -fx-background-color: white; -fx-border-color: white; -fx-border-width: 0.5; -fx-background-color: cornsilk; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5;">
+               <children>
+                  <TextArea fx:id="v_historico" editable="false" prefHeight="108.0" prefWidth="602.0" />
+                  <Text fx:id="reservado" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="R E S E R V A D O" textAlignment="CENTER" visible="false" wrappingWidth="622.13671875">
+                     <font>
+                        <Font name="System Bold Italic" size="76.0" />
+                     </font>
+                  </Text>
+               </children>
+            </StackPane>
+            <Label fx:id="title" layoutX="-2.0" layoutY="229.0" style="-fx-background-color: transparent; -fx-translate-y: -67; -fx-font-size: 14; -fx-translate-x: 10;" text="Histórico" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/label.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/textarea.css" />
+      <URL value="@../../css/button.css" />
+   </stylesheets>
+</AnchorPane>

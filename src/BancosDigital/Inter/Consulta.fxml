@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneConsulta" prefHeight="546.0" prefWidth="791.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BancosDigital.Inter.Consulta">
+   <children>
+      <HBox layoutX="8.0" layoutY="14.0" prefHeight="39.0" prefWidth="768.0" spacing="5.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Label layoutX="11.0" layoutY="11.0" text="Listar:">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="jTipoListagem" layoutX="46.0" layoutY="11.0" prefHeight="25.0" prefWidth="302.0" />
+            <Label layoutX="208.0" layoutY="11.0" text="Período:">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="conDataInicial" prefHeight="25.0" prefWidth="121.0" />
+            <Label layoutX="401.0" layoutY="11.0" text="até">
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="conDataFinal" layoutX="445.0" layoutY="11.0" prefHeight="25.0" prefWidth="121.0" />
+            <Button fx:id="conBtnListar" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Listar" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox layoutX="8.0" layoutY="61.0" prefHeight="353.0" prefWidth="770.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <HBox prefHeight="3.0" prefWidth="831.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="715.0" style="-fx-background-color: lightblue;" text="Boletos no sistema do banco.">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Button fx:id="jBtnBaixar" mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Baixar no Sistema" />
+               </children>
+            </HBox>
+            <TableView fx:id="conLista" prefHeight="291.0" prefWidth="831.0">
+               <columns>
+                  <TableColumn fx:id="conLista_Emissao" prefWidth="75.0" text="Emissão" />
+                  <TableColumn fx:id="conLista_Vencimento" prefWidth="75.0" text="Vencimento" />
+                  <TableColumn fx:id="conLista_Pagamento" prefWidth="75.0" text="Pagamento" />
+                  <TableColumn fx:id="conLista_SeuNumero" prefWidth="75.0" text="SeuNumero" />
+                  <TableColumn fx:id="conLista_NossoNumero" prefWidth="75.0" text="NossoNumero" />
+                  <TableColumn fx:id="conLista_CpfCnpj" prefWidth="75.0" text="CpfCnpj" />
+                  <TableColumn fx:id="conLista_Sacado" prefWidth="75.0" text="Sacado" />
+                  <TableColumn fx:id="conLista_Multa" prefWidth="75.0" text="Multa" />
+                  <TableColumn fx:id="conLista_Juros" prefWidth="75.0" text="Juros" />
+                  <TableColumn fx:id="conLista_Valor" prefWidth="75.0" text="Valor" />
+                  <TableColumn fx:id="conLista_Situacao" prefWidth="75.0" text="Situacao" />
+                  <TableColumn fx:id="conLista_B" prefWidth="75.0" text="B" />
+               </columns>
+            </TableView>
+            <ProgressBar fx:id="jProgressListaBoletasConsulta" prefHeight="18.0" prefWidth="770.0" progress="0.0" />
+            <ProgressBar fx:id="jProgressListaBoletasConsulta1" prefHeight="18.0" prefWidth="769.0" progress="0.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="8.0" layoutY="419.0" prefHeight="113.0" prefWidth="770.0" style="-fx-background-color: ligthgray; -fx-border-color: gray; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <VBox prefHeight="111.0" prefWidth="218.0" style="-fx-background-color: lightblue;">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="[ Baixados ]" />
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Quantidade:" />
+                        <TextField fx:id="baiQuantidade" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="88.0" promptText="000" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Valor:" />
+                        <TextField fx:id="baiValor" alignment="CENTER_RIGHT" editable="false" prefHeight="25.0" prefWidth="127.0" promptText="0,00" />
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="21.0" layoutY="21.0" prefHeight="111.0" prefWidth="218.0" style="-fx-background-color: lightgreen;">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="[ Recebidos ]" />
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Quantidade:" />
+                        <TextField fx:id="recQuantidade" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="83.0" promptText="000" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Valor:" />
+                        <TextField fx:id="recValor" alignment="CENTER_RIGHT" editable="false" prefHeight="25.0" prefWidth="119.0" promptText="0,00" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="259.0" layoutY="21.0" prefHeight="111.0" prefWidth="218.0" style="-fx-background-color: red;">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="[ Expirados ]" />
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Quantidade:" />
+                        <TextField fx:id="expQuantidade" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="82.0" promptText="000" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Valor:" />
+                        <TextField fx:id="expValor" alignment="CENTER_RIGHT" editable="false" prefHeight="25.0" prefWidth="116.0" promptText="0,00" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="497.0" layoutY="21.0" prefHeight="111.0" prefWidth="218.0" style="-fx-background-color: magenta;">
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="[ Previstos ]">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Quantidade:" />
+                        <TextField fx:id="preQuantidade" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="86.0" promptText="000" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="61.0" prefWidth="149.0">
+                     <children>
+                        <Label text="Valor:" />
+                        <TextField fx:id="preValor" alignment="CENTER_RIGHT" editable="false" prefHeight="25.0" prefWidth="122.0" promptText="0,00" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

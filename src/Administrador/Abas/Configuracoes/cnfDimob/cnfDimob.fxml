@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="193.0" prefWidth="720.0" style="-fx-background-color: #47a2f8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.Configuracoes.cnfDimob.cnfDimob">
+   <children>
+      <Label prefHeight="17.0" prefWidth="720.0" style="-fx-background-color: #47a0ff;" text=" # Configurações do Dimob" textFill="#0905f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="dip_tx" layoutX="177.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="Taxas" />
+      <Label layoutX="162.0" layoutY="54.0" text="+" />
+      <Label layoutX="237.0" layoutY="54.0" text="+" />
+      <CheckBox fx:id="dip_mu" layoutX="255.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="[MU]" />
+      <Label layoutX="308.0" layoutY="54.0" text="+" />
+      <CheckBox fx:id="dip_ju" layoutX="326.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="[JU]" />
+      <Label layoutX="373.0" layoutY="54.0" text="+" />
+      <CheckBox fx:id="dip_co" layoutX="391.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="[CO]" />
+      <Label layoutX="443.0" layoutY="54.0" text="+" />
+      <CheckBox fx:id="dip_ep" layoutX="461.0" layoutY="54.0" mnemonicParsing="false" selected="true" text="[EP]" />
+      <Label layoutX="111.0" layoutY="104.0" text="+" />
+      <CheckBox fx:id="dia_mu" layoutX="129.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="[MU]" />
+      <Label layoutX="182.0" layoutY="104.0" text="+" />
+      <CheckBox fx:id="dia_ju" layoutX="200.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="[JU]" />
+      <Label layoutX="247.0" layoutY="104.0" text="+" />
+      <CheckBox fx:id="dia_co" layoutX="265.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="[CO]" />
+      <Label layoutX="317.0" layoutY="104.0" text="+" />
+      <CheckBox fx:id="dia_ep" layoutX="335.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="[EP]" />
+      <Label layoutX="20.0" layoutY="130.0" style="-fx-background-color: yellow;" text="* Observações:" textFill="RED" />
+      <Label layoutX="32.0" layoutY="147.0" style="-fx-background-color: yellow;" text="Quando das taxas estiverem em retenção, as mesmas somarão na comissão da Imobiliária." textFill="RED" />
+      <Label layoutX="26.0" layoutY="29.0" text="- Regra do Proprietário" textFill="RED" />
+      <Label layoutX="26.0" layoutY="80.0" text="- Regra da Administradora" textFill="RED" />
+      <CheckBox fx:id="dia_tx" layoutX="396.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="Taxas" />
+      <Label layoutX="381.0" layoutY="104.0" text="+" />
+      <Label layoutX="26.0" layoutY="54.0" text="Aluguel/Condominio" />
+      <Label layoutX="26.0" layoutY="104.0" text="Comissão" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import masktextfield.MaskTextField?>
+<?import java.net.*?>
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="202.0" prefWidth="813.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Locatarios.Socios.SociosController">
+   <children>
+      <Pane prefHeight="226.0" prefWidth="813.0" style="-fx-background-color: cornsilk;">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" prefHeight="24.0" text="Nome:" />
+            <Label layoutX="14.0" layoutY="159.0" prefHeight="24.0" text="Renda:" />
+            <Label layoutX="366.0" layoutY="159.0" prefHeight="24.0" text="Cargo:" />
+            <Button fx:id="s_btincluir" layoutX="19.0" layoutY="195.0" mnemonicParsing="false" onAction="#s_btincluir_OnAction" prefHeight="25.0" prefWidth="88.0" text="Incluir" />
+            <Button fx:id="s_btgravar" layoutX="612.0" layoutY="195.0" mnemonicParsing="false" onAction="#s_btgravar_OnAction" prefHeight="25.0" prefWidth="88.0" text="Gravar" />
+            <Button fx:id="s_btretornar" layoutX="711.0" layoutY="195.0" mnemonicParsing="false" onAction="#s_btretornar_OnAction" prefHeight="25.0" prefWidth="88.0" text="Retornar" />
+            <TextField fx:id="s_renda" layoutX="61.0" layoutY="159.0" prefHeight="24.0" prefWidth="122.0" />
+            <TextField fx:id="s_cargo" layoutX="408.0" layoutY="159.0" prefHeight="24.0" prefWidth="394.0" />
+            <Label layoutX="14.0" layoutY="59.0" prefHeight="24.0" text="Endereço:" />
+            <TextField fx:id="s_nome" layoutX="55.0" layoutY="9.0" prefHeight="24.0" prefWidth="419.0" />
+            <Label layoutX="484.0" layoutY="9.0" prefHeight="24.0" text="Sexo:" />
+            <ComboBox fx:id="s_sexo" layoutX="522.0" layoutY="9.0" prefHeight="25.0" prefWidth="52.0" />
+            <DatePicker fx:id="s_dtnasc" layoutX="691.0" layoutY="9.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+            <Label layoutX="601.0" layoutY="9.0" prefHeight="24.0" text="Dt.Nascimento:" />
+            <Label layoutX="14.0" layoutY="109.0" prefHeight="24.0" text="Nacionalidade:" />
+            <TextField fx:id="s_nacionalidade" layoutX="98.0" layoutY="109.0" prefHeight="24.0" prefWidth="167.0" />
+            <ComboBox fx:id="s_estcivil" layoutX="343.0" layoutY="109.0" prefHeight="24.0" prefWidth="145.0" />
+            <Label layoutX="274.0" layoutY="109.0" prefHeight="24.0" text="Estado Civil:" />
+            <MenuButton fx:id="telef_menu" layoutX="506.0" layoutY="109.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+               <items>
+                  <MenuItem fx:id="s_teladc" mnemonicParsing="false" onAction="#s_teladc_OnAction" text="Adicionar" />
+                  <MenuItem fx:id="s_teldel" mnemonicParsing="false" onAction="#s_teldel_OnAction" text="Excluir" />
+               </items>
+            </MenuButton>
+            <ComboBox fx:id="s_tel" layoutX="607.0" layoutY="109.0" prefHeight="24.0" prefWidth="195.0" />
+            <TextField fx:id="s_mae" layoutX="47.0" layoutY="134.0" prefHeight="24.0" prefWidth="419.0" />
+            <Label layoutX="14.0" layoutY="134.0" prefHeight="24.0" text="Mae:" />
+            <TextField fx:id="s_pai" layoutX="497.0" layoutY="134.0" prefHeight="24.0" prefWidth="304.0" />
+            <Label layoutX="471.0" layoutY="134.0" prefHeight="24.0" text="Pai:" />
+            <Button fx:id="s_btFindEndereco" layoutX="416.0" layoutY="59.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" />
+            <Label layoutX="289.0" layoutY="84.0" prefHeight="24.0" text="Cidade:" />
+            <TextField fx:id="s_bairro" editable="false" layoutX="64.0" layoutY="84.0" prefHeight="24.0" prefWidth="215.0" />
+            <TextField fx:id="s_cidade" editable="false" layoutX="337.0" layoutY="84.0" prefHeight="24.0" prefWidth="215.0" />
+            <Label layoutX="14.0" layoutY="84.0" prefHeight="24.0" text="Bairro:" />
+            <Label layoutX="562.0" layoutY="84.0" prefHeight="24.0" text="Estado:" />
+            <Label layoutX="659.0" layoutY="84.0" prefHeight="24.0" text="Cep:" />
+            <Label layoutX="600.0" layoutY="59.0" prefHeight="24.0" text="Complto:" />
+            <TextField fx:id="s_estado" editable="false" layoutX="609.0" layoutY="84.0" prefHeight="24.0" prefWidth="39.0" />
+            <TextField fx:id="s_cplto" layoutX="651.0" layoutY="59.0" prefHeight="24.0" prefWidth="151.0" />
+            <Label layoutX="449.0" layoutY="59.0" prefHeight="24.0" text="Numero:" />
+            <TextField fx:id="s_endereco" editable="false" layoutX="69.0" layoutY="59.0" prefHeight="24.0" prefWidth="346.0" />
+            <TextField fx:id="s_numero" layoutX="499.0" layoutY="59.0" prefHeight="24.0" prefWidth="88.0" />
+            <MaskTextField fx:id="s_cep" layoutX="691.0" layoutY="84.0" mask="NNNNN-NNN" prefHeight="24.0" prefWidth="111.0" />
+            <Label layoutX="14.0" layoutY="34.0" prefHeight="24.0" text="CPF:" textAlignment="RIGHT" />
+            <TextField fx:id="s_rginsc" layoutX="635.0" layoutY="34.0" prefHeight="24.0" prefWidth="167.0" />
+            <Label layoutX="606.0" layoutY="34.0" prefHeight="24.0" text="RG:" textAlignment="RIGHT" />
+            <Button fx:id="s_btalterar" layoutX="117.0" layoutY="195.0" mnemonicParsing="false" onAction="#s_btalterar_OnAction" prefHeight="25.0" prefWidth="88.0" text="Alterar" />
+            <TextField fx:id="s_cpf" layoutX="55.0" layoutY="34.0" prefHeight="24.0" prefWidth="167.0" />
+         </children>
+         <stylesheets>
+            <URL value="@../../css/button.css" />
+            <URL value="@../../css/label.css" />
+            <URL value="@../../css/textfield.css" />
+            <URL value="@../../css/combobox.css" />
+            <URL value="@../../css/menubutton.css" />
+         </stylesheets>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="549.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Avulsas.BoletasAvulsasController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="11.0" prefHeight="524.0" prefWidth="692.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="avuEmissao" text="Emissão">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="444.0" prefWidth="692.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="19.0" text="Nome:" />
+                        <TextField fx:id="avuNome" layoutX="62.0" layoutY="15.0" prefHeight="25.0" prefWidth="614.0" />
+                        <Label layoutX="17.0" layoutY="52.0" text="CPF/CNPJ:" />
+                        <TextField fx:id="avuCPFCNPJ" layoutX="77.0" layoutY="48.0" prefHeight="25.0" prefWidth="199.0" />
+                        <Label layoutX="444.0" layoutY="52.0" text="RG/Insc:" />
+                        <TextField fx:id="avuRGINSC" layoutX="493.0" layoutY="48.0" prefHeight="25.0" prefWidth="184.0" />
+                        <Label layoutX="17.0" layoutY="84.0" text="End.:" />
+                        <TextField fx:id="avuEnder" layoutX="50.0" layoutY="80.0" prefHeight="25.0" prefWidth="315.0" />
+                        <Label layoutX="374.0" layoutY="84.0" text="Nº:" />
+                        <TextField fx:id="avuNumero" layoutX="397.0" layoutY="80.0" prefHeight="25.0" prefWidth="88.0" />
+                        <Label layoutX="500.0" layoutY="84.0" text="Complto:" />
+                        <TextField fx:id="avuCplto" layoutX="552.0" layoutY="80.0" prefHeight="25.0" prefWidth="125.0" />
+                        <Label layoutX="17.0" layoutY="116.0" text="Bairro:" />
+                        <TextField fx:id="avuBairro" layoutX="57.0" layoutY="112.0" prefHeight="25.0" prefWidth="261.0" />
+                        <Label layoutX="369.0" layoutY="116.0" text="Cidade:" />
+                        <TextField fx:id="avuCidade" layoutX="414.0" layoutY="112.0" prefHeight="25.0" prefWidth="261.0" />
+                        <Label layoutX="17.0" layoutY="148.0" text="Estado:" />
+                        <TextField fx:id="avuEstado" layoutX="63.0" layoutY="144.0" prefHeight="25.0" prefWidth="36.0" />
+                        <Label layoutX="126.0" layoutY="148.0" text="Cep:" />
+                        <TextField fx:id="avuCep" layoutX="155.0" layoutY="144.0" prefHeight="25.0" prefWidth="125.0" />
+                        <TextArea fx:id="avuDescricao" layoutX="17.0" layoutY="199.0" prefHeight="125.0" prefWidth="657.0" />
+                        <Label layoutX="513.0" layoutY="335.0" text="Valor:" />
+                        <TextField fx:id="avuValor" layoutX="549.0" layoutY="331.0" prefHeight="25.0" prefWidth="125.0" />
+                        <DatePicker fx:id="avuVencimento" layoutX="354.0" layoutY="331.0" prefHeight="25.0" prefWidth="142.0" />
+                        <Label layoutX="280.0" layoutY="335.0" text="Vencimento:" />
+                        <Label layoutX="17.0" layoutY="182.0" prefHeight="17.0" prefWidth="657.0" style="-fx-background-color: #64f8b3;" text="Descrições" />
+                        <Label layoutX="17.0" layoutY="364.0" prefHeight="17.0" prefWidth="657.0" style="-fx-background-color: #64f8b3;" text="Menssagem Boleta" />
+                        <TextField fx:id="avuMsg1" layoutX="17.0" layoutY="381.0" prefHeight="25.0" prefWidth="657.0" text="Não receber após vencimento" />
+                        <TextField fx:id="avuMsg2" layoutX="17.0" layoutY="406.0" prefHeight="25.0" prefWidth="657.0" text="Cobrar 10% de Multa, 1% de Juros e 0,33% de Correção" />
+                        <TextField fx:id="avuMsg3" layoutX="17.0" layoutY="431.0" prefHeight="25.0" prefWidth="657.0" />
+                        <Button fx:id="avuBtnImprimir" layoutX="547.0" layoutY="461.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Impressão" />
+                        <ComboBox fx:id="avuBanco" layoutX="68.0" layoutY="331.0" prefHeight="25.0" prefWidth="206.0" />
+                        <Label layoutX="21.0" layoutY="335.0" text="Banco:">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="290.0" layoutY="148.0" text="E-Mail:" />
+                        <TextField fx:id="avuEmail" layoutX="335.0" layoutY="144.0" prefHeight="25.0" prefWidth="339.0" promptText="Para enviar via e-mail, preencha esta campo." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="avuControle" text="Controle">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="429.0" prefWidth="692.0">
+                     <children>
+                        <TextField fx:id="avuBaixarBuscar" layoutX="20.0" layoutY="216.0" prefHeight="25.0" prefWidth="655.0">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding></TextField>
+                        <Label layoutX="18.0" layoutY="14.0" prefHeight="17.0" prefWidth="657.0" style="-fx-background-color: #64f8b3;" text="Boletas a Baixar" />
+                        <Label layoutX="19.0" layoutY="256.0" prefHeight="17.0" prefWidth="657.0" style="-fx-background-color: #64f8b3;" text="Boletas Baixadas" />
+                        <TableView fx:id="avuBaixar" layoutX="18.0" layoutY="31.0" prefHeight="177.0" prefWidth="656.0">
+                          <columns>
+                            <TableColumn fx:id="avuBaixarId" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="avuBaixarBanco" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" text="Banco" />
+                              <TableColumn fx:id="avuBaixarNossoNumero" maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="NossoNumero" />
+                              <TableColumn fx:id="avuBaixarNome" prefWidth="339.0" text="Nome" />
+                              <TableColumn fx:id="avuBaixarVencimento" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="Vencimento" />
+                              <TableColumn fx:id="avuBaixarValor" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="Valor" />
+                              <TableColumn fx:id="avuBaixarDescricao" prefWidth="75.0" text="Descricao" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="19.0" layoutY="283.0" text="Mês:" />
+                        <Spinner fx:id="avuMes" layoutX="51.0" layoutY="279.0" prefHeight="25.0" prefWidth="174.0" />
+                        <Label layoutX="244.0" layoutY="283.0" text="Ano:" />
+                        <Spinner fx:id="avuAno" layoutX="276.0" layoutY="279.0" prefHeight="25.0" prefWidth="104.0" />
+                        <Button fx:id="avuBaixadasBtnPesquisar" layoutX="390.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Pesquisar" />
+                        <Button fx:id="avuBaixadasBtnImprimir" layoutX="554.0" layoutY="279.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="122.0" text="Imprimir" />
+                        <TextField fx:id="avuBaixadasBuscar" layoutX="18.0" layoutY="456.0" prefHeight="25.0" prefWidth="658.0">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding></TextField>
+                        <Label layoutX="25.0" layoutY="460.0" text="Buscar:" />
+                        <Label fx:id="avuBaixadasLimpar" layoutX="641.0" layoutY="464.0" style="-fx-background-color: black;" text="LIMPAR" textFill="WHITE">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="220.0" text="Buscar:" />
+                        <Label fx:id="avuBaixarLimpar" layoutX="640.0" layoutY="224.0" style="-fx-background-color: black;" text="LIMPAR" textFill="WHITE">
+                           <font>
+                              <Font size="7.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="19.0" layoutY="263.0" prefHeight="14.0" prefWidth="652.0" />
+                        <TableView fx:id="avuBaixadas" layoutX="18.0" layoutY="310.0" prefHeight="140.0" prefWidth="656.0">
+                           <columns>
+                              <TableColumn fx:id="avuBaixadasId" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Id" />
+                              <TableColumn fx:id="avuBaixadasBanco" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" text="Banco" />
+                              <TableColumn fx:id="avuBaixadasNossoNumero" maxWidth="115.0" minWidth="115.0" prefWidth="115.0" text="NossoNumero" />
+                              <TableColumn fx:id="avuBaixadasNome" prefWidth="339.0" text="Nome" />
+                              <TableColumn fx:id="avuBaixadasVencimento" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="Vencimento" />
+                              <TableColumn fx:id="avuBaixadasValor" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="Valor" />
+                              <TableColumn fx:id="avuBaixadasDescricao" prefWidth="75.0" text="Descricao" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

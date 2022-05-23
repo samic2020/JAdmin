@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import masktextfield.MaskTextField?>
+<?import java.lang.*?>
+<AnchorPane id="AnchorPane" fx:id="l_anchorPane" prefHeight="374.0" prefWidth="972.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Locatarios.Adicionais.AdcLocatarios">
+   <styleClass>
+      <String fx:value="..\..\css\label.css" />
+      <String fx:value="..\..\css\textfield.css" />
+      <String fx:value="..\..\css\button.css" />
+      <String fx:value="..\..\css\textarea.css" />
+      <String fx:value="..\..\css\combobox.css" />
+      <String fx:value="..\..\css\menubutton.css" />
+   </styleClass>
+   <children>
+      <Pane layoutX="10.0" layoutY="9.0" prefHeight="38.0" prefWidth="806.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-background-color: cornsilk;">
+         <children>
+            <RadioButton fx:id="l_fisica" layoutX="14.0" layoutY="36.0" mnemonicParsing="false" selected="true" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Fisica" visible="false">
+               <toggleGroup>
+                  <ToggleGroup fx:id="l_gfisjur" />
+               </toggleGroup>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="l_juridica" layoutX="92.0" layoutY="36.0" mnemonicParsing="false" style="-fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" text="Juridica" toggleGroup="$l_gfisjur" visible="false">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="15.0" layoutY="10.0" text="Cpf/Cnpj:" />
+            <MaskTextField fx:id="l_cpfcnpj" layoutX="79.0" layoutY="6.0" />
+            <Label layoutX="577.0" layoutY="10.0" text="Rg/Insc.:" />
+            <TextField fx:id="l_rginsc" layoutX="630.0" layoutY="6.0" prefHeight="24.0" prefWidth="167.0" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="5.0" layoutY="54.0" minHeight="0.0" minWidth="0.0" prefHeight="332.0" prefWidth="817.0" style="-fx-background-color: cornsilk;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="Nome:" />
+            <TextField fx:id="l_f_nome" layoutX="54.0" layoutY="6.0" prefHeight="24.0" prefWidth="419.0" />
+            <Label layoutX="483.0" layoutY="11.0" text="Sexo:" />
+            <ComboBox fx:id="l_f_sexo" layoutX="521.0" layoutY="6.0" prefHeight="25.0" prefWidth="64.0" />
+            <Label layoutX="600.0" layoutY="10.0" text="Dt.Nascimento:" />
+            <DatePicker fx:id="l_f_dtnasc" layoutX="692.0" layoutY="6.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+            <Label layoutX="14.0" layoutY="39.0" text="Nacionalidade:" />
+            <TextField fx:id="l_f_nacionalidade" layoutX="99.0" layoutY="35.0" prefHeight="24.0" prefWidth="167.0" />
+            <Label layoutX="275.0" layoutY="39.0" text="Estado Civil:" />
+            <ComboBox fx:id="l_f_estcivil" layoutX="344.0" layoutY="34.0" prefHeight="24.0" prefWidth="145.0" />
+            <MenuButton fx:id="l_f_tel_menu" layoutX="507.0" layoutY="35.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+               <items>
+                  <MenuItem fx:id="l_f_teladc" mnemonicParsing="false" text="Adicionar" />
+                  <MenuItem fx:id="l_f_teldel" mnemonicParsing="false" text="Excluir" />
+               </items>
+            </MenuButton>
+            <ComboBox fx:id="l_f_tel" layoutX="608.0" layoutY="35.0" prefHeight="24.0" prefWidth="197.0" />
+            <Label layoutX="14.0" layoutY="67.0" text="Mae:" />
+            <TextField fx:id="l_f_mae" layoutX="48.0" layoutY="63.0" prefHeight="24.0" prefWidth="365.0" />
+            <Label layoutX="430.0" layoutY="67.0" text="Pai:" />
+            <TextField fx:id="l_f_pai" layoutX="454.0" layoutY="63.0" prefHeight="24.0" prefWidth="350.0" />
+            <Label layoutX="14.0" layoutY="95.0" text="Empresa:" />
+            <TextField fx:id="l_f_empresa" layoutX="69.0" layoutY="91.0" prefHeight="24.0" prefWidth="532.0" />
+            <Label layoutX="613.0" layoutY="95.0" text="Dt.Admissao:" />
+            <DatePicker fx:id="l_f_dtadmissao" layoutX="692.0" layoutY="91.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+            <Label layoutX="15.0" layoutY="123.0" text="Endereço:" />
+            <TextField fx:id="l_f_endereco" editable="false" layoutX="70.0" layoutY="119.0" prefHeight="24.0" prefWidth="346.0" />
+            <Button fx:id="l_f_btFindEndereco" layoutX="417.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" />
+            <Label layoutX="454.0" layoutY="123.0" text="Numero:" />
+            <TextField fx:id="l_f_numero" layoutX="505.0" layoutY="119.0" prefHeight="24.0" prefWidth="88.0" />
+            <Label layoutX="601.0" layoutY="123.0" text="Complto:" />
+            <TextField fx:id="l_f_cplto" layoutX="652.0" layoutY="119.0" prefHeight="24.0" prefWidth="151.0" />
+            <Label layoutX="14.0" layoutY="151.0" text="Bairro:" />
+            <TextField fx:id="l_f_bairro" editable="false" layoutX="53.0" layoutY="147.0" prefHeight="24.0" prefWidth="215.0" />
+            <Label layoutX="286.0" layoutY="151.0" text="Cidade:" />
+            <TextField fx:id="l_f_cidade" editable="false" layoutX="329.0" layoutY="147.0" prefHeight="24.0" prefWidth="215.0" />
+            <Label layoutX="556.0" layoutY="151.0" text="Estado:" />
+            <TextField fx:id="l_f_estado" editable="false" layoutX="600.0" layoutY="147.0" prefHeight="24.0" prefWidth="39.0" />
+            <Label layoutX="658.0" layoutY="151.0" text="Cep:" />
+            <MaskTextField fx:id="l_f_cep" layoutX="686.0" layoutY="147.0" mask="NNNNN-NNN" prefHeight="24.0" prefWidth="114.0" />
+            <Label layoutX="15.0" layoutY="179.0" text="Cargo:" />
+            <TextField fx:id="l_f_cargo" layoutX="54.0" layoutY="175.0" prefHeight="24.0" prefWidth="555.0" />
+            <Label layoutX="626.0" layoutY="179.0" text="Salario:" />
+            <TextField fx:id="l_f_salario" layoutX="673.0" layoutY="175.0" prefHeight="24.0" prefWidth="128.0" />
+            <Label layoutX="15.0" layoutY="206.0" text="Conjugue:" />
+            <TextField fx:id="l_f_conjugue" layoutX="72.0" layoutY="202.0" prefHeight="24.0" prefWidth="521.0" />
+            <Label layoutX="601.0" layoutY="210.0" text="Dt.Nascimento:" />
+            <DatePicker fx:id="l_f_conjuguedtnasc" layoutX="689.0" layoutY="202.0" prefHeight="24.0" prefWidth="111.0" promptText="99/99/9999" />
+            <Label layoutX="15.0" layoutY="235.0" text="Sexo:" />
+            <ComboBox fx:id="l_f_conjuguesexo" layoutX="53.0" layoutY="230.0" prefHeight="24.0" prefWidth="52.0" />
+            <Label layoutX="161.0" layoutY="235.0" text="Cpf:" />
+            <TextField fx:id="l_f_conjuguecpf" layoutX="188.0" layoutY="231.0" prefHeight="24.0" prefWidth="167.0" />
+            <Label layoutX="399.0" layoutY="235.0" text="RG:" />
+            <TextField fx:id="l_f_conjuguerg" layoutX="424.0" layoutY="231.0" prefHeight="24.0" prefWidth="167.0" />
+            <Label layoutX="626.0" layoutY="235.0" text="Salario:" />
+            <TextField fx:id="l_f_conjuguesalario" layoutX="673.0" layoutY="231.0" prefHeight="24.0" prefWidth="128.0" />
+            <Label layoutX="14.0" layoutY="263.0" text="Empresa:" />
+            <TextField fx:id="l_f_conjugueempresa" layoutX="67.0" layoutY="259.0" prefHeight="24.0" prefWidth="423.0" />
+            <MenuButton fx:id="l_f_conjuguetelefone_menu" layoutX="503.0" layoutY="258.0" mnemonicParsing="false" prefHeight="24.0" style="-fx-background-color: transparent;" text="Telefone(s):">
+               <items>
+                  <MenuItem fx:id="l_f_conjugueteladc" mnemonicParsing="false" text="Adicionar" />
+                  <MenuItem fx:id="l_f_conjugueteldel" mnemonicParsing="false" text="Excluir" />
+               </items>
+            </MenuButton>
+            <ComboBox fx:id="l_f_conjuguetelefone" layoutX="604.0" layoutY="258.0" prefHeight="24.0" prefWidth="197.0" />
+            <MenuButton fx:id="l_f_email_menu" layoutX="12.0" layoutY="290.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="E-Mail(s):">
+               <items>
+                  <MenuItem fx:id="l_f_emailadc" mnemonicParsing="false" text="Adicionar" />
+                  <MenuItem fx:id="l_f_emaildel" mnemonicParsing="false" text="Excluir" />
+               </items>
+            </MenuButton>
+            <ComboBox fx:id="l_f_email" layoutX="101.0" layoutY="290.0" prefHeight="25.0" prefWidth="698.0" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="828.0" layoutY="9.0" prefHeight="362.0" prefWidth="131.0" style="-fx-border-color: gray; -fx-border-radius: 20 0 20 0; -fx-background-radius: 20 0 20 0; -fx-linear-gradient: bottom, #b6ebf7, #fff 50%; -fx-background-color: cornsilk;" stylesheets="@../../css/fundo.css">
+         <children>
+            <Button fx:id="l_btIncluir" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Incluir" />
+            <Button fx:id="l_btExcluir" layoutX="14.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Excluir" />
+            <Button fx:id="l_btGravar" layoutX="12.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Gravar" />
+            <Button fx:id="l_btRetornar" layoutX="12.0" layoutY="298.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Retornar" />
+            <Button fx:id="l_btAlterar" layoutX="14.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" stylesheets="@../../css/button.css" text="Alterar" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

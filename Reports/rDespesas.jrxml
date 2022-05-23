@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.0.final using JasperReports Library version 6.5.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rDespesas" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="NoPages" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5d82f51-68d4-46df-bdd7-7ed4a569eddc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String">
+		<property name="parameter1" value="2011-01-01"/>
+		<property name="parameter2" value="2011-12-31"/>
+		<defaultValueExpression><![CDATA["2011-01-01"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="parameter2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["2011-12-31"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT d.grupo, c.buffer, d.item, d.valor, d.data, d.autentica FROM DESPESAS d, COMBOBUFFER c WHERE c.autoid = d.grupo AND c.local = 'DESPES' AND (d.data >= $P{parameter1} AND d.data <= $P{parameter2}) ORDER BY d.grupo, d.data;]]>
+	</queryString>
+	<field name="grupo" class="java.lang.String"/>
+	<field name="buffer" class="java.lang.String"/>
+	<field name="item" class="java.lang.String"/>
+	<field name="valor" class="java.math.BigDecimal"/>
+	<field name="data" class="java.sql.Date"/>
+	<field name="autentica" class="java.lang.String"/>
+	<variable name="valor_1" class="java.math.BigDecimal" resetType="Group" resetGroup="grupo" calculation="Sum">
+		<variableExpression><![CDATA[$F{valor}]]></variableExpression>
+	</variable>
+	<variable name="total" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{valor}]]></variableExpression>
+	</variable>
+	<group name="grupo">
+		<groupExpression><![CDATA[$F{grupo}]]></groupExpression>
+		<groupHeader>
+			<band height="14">
+				<textField>
+					<reportElement x="0" y="0" width="202" height="12" uuid="1369ab8e-e7be-45c7-8395-ade966f6fb16"/>
+					<textElement>
+						<font size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{buffer}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="12" width="555" height="1" uuid="4cae4ab1-54b1-4972-b64c-90647bca8691"/>
+					<graphicElement>
+						<pen lineWidth="1.0" lineStyle="Dashed"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="14">
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+					<reportElement x="423" y="0" width="74" height="12" uuid="5d078206-b8a2-44e9-9449-7f184d9ee7f6"/>
+					<textElement textAlignment="Right">
+						<font size="8" isBold="true" isPdfEmbedded="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{valor_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="351" y="0" width="72" height="12" uuid="13635956-5f34-411d-9ac3-d39fa617643b"/>
+					<textElement textAlignment="Right">
+						<font size="8" isBold="true" isItalic="true" isPdfEmbedded="true"/>
+					</textElement>
+					<text><![CDATA[SUB-TOTAL ]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="168" y="0" width="194" height="14" uuid="2d127383-6f53-49a7-b32f-341df92f2293"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATORIO DE DESPESAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="433" y="0" width="80" height="20" uuid="82d54101-599f-4839-ae0c-1b78da115994"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página: "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="513" y="0" width="40" height="20" uuid="083c0dc0-5beb-4afe-99f8-cb38676fb1ca"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="0" y="0" width="100" height="20" uuid="b7d8ba0d-e967-405e-8d2d-8fda02c6b29c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="43732162-2485-4117-8ba7-b97de969275e"/>
+			</line>
+			<textField>
+				<reportElement x="168" y="14" width="194" height="15" uuid="9ff80e74-95d7-497c-a76b-c23c809b9f65"/>
+				<textElement textAlignment="Center" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Período de " + $P{parameter1}.substring( 8, 10 ) + "-" + $P{parameter1}.substring( 5, 7 ) + "-" + $P{parameter1}.substring( 0, 4 ) + " até " + $P{parameter2}.substring( 8, 10 ) + "-" + $P{parameter2}.substring( 5, 7 ) + "-" + $P{parameter2}.substring( 0, 4 )]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="2" width="369" height="12" uuid="76857b40-4399-4be9-a830-ecf27ecb4441"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DESCRIÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="2" width="74" height="12" uuid="523f6650-6ab9-4b50-ad87-a5c2e128061f"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[VALOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="2" width="55" height="12" uuid="5c4a72df-feee-482c-a8a4-3c3e1631f225"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[AUT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="2" width="54" height="12" uuid="f7ba9463-35ef-4782-9a66-2bcf84b00bb0"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="12" forecolor="#000000" backcolor="#CCCCCC" uuid="3f789e25-8712-417d-94a7-54799ec1da0c">
+					<printWhenExpression><![CDATA[new Boolean(($V{COLUMN_COUNT}.intValue() % 2) == 0)]]></printWhenExpression>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="54" y="0" width="369" height="12" uuid="142b332f-0cc3-490e-a3aa-5bc483bcd962"/>
+				<textElement>
+					<font size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="423" y="0" width="74" height="12" uuid="d26196f3-b096-478d-a13e-fa7fda56471f"/>
+				<textElement textAlignment="Right">
+					<font size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="55" height="12" uuid="216fb8e4-1bcd-40d5-8c4b-5c427667f340"/>
+				<textElement textAlignment="Right">
+					<font size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{autentica}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="54" height="12" uuid="247a21d2-203e-485c-9529-20d96748d45b"/>
+				<textElement>
+					<font size="8" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="12">
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="true">
+				<reportElement x="423" y="0" width="74" height="12" uuid="b3b893e3-7a92-43a3-bb57-56873dcfb189"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="351" y="0" width="72" height="12" uuid="122b0274-ba17-4c19-b41f-1e9779b624eb"/>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true" isItalic="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

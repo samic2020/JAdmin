@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="anchorPane" prefHeight="610.0" prefWidth="725.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.Adiantamento.AdiantaController">
+   <children>
+      <Label layoutX="14.0" layoutY="10.0" text="Código:" />
+      <TextField fx:id="adCodigo" layoutX="59.0" layoutY="6.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="141.0" layoutY="10.0" text="Nome:" />
+      <TextField fx:id="adNome" layoutX="186.0" layoutY="6.0" prefHeight="25.0" prefWidth="522.0" />
+      <TableView fx:id="adImoveis" editable="true" layoutX="14.0" layoutY="36.0" prefHeight="118.0" prefWidth="696.0">
+        <columns>
+            <TableColumn fx:id="adImoveisTag" prefWidth="20.0" text="A" />
+          <TableColumn fx:id="adImoveisRgimv" editable="false" prefWidth="67.0" text="RgImv" />
+          <TableColumn fx:id="adImoveisContrato" editable="false" prefWidth="78.0" text="Contrato" />
+            <TableColumn fx:id="adImoveisEndereco" editable="false" prefWidth="344.0" text="Endereço" />
+            <TableColumn fx:id="adImoveisVencimento" prefWidth="86.0" text="Vencimento" />
+            <TableColumn fx:id="adImoveisValor" prefWidth="81.0" text="Valor" />
+        </columns>
+      </TableView>
+      <Pane layoutX="14.0" layoutY="189.0" prefHeight="261.0" prefWidth="370.0" style="-fx-border-width: 0.5; -fx-border-color: black; -fx-background-color: #dddddd;">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <children>
+            <TableView fx:id="adRecibo" editable="true" prefHeight="222.0" prefWidth="365.0" style="-fx-background-color: cornsilk; -fx-opacity: 0.9;" stylesheets="@../../css/ptableImoveis.css">
+               <columns>
+                  <TableColumn fx:id="adReciboId" editable="false" prefWidth="75.0" sortable="false" text="Id" visible="false" />
+                  <TableColumn fx:id="adReciboTabela" editable="false" prefWidth="75.0" sortable="false" text="Table" visible="false" />
+                  <TableColumn fx:id="adReciboTag" prefWidth="24.0" resizable="false" sortable="false" style="-fx-alignment: center;" text="A" />
+                  <TableColumn fx:id="adReciboDescricao" editable="false" prefWidth="126.0" text="Descriçao" />
+                  <TableColumn fx:id="adReciboCotaParcela" editable="false" prefWidth="75.0" resizable="false" sortable="false" text="C/P" />
+                  <TableColumn fx:id="adReciboValor" editable="false" prefWidth="89.0" resizable="false" sortable="false" text="Valor" />
+               </columns>
+            </TableView>
+            <Label layoutX="8.0" layoutY="232.0" text="(-) Comissão:" />
+            <TextField fx:id="adReciboComissao" alignment="CENTER_RIGHT" editable="false" layoutX="81.0" layoutY="228.0" prefHeight="25.0" prefWidth="94.0" text="0,00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="196.0" layoutY="232.0" text="Líquido:" />
+            <TextField fx:id="adReciboLiquido" alignment="CENTER_RIGHT" editable="false" layoutX="246.0" layoutY="228.0" prefHeight="25.0" prefWidth="117.0" text="0,00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="177.0" layoutY="232.0" text="(=)" />
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="156.0" prefHeight="31.0" prefWidth="696.0" style="-fx-border-width: 0.3; -fx-border-color: black; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-opacity: 0.9;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Label layoutX="515.0" layoutY="6.0" text="Vr. Pagar:" />
+            <TextField fx:id="adValor" alignment="CENTER_RIGHT" disable="true" layoutX="575.0" layoutY="3.0" prefHeight="25.0" prefWidth="107.0" style="-fx-font: bold 9pt &quot;Arial Bold&quot;;" text="0,00" />
+            <CheckBox fx:id="adEnviarEmail" layoutX="380.0" layoutY="6.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="127.0" text="Enviar por E-Mail." />
+            <Button fx:id="btnImprimir" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" stylesheets="@../../css/button.css" text="Imprimir Demonstrativo" />
+         </children>
+      </Pane>
+      <Pane fx:id="adTpagtos" layoutX="393.0" layoutY="190.0" prefHeight="261.0" prefWidth="319.0" style="-fx-border-width: 0.5; -fx-border-color: white; -fx-border-style: dashed; -fx-background-color: cornsilk; -fx-border-radius: 5 5 5 5; -fx-background-radius: 5 5 5 5;">
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="453.0" prefHeight="150.0" prefWidth="696.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <TableView fx:id="adDebLista" layoutX="334.0" layoutY="26.0" prefHeight="111.0" prefWidth="348.0">
+              <columns>
+                  <TableColumn fx:id="adDebListaId" prefWidth="75.0" text="Id" visible="false" />
+                <TableColumn fx:id="adDebListaDesc" prefWidth="229.0" text="Descrição" />
+                <TableColumn fx:id="adDebListaValor" minWidth="0.0" prefWidth="99.0" text="Valor" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="adDebMsg" layoutX="14.0" layoutY="9.0" prefHeight="64.0" prefWidth="309.0" wrapText="true" />
+            <Label layoutX="14.0" layoutY="88.0" text="Valor:" />
+            <TextField fx:id="adDebValor" alignment="CENTER_RIGHT" layoutX="47.0" layoutY="83.0" prefHeight="20.0" prefWidth="117.0" style="-fx-font: bold 9pt &quot;Arial Bold&quot;;" stylesheets="@../../css/textfield.css" text="0,00" />
+            <Button fx:id="btnLancDeb" layoutX="184.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" stylesheets="@../../css/button.css" text="Lançar Débito" />
+            <Label layoutX="334.0" layoutY="9.0" prefHeight="17.0" prefWidth="348.0" style="-fx-background-color: lightblue;" text="Avisos do Adiantamento">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="117.0" text="Total dos Débitos:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="adDebValorTotal" alignment="CENTER_RIGHT" editable="false" layoutX="206.0" layoutY="114.0" prefHeight="25.0" prefWidth="117.0" style="-fx-font: bold 9pt &quot;Arial Bold&quot;;" stylesheets="@../../css/textfield.css" text="0,00" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

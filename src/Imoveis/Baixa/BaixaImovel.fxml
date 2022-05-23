@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="143.0" prefWidth="315.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imoveis.Baixa.BaixaImovelController">
+   <children>
+      <Pane layoutX="1.0" prefHeight="257.0" prefWidth="327.0" style="-fx-background-color: cornsilk;">
+         <children>
+            <Label layoutX="14.0" layoutY="20.0" text="Data da Baixa do Imovel:" />
+            <DatePicker fx:id="motivo_dtBaixa" layoutX="186.0" layoutY="14.0" prefHeight="25.0" prefWidth="128.0" />
+            <Label layoutX="14.0" layoutY="47.0" prefHeight="15.0" prefWidth="302.0" text="Motivo:" />
+            <ComboBox fx:id="motivo_mtBaixa" layoutX="14.0" layoutY="69.0" prefHeight="25.0" prefWidth="302.0" />
+            <Button fx:id="motivo_btBaixar" layoutX="80.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Baixar" />
+            <Button fx:id="motivo_btRetornar" layoutX="168.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" text="Retornar" />
+            <Label layoutX="14.0" layoutY="103.0" text="Classificação do Locatário:" />
+            <RadioButton fx:id="classifica_bom" layoutX="14.0" layoutY="120.0" mnemonicParsing="false" selected="true" text="Bom">
+               <toggleGroup>
+                  <ToggleGroup fx:id="classifica" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="classifica_medio" layoutX="81.0" layoutY="120.0" mnemonicParsing="false" text="Médio" toggleGroup="$classifica" />
+            <RadioButton fx:id="classifica_ruim" layoutX="155.0" layoutY="121.0" mnemonicParsing="false" text="Ruim" toggleGroup="$classifica" />
+            <Label layoutX="14.0" layoutY="144.0" text="Obs.:" />
+            <TextArea fx:id="classifica_obs" layoutX="15.0" layoutY="159.0" prefHeight="47.0" prefWidth="302.0" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/label.css" />
+      <URL value="@../../css/textfield.css" />
+   </stylesheets>
+</AnchorPane>

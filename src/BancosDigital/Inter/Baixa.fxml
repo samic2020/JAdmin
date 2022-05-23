@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BancosDigital.Inter.Baixa">
+   <children>
+      <Label prefHeight="23.0" prefWidth="778.0" style="-fx-background-color: lightblue;" text="  .:: Boletas a baixar no sistema.">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="gridLista" layoutY="23.0" prefHeight="274.0" prefWidth="778.0">
+        <columns>
+          <TableColumn fx:id="tipo" editable="false" prefWidth="68.0" text="Tipo" />
+          <TableColumn fx:id="nome" editable="false" prefWidth="179.0" text="Nome" />
+            <TableColumn fx:id="emissao" editable="false" prefWidth="73.0" text="Pagamento" />
+            <TableColumn fx:id="vencimento" editable="false" minWidth="0.0" prefWidth="85.0" text="Vencimento" />
+            <TableColumn fx:id="cpfcnpj" editable="false" prefWidth="58.0" text="Cpf/Cnpj" />
+            <TableColumn fx:id="nnumero" editable="false" prefWidth="66.0" text="N.Numero" />
+            <TableColumn fx:id="multa" editable="false" prefWidth="74.0" text="Multa" />
+            <TableColumn fx:id="juros" editable="false" maxWidth="59.0" prefWidth="59.0" text="Juros" />
+            <TableColumn fx:id="valor" editable="false" prefWidth="55.0" text="Valor" />
+            <TableColumn fx:id="tag" prefWidth="67.0" text="Tag" />
+        </columns>
+      </TableView>
+      <HBox layoutX="2.0" layoutY="299.0" prefHeight="100.0" prefWidth="407.0" spacing="5.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgreen; -fx-border-color: black;">
+               <children>
+                  <Label layoutX="1.0" layoutY="1.0" prefHeight="17.0" prefWidth="198.0" style="-fx-background-color: lightblue;" text="  .:: Boletas Marcadas">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="63.0" prefHeight="21.0" prefWidth="38.0" text="Valor:" />
+                  <TextField fx:id="vmarcadas" alignment="CENTER_RIGHT" editable="false" layoutX="53.0" layoutY="61.0" prefHeight="25.0" prefWidth="122.0" text="0,00" />
+                  <Label layoutX="8.0" layoutY="33.0" prefHeight="21.0" prefWidth="46.0" text="Boletas:" />
+                  <TextField fx:id="bmarcadas" alignment="CENTER" editable="false" layoutX="53.0" layoutY="31.0" prefHeight="25.0" prefWidth="61.0" text="0000" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightyellow; -fx-border-color: black;">
+               <children>
+                  <Label layoutX="1.0" layoutY="1.0" prefHeight="17.0" prefWidth="198.0" style="-fx-background-color: lightblue;" text="  .:: Boletas Desmarcadas">
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="8.0" layoutY="63.0" prefHeight="21.0" prefWidth="38.0" text="Valor:" />
+                  <TextField fx:id="vdesmarcadas" alignment="CENTER_RIGHT" editable="false" layoutX="53.0" layoutY="61.0" prefHeight="25.0" prefWidth="122.0" text="0,00" />
+                  <Label layoutX="8.0" layoutY="33.0" prefHeight="21.0" prefWidth="46.0" text="Boletas:" />
+                  <TextField fx:id="bdesmacadas" alignment="CENTER" editable="false" layoutX="53.0" layoutY="31.0" prefHeight="25.0" prefWidth="61.0" text="0000" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Button fx:id="btnbaixar" layoutX="596.0" layoutY="340.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="168.0" text="Baixar">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

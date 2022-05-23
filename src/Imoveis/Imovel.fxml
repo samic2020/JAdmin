@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Sphere?>
+<?import masktextfield.MaskTextField?>
+<?import java.net.*?>
+<AnchorPane id="imvAnchorPane" fx:id="anchorImovel" prefHeight="498.0" prefWidth="653.0" style="-fx-background-color: cornsilk; -fx-effect: dropshadow(three-pass-box, grey, 10, 0, 0, 10);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imoveis.ImovelController">
+   <children>
+      <Pane fx:id="i_pane" layoutX="1.0" layoutY="-9.0" prefHeight="506.0" prefWidth="652.0" style="-fx-background-color: cornsilk; -fx-effect: dropshadow(three-pass-box, grey, 10, 0, 0, 10);">
+         <children>
+            <Label layoutX="12.0" layoutY="19.0" stylesheets="@../css/label.css" text="RgImv:" />
+            <Label layoutX="147.0" layoutY="19.0" stylesheets="@../css/label.css" text="Tipo:" />
+            <Label layoutX="408.0" layoutY="19.0" stylesheets="@../css/label.css" text="Situaçao:" />
+            <TextField fx:id="i_rgimv" editable="false" layoutX="55.0" layoutY="14.0" prefHeight="25.0" prefWidth="82.0" promptText="Registro imóvel..." />
+            <ComboBox fx:id="i_tipo" layoutX="180.0" layoutY="14.0" prefHeight="25.0" prefWidth="212.0" promptText="Selecione o tipo do imóvel..." />
+            <ComboBox fx:id="i_situacao" layoutX="462.0" layoutY="14.0" prefHeight="22.0" prefWidth="171.0" promptText="Situação do imóvel..." />
+            <Label layoutX="12.0" layoutY="49.0" stylesheets="@../css/label.css" text="Endereço:" />
+            <Label layoutX="385.0" layoutY="49.0" stylesheets="@../css/label.css" text="Nº:" />
+            <Label layoutX="481.0" layoutY="49.0" stylesheets="@../css/label.css" text="Complto:" />
+            <TextField fx:id="i_endereco" editable="false" layoutX="76.0" layoutY="44.0" prefHeight="25.0" prefWidth="257.0" promptText="Endereço do imóvel..." />
+            <TextField fx:id="i_num" layoutX="409.0" layoutY="44.0" prefHeight="25.0" prefWidth="65.0" promptText="Número..." />
+            <TextField fx:id="i_cplto" layoutX="532.0" layoutY="44.0" prefHeight="25.0" prefWidth="102.0" promptText="Complemento..." />
+            <Label layoutX="14.0" layoutY="77.0" stylesheets="@../css/label.css" text="Bairro:" />
+            <Label layoutX="346.0" layoutY="77.0" stylesheets="@../css/label.css" text="Cidade:" />
+            <TextField fx:id="i_bairro" editable="false" layoutX="63.0" layoutY="72.0" prefHeight="25.0" prefWidth="226.0" promptText="Bairro do imóvel..." />
+            <TextField fx:id="i_cidade" editable="false" layoutX="399.0" layoutY="72.0" prefHeight="25.0" prefWidth="235.0" promptText="Cidade do imóvel..." />
+            <Label layoutX="14.0" layoutY="105.0" stylesheets="@../css/label.css" text="Codigo Municipio:" />
+            <Label layoutX="495.0" layoutY="105.0" stylesheets="@../css/label.css" text="Cep:" />
+            <CheckBox fx:id="i_retertaxas" layoutX="344.0" layoutY="133.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" stylesheets="@../css/checkbox.css" text="Quando vazio reter as taxas." />
+            <ComboBox fx:id="i_matriculas" layoutX="102.0" layoutY="129.0" prefHeight="25.0" prefWidth="235.0" promptText="Matrícula das taxas..." />
+            <Label layoutX="9.0" layoutY="215.0" prefHeight="15.0" prefWidth="631.0" stylesheets="@../css/label.css" text="Especificaçoes do Imovel" />
+            <TextArea fx:id="i_descricao" layoutX="9.0" layoutY="236.0" prefHeight="53.0" prefWidth="631.0" promptText="Entre aqui as especificações do imóvel... 2 Quartos, Sala, cozi..." wrapText="true" />
+            <Label layoutX="12.0" layoutY="164.0" stylesheets="@../css/label.css" text="Mensagem:" />
+            <Label layoutX="12.0" layoutY="192.0" stylesheets="@../css/label.css" text="Observaçoes:" />
+            <TextField fx:id="i_msg" layoutX="76.0" layoutY="159.0" prefHeight="25.0" prefWidth="565.0" promptText="Mensagem que ira aparecer tanto na boleta quanto no recibo..." />
+            <TextField fx:id="i_obs" layoutX="85.0" layoutY="187.0" prefHeight="25.0" prefWidth="555.0" promptText="Observações sobre o imóvel..." />
+            <ComboBox fx:id="i_ur" layoutX="339.0" layoutY="100.0" prefHeight="25.0" prefWidth="131.0" promptText="Urbano, Rural..." />
+            <Button fx:id="i_btEndereco" layoutX="332.0" layoutY="44.0" mnemonicParsing="false" stylesheets="@../css/button.css" text="..." />
+            <TextField fx:id="i_estado" editable="false" layoutX="294.0" layoutY="100.0" prefHeight="25.0" prefWidth="36.0" promptText="Estado..." />
+            <TextField fx:id="i_cdmun" editable="false" layoutX="114.0" layoutY="100.0" prefHeight="25.0" prefWidth="131.0" promptText="Código Municipio..." />
+            <Label layoutX="270.0" layoutY="109.0" stylesheets="@../css/label.css" text="UF:" />
+            <MenuButton fx:id="i_mat_menu" layoutX="7.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: transparent;" stylesheets="@../css/menubutton.css" text="Matriculas:" textFill="WHITE">
+              <items>
+                <MenuItem fx:id="btMatExcluir" mnemonicParsing="false" onAction="#btMatExcluir_OnAction" text="Excluir" />
+              </items>
+            </MenuButton>
+            <CheckBox fx:id="i_Dimob" layoutX="558.0" layoutY="133.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" stylesheets="@../css/checkbox.css" text="Dimob" />
+            <MaskTextField fx:id="i_cep" layoutX="526.0" layoutY="101.0" mask="NNNNN-NNN" prefHeight="24.0" prefWidth="108.0" promptText="Entre com o CEP." />
+            <Pane layoutX="11.0" layoutY="399.0" prefHeight="66.0" prefWidth="631.0" style="-fx-background-color: cornsilk; -fx-background-radius: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-border-width: 1; -fx-border-color: black;">
+               <children>
+                  <Label layoutX="8.0" layoutY="14.0" text="Reservado:" />
+                  <TextField fx:id="i_reservtels" editable="false" layoutX="69.0" layoutY="34.0" prefHeight="24.0" prefWidth="397.0" />
+                  <TextField fx:id="i_dtfinal" editable="false" layoutX="544.0" layoutY="34.0" prefHeight="24.0" prefWidth="79.0" promptText="99/99/9999" />
+                  <Label layoutX="477.0" layoutY="14.0" text="Dt.Reserva:" />
+                  <TextField fx:id="i_dtreserva" editable="false" layoutX="544.0" layoutY="9.0" prefHeight="24.0" prefWidth="79.0" promptText="99/99/9999" />
+                  <Label layoutX="496.0" layoutY="39.0" text="Dt.Final:" />
+                  <Label layoutX="14.0" layoutY="34.0" prefHeight="24.0" prefWidth="61.0" text="Telefone:" />
+                  <TextField fx:id="i_reservado" editable="false" layoutX="74.0" layoutY="9.0" prefHeight="24.0" prefWidth="397.0" />
+               </children>
+            </Pane>
+            <TableView fx:id="i_anuncios" editable="true" layoutX="309.0" layoutY="300.0" prefHeight="96.0" prefWidth="331.0">
+               <columns>
+                  <TableColumn fx:id="i_campo" editable="false" prefWidth="175.0" sortable="false" text="Campo" />
+                  <TableColumn fx:id="i_conteudo" prefWidth="134.0" text="Conteudo" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="i_tipoimv" layoutX="157.0" layoutY="368.0" prefHeight="25.0" prefWidth="131.0" />
+            <MenuButton fx:id="i_tpimovel" layoutX="7.0" layoutY="364.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" style="-fx-background-color: transparent;" stylesheets="@../css/menubutton.css" text="Caract. do Imovel:">
+              <items>
+                <MenuItem fx:id="i_tpimovel_adc" mnemonicParsing="false" onAction="#i_tpimovel_adc_OnAction" text="adiciona" />
+                <MenuItem fx:id="i_tpimovel_del" mnemonicParsing="false" onAction="#i_tpimovel_del_OnAction" text="excluir" />
+              </items>
+            </MenuButton>
+            <CheckBox fx:id="i_anunciar" layoutX="10.0" layoutY="330.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: rgba(255, 255, 255, 1); -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );" stylesheets="@../css/checkbox.css" text="Anunciar" />
+            <Button fx:id="i_btInc" layoutX="12.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btInc_OnAction" prefHeight="25.0" prefWidth="74.0" stylesheets="@../css/button.css" text="Incluir" />
+            <Button fx:id="i_btExcluir" layoutX="176.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btExcluir_OnAction" prefWidth="74.0" stylesheets="@../css/button.css" text="Excluir" />
+            <Button fx:id="i_btBaixar" layoutX="271.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btBaixar_OnAction" prefHeight="25.0" prefWidth="108.0" stylesheets="@../css/button.css" text="Baixar Imovel" />
+            <Button fx:id="i_btFotos" layoutX="386.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btFotos_OnAction" prefWidth="74.0" stylesheets="@../css/button.css" text="Fotos" />
+            <Button fx:id="i_btGravar" layoutX="483.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btGravar_OnAction" prefWidth="74.0" stylesheets="@../css/button.css" text="Gravar" />
+            <Button fx:id="i_btRetornar" layoutX="564.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btRetornar_OnAction" prefWidth="74.0" stylesheets="@../css/button.css" text="Retornar" />
+            <Button fx:id="i_btAlt" layoutX="94.0" layoutY="473.0" mnemonicParsing="false" onAction="#i_btAlt_OnAction" prefHeight="25.0" prefWidth="74.0" stylesheets="@../css/button.css" text="Alterar" />
+            <Sphere fx:id="i_dividido" layoutX="21.0" layoutY="307.0" radius="10.0" />
+            <Label fx:id="i_ldividido" layoutX="37.0" layoutY="299.0" prefHeight="15.0" prefWidth="139.0" text="Imovel dividido" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/textarea.css" />
+      <URL value="@../css/ptableImoveis.css" />
+      <URL value="@../css/combobox.css" />
+      <URL value="@../css/checkbox.css" />
+      <URL value="@../css/label.css" />
+      <URL value="@../css/menubutton.css" />
+   </stylesheets>
+</AnchorPane>

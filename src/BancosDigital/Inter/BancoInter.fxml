@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BancosDigital.Inter.BancoInter">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="813.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Geração de Boletos">
+               <content>
+                  <AnchorPane fx:id="anchorPaneBoletos" prefHeight="620.0" prefWidth="707.0" />
+               </content>
+            </Tab>
+            <Tab text="Envio por Email/Zap">
+               <content>
+                  <AnchorPane fx:id="anchorPaneEmail" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="870.0" />
+               </content>
+            </Tab>
+            <Tab text="Consulta/Baixa">
+               <content>
+                  <AnchorPane fx:id="anchorPaneConsulta" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Avulsas">
+               <content>
+                  <AnchorPane fx:id="anchorPaneAvulsas" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

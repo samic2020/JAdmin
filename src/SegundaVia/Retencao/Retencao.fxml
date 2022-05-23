@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPaneRetencao" prefHeight="257.0" prefWidth="714.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SegundaVia.Retencao.RetencaoController">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="40.0" prefWidth="692.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="Mes:" />
+            <Spinner fx:id="retMes" layoutX="45.0" layoutY="6.0" prefHeight="25.0" prefWidth="61.0" />
+            <Label layoutX="118.0" layoutY="11.0" text="Ano:" />
+            <Spinner fx:id="retAno" layoutX="148.0" layoutY="7.0" prefHeight="25.0" prefWidth="88.0" />
+            <Button fx:id="btnListar" layoutX="244.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Listar" />
+            <Label layoutX="464.0" layoutY="11.0" text="Aut:" />
+            <TextField fx:id="retAutent" layoutX="489.0" layoutY="6.0" prefHeight="25.0" prefWidth="88.0" />
+            <Button fx:id="btnImprimir" layoutX="581.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Imprimir" />
+         </children>
+      </Pane>
+      <TableView fx:id="ListaRet" layoutX="8.0" layoutY="60.0" prefHeight="190.0" prefWidth="692.0">
+         <columns>
+            <TableColumn fx:id="retId" prefWidth="75.0" text="Id" visible="false" />
+            <TableColumn fx:id="retOper" prefWidth="75.0" text="Oper" />
+            <TableColumn fx:id="retAut" prefWidth="75.0" text="Aut" />
+            <TableColumn fx:id="retDataHora" prefWidth="100.0" text="DataHora" />
+            <TableColumn fx:id="retValor" prefWidth="91.0" text="Valor" />
+            <TableColumn fx:id="retLogado" prefWidth="94.0" text="Logado" />
+            <TableColumn fx:id="retLanctos" prefWidth="153.0" text="Lançamentos" />
+            <TableColumn fx:id="retAcoes" prefWidth="82.0" text="Ações" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

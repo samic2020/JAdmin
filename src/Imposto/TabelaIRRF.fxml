@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="531.0" style="-fx-background-color: cornsilk;" stylesheets="@../css/ptableImoveis.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Imposto.TabelaIRRFController">
+   <children>
+      <Pane layoutY="-13.0" prefHeight="236.0" prefWidth="531.0" AnchorPane.bottomAnchor="186.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="33.0" text="Faixas" />
+            <TextField fx:id="irf_faixa1" layoutX="120.0" layoutY="61.0" promptText="Faixa 1" />
+            <Label layoutX="275.0" layoutY="66.0" text="Isento" />
+            <TextField fx:id="irf_faixa2" layoutX="120.0" layoutY="87.0" promptText="Faixa 2" />
+            <TextField fx:id="irf_aliquota2" layoutX="275.0" layoutY="88.0" prefHeight="24.0" prefWidth="117.0" promptText="Alíquota 2 %" />
+            <TextField fx:id="irf_deducao2" layoutX="402.0" layoutY="89.0" prefHeight="24.0" prefWidth="117.0" promptText="Dedução 2 R$" />
+            <TextField fx:id="irf_faixa3" layoutX="120.0" layoutY="113.0" promptText="Faixa 3" />
+            <TextField fx:id="irf_aliquota3" layoutX="275.0" layoutY="114.0" prefHeight="24.0" prefWidth="117.0" promptText="Alíquota 3 %" />
+            <TextField fx:id="irf_deducao3" layoutX="402.0" layoutY="115.0" prefHeight="24.0" prefWidth="117.0" promptText="Dedução 3 R$" />
+            <TextField fx:id="irf_faixa4" layoutX="120.0" layoutY="139.0" promptText="Faixa 4" />
+            <TextField fx:id="irf_aliquota4" layoutX="275.0" layoutY="140.0" prefHeight="24.0" prefWidth="117.0" promptText="Alíquota 4 %" />
+            <TextField fx:id="irf_deducao4" layoutX="402.0" layoutY="141.0" prefHeight="24.0" prefWidth="117.0" promptText="Dedução 4 R$" />
+            <TextField fx:id="irf_faixa5" layoutX="120.0" layoutY="165.0" promptText="Faixa 5" />
+            <TextField fx:id="irf_aliquota5" layoutX="275.0" layoutY="166.0" prefHeight="24.0" prefWidth="117.0" promptText="Alíquota 5 %" />
+            <TextField fx:id="irf_deducao5" layoutX="402.0" layoutY="167.0" prefHeight="24.0" prefWidth="117.0" promptText="Dedução 5 R$" />
+            <Label layoutX="167.0" layoutY="33.0" text="Alíquota %" />
+            <Label layoutX="325.0" layoutY="33.0" text="Parcela a deduzir do imposto em R$" />
+            <TableView fx:id="tbvIRF" layoutX="14.0" layoutY="61.0" prefHeight="160.0" prefWidth="88.0" style="-fx-background-color: cornsilk;">
+              <columns>
+                <TableColumn fx:id="tbvIRF_id" editable="false" prefWidth="75.0" text="Id" visible="false" />
+                <TableColumn fx:id="tbvIRF_mesano" editable="false" prefWidth="483.0" text="Mes/Ano" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnInserir" layoutX="417.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="102.0" text="Inserir" />
+            <Separator layoutX="14.0" layoutY="54.0" prefHeight="3.0" prefWidth="505.0" />
+            <Label layoutX="14.0" layoutY="14.0" text="Tabela de IRRF:" />
+            <TextField fx:id="irrf_mesano" editable="false" layoutX="111.0" layoutY="9.0" prefHeight="24.0" prefWidth="117.0" promptText="mesano" />
+         </children>
+         <stylesheets>
+            <URL value="@../css/label.css" />
+            <URL value="@../css/textfield.css" />
+            <URL value="@../css/button.css" />
+         </stylesheets>
+      </Pane>
+   </children>
+</AnchorPane>

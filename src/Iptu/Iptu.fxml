@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<AnchorPane fx:id="tlaimv" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="412.0" prefWidth="600.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Iptu.IptuController">
+   <children>
+      <HBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="4.0" prefHeight="46.0" prefWidth="590.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5; -fx-border-width: 0.3;" styleClass="label" stylesheets="@../css/label.css">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Label stylesheets="@../css/label.css" text="Ano:">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <Spinner fx:id="iptu_ano" prefHeight="24.0" prefWidth="106.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="25.0" prefHeight="16.0" prefWidth="82.0" stylesheets="@../css/label.css" text="Matricula:">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="iptu_matricula" prefHeight="24.0" prefWidth="158.0">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="128.0" stylesheets="@../css/label.css" text="Vencimento(dd):">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="iptu_vencimento" prefHeight="26.0" prefWidth="42.0" />
+         </children>
+      </HBox>
+      <VBox layoutY="46.0" prefHeight="409.0" prefWidth="600.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="6.0" prefWidth="590.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5 5 5 5; -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 ); -fx-border-width: 0.3;">
+               <children>
+                  <Label stylesheets="@../css/label.css" text="RgImv:">
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="iptu_rgimv" alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="100.0" style="-fx-font-weight: bold; -fx-text-fill: green;" text="000000" />
+                  <TextField fx:id="iptu_end" editable="false" layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="233.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="iptu_num" editable="false" layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="81.0" />
+                  <TextField fx:id="iptu_cplto" editable="false" layoutX="404.0" layoutY="15.0" prefHeight="26.0" prefWidth="108.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="15.0" prefHeight="6.0" prefWidth="590.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5 5 5 5; -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );">
+               <children>
+                  <TextField fx:id="iptu_bairro" editable="false" prefHeight="26.0" prefWidth="214.0" />
+                  <TextField fx:id="iptu_cidade" editable="false" layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="222.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="iptu_estado" editable="false" layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="36.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="iptu_cep" editable="false" layoutX="404.0" layoutY="15.0" prefHeight="26.0" prefWidth="90.0">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="iptu_faixas" alignment="CENTER_LEFT" layoutX="15.0" layoutY="87.0" prefHeight="6.0" prefWidth="590.0" style="-fx-background-color: transparent;" styleClass="label" stylesheets="@../css/label.css">
+               <children>
+                  <Label fx:id="iptu_lbl_faixas" stylesheets="@../css/label.css" text="Faixas:">
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="iptu_faixa1" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="129.0" style="-fx-font-weight: bold;" text="0,00" />
+                  <TextField fx:id="iptu_faixa2" alignment="CENTER_RIGHT" layoutX="66.0" layoutY="15.0" prefHeight="26.0" prefWidth="129.0" style="-fx-font-weight: bold;" text="0,00">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="iptu_faixa3" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="15.0" prefHeight="26.0" prefWidth="129.0" style="-fx-font-weight: bold;" text="0,00">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <TextField fx:id="iptu_faixa4" alignment="CENTER_RIGHT" layoutX="312.0" layoutY="15.0" prefHeight="26.0" prefWidth="123.0" style="-fx-font-weight: bold;" text="0,00">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="213.0" prefWidth="590.0" style="-fx-border-color: white;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="780.0" prefWidth="588.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <VBox prefHeight="1600.0" prefWidth="575.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="194.0" prefWidth="575.0" style="-fx-background-color: transparent;">
+                                 <children>
+                                    <Pane prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3; -fx-background-color: transparent;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Janeiro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jan_jan" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jan_vjan" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jan_fev" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jan_vfev" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jan_mar" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jan_vmar" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jan_abr" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jan_vabr" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3; -fx-background-color: transparent;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Fevereiro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_fev_fev" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_fev_vfev" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_fev_mar" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_fev_vmar" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_fev_abr" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_fev_vabr" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_fev_mai" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_fev_vmai" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="194.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3; -fx-background-color: transparent;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Março" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mar_mar" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mar_vmar" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mar_abr" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mar_vabr" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mar_mai" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mar_vmai" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mar_jun" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mar_vjun" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="194.0" prefWidth="575.0">
+                                 <children>
+                                    <Pane prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Abril" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_abr_abr" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_abr_vabr" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_abr_mai" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_abr_vmai" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_abr_jun" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_abr_vjun" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_abr_jul" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_abr_vjul" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Maio" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mai_mai" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mai_vmai" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mai_jun" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mai_vjun" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mai_jul" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mai_vjul" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_mai_ago" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_mai_vago" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="194.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Junho" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jun_jun" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jun_vjun" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jun_jul" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jun_vjul" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jun_ago" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jun_vago" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jun_set" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jun_vset" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="204.0" prefHeight="194.0" prefWidth="575.0">
+                                 <children>
+                                    <Pane prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Julho" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jul_jul" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jul_vjul" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jul_ago" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jul_vago" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jul_set" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jul_vset" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_jul_out" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_jul_vout" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Agosto" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_ago_ago" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_ago_vago" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_ago_set" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_ago_vset" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_ago_out" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_ago_vout" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_ago_nov" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_ago_vnov" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="194.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Setembro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_set_set" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_set_vset" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_set_out" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_set_vout" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_set_nov" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_set_vnov" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_set_dez" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_set_vdez" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="398.0" prefHeight="194.0" prefWidth="575.0">
+                                 <children>
+                                    <Pane prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Outubro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_out_out" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_out_vout" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_out_nov" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_out_vnov" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_out_dez" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_out_vdez" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_out_jan" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_out_vjan" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Novembro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_nov_nov" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_nov_vnov" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_nov_dez" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_nov_vdez" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_nov_jan" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_nov_vjan" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_nov_fev" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_nov_vfev" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="194.0" layoutY="10.0" prefHeight="194.0" prefWidth="184.0" style="-fx-border-color: black; -fx-border-radius: 10 10 10 10; -fx-border-width: 0.3;">
+                                       <children>
+                                          <VBox layoutX="1.0" prefHeight="197.0" prefWidth="183.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="18.0" prefWidth="189.0" style="-fx-background-color: rgb(141,155,169); -fx-background-radius: 10 10 10 10;">
+                                                   <children>
+                                                      <Label style="-fx-text-fill: white;" text="Dezembro" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_dez_dez" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_dez_vdez" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="39.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_dez_jan" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_dez_vjan" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="81.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_dez_fev" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_dez_vfev" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="123.0" prefHeight="42.0" prefWidth="198.0">
+                                                   <children>
+                                                      <Label fx:id="iptu_dez_mar" style="-fx-font-weight: bold;" text="dd/MM/aaaa">
+                                                         <HBox.margin>
+                                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="iptu_dez_vmar" alignment="CENTER_RIGHT" editable="false" prefHeight="26.0" prefWidth="97.0" style="-fx-text-fill: blue; -fx-font-weight: bold;" text="0,00">
+                                                         <font>
+                                                            <Font size="10.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <stylesheets>
+                  <URL value="@../css/scrollpane.css" />
+                  <URL value="@../css/label.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="viewport" />
+                  <String fx:value="scroll-bar" />
+               </styleClass>
+            </ScrollPane>
+            <HBox alignment="CENTER" prefHeight="8.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="btGravar" defaultButton="true" disable="true" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" text="Gravar">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/button.css" />
+   </stylesheets>
+</AnchorPane>

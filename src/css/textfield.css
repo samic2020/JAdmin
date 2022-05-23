@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/08/2015, 20/08/2015 12:43:16
+    Author     : supervisor
+*/
+.text-field {
+    -fx-font-size: 11;
+    -fx-background-color:
+        rgba(255, 255, 255, 0.3),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+        rgb(218, 226, 224);
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    -fx-background-radius: 6, 5, 4;
+    -fx-padding: 6 10 4 10;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: darkblue;
+}
+
+.text-field:focused {
+    -fx-prompt-text-fill:
+        rgb(128,128,128);
+    -fx-background-color:
+        rgba(235, 235, 235, 0.5),
+        rgba(0, 0, 0, 0.4),
+        rgb(255, 255, 255);
+}
+
+/*.text-field:focused:hover {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.3),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+        rgb(218, 226, 224);
+    -fx-prompt-text-fill: darkgreen;
+    -fx-font: bold 11pt "Arial"
+}
+
+.text-field:hover {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.3),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+        rgb(218, 226, 224);
+    -fx-prompt-text-fill: darkgreen;
+    -fx-font: bold 11pt "Arial"
+}*/

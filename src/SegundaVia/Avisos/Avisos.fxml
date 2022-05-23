@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="anchorPaneAvisos" prefHeight="257.0" prefWidth="714.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SegundaVia.Avisos.AvisosController">
+   <children>
+      <TabPane fx:id="tabPaneAvisos" layoutX="11.0" layoutY="14.0" prefHeight="85.0" prefWidth="452.0" style="-fx-background-color: cornsilk;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="aviAdm" style="-fx-background-color: cornsilk;" text="Adm">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="452.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+                     <children>
+                        <Label layoutX="20.0" layoutY="18.0" prefHeight="16.0" prefWidth="46.0" text="Codigo:" />
+                        <TextField fx:id="txbAvCodigo" layoutX="66.0" layoutY="14.0" prefHeight="26.0" prefWidth="71.0" />
+                        <TextField fx:id="txbAvNome" layoutX="147.0" layoutY="14.0" prefHeight="26.0" prefWidth="293.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="aviProp" style="-fx-background-color: cornsilk;" text="Proprietários">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="19.0" prefHeight="16.0" prefWidth="55.0" text="Registro:" />
+                        <TextField fx:id="txbPrCodigo" layoutX="69.0" layoutY="15.0" prefHeight="26.0" prefWidth="71.0" />
+                        <TextField fx:id="txbPrNome" layoutX="147.0" layoutY="15.0" prefHeight="26.0" prefWidth="293.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="aviLoca" style="-fx-background-color: cornsilk;" text="Locatários">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="20.0" prefHeight="16.0" prefWidth="55.0" text="Contrato:" />
+                        <TextField fx:id="txbLcCodigo" layoutX="69.0" layoutY="14.0" prefHeight="26.0" prefWidth="82.0" />
+                        <TextField fx:id="txbLcNome" layoutX="158.0" layoutY="14.0" prefHeight="26.0" prefWidth="285.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="aviSoc" style="-fx-background-color: cornsilk;" text="Sócios">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="20.0" prefHeight="16.0" prefWidth="20.0" text="Id:" />
+                        <TextField fx:id="txbScCodigo" layoutX="36.0" layoutY="15.0" prefHeight="26.0" prefWidth="82.0" />
+                        <TextField fx:id="txbScNome" layoutX="124.0" layoutY="16.0" prefHeight="26.0" prefWidth="319.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="aviCtas" style="-fx-background-color: cornsilk;" text="Contas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5; -fx-background-color: cornsilk;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="20.0" prefHeight="16.0" prefWidth="42.0" text="Conta:" />
+                        <TextField fx:id="txbCtCodigo" layoutX="56.0" layoutY="15.0" prefHeight="26.0" prefWidth="82.0" />
+                        <TextField fx:id="txbCtNome" layoutX="144.0" layoutY="16.0" prefHeight="26.0" prefWidth="300.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="470.0" layoutY="11.0" prefHeight="91.0" prefWidth="230.0" style="-fx-border-color: black; -fx-border-radius: 5 5 5 5;">
+         <children>
+            <Label layoutX="8.0" layoutY="9.0" text="Mes:" />
+            <Spinner fx:id="aviMes" layoutX="39.0" layoutY="5.0" prefHeight="25.0" prefWidth="61.0" />
+            <Label layoutX="103.0" layoutY="9.0" text="Ano:" />
+            <Spinner fx:id="aviAno" layoutX="133.0" layoutY="5.0" prefHeight="25.0" prefWidth="88.0" />
+            <Button fx:id="btnListar" layoutX="8.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="214.0" text="Listar" />
+            <Label layoutX="6.0" layoutY="65.0" text="Aut:" />
+            <TextField fx:id="aviAutent" layoutX="31.0" layoutY="60.0" prefHeight="25.0" prefWidth="88.0" />
+            <Button fx:id="btnImprimir" layoutX="123.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Imprimir" />
+         </children>
+      </Pane>
+      <TableView fx:id="ListaAvi" layoutX="8.0" layoutY="111.0" prefHeight="139.0" prefWidth="692.0">
+         <columns>
+            <TableColumn fx:id="aviId" prefWidth="75.0" text="Id" visible="false" />
+            <TableColumn fx:id="aviOper" prefWidth="75.0" text="Oper" />
+            <TableColumn fx:id="aviAut" prefWidth="75.0" text="Aut" />
+            <TableColumn fx:id="aviDataHora" prefWidth="100.0" text="DataHora" />
+            <TableColumn fx:id="aviValor" prefWidth="110.0" text="Valor" />
+            <TableColumn fx:id="aviLogado" prefWidth="99.0" text="Logado" />
+            <TableColumn fx:id="aviLanctos" prefWidth="159.0" text="Lançamentos" />
+            <TableColumn fx:id="aviAcoes" prefWidth="48.0" resizable="false" text="Ações" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

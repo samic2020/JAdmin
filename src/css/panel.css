@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/08/2015, 20/08/2015 12:45:23
+    Author     : supervisor
+*/
+.pane-basicwindow {
+    -fx-border-color:
+        #dddddd;
+    -fx-border-style: solid;
+    -fx-border-width:
+        0 0 0 0.417em,
+        0 0 0.417em 0,
+        0 0.417em 0 0;
+}
+

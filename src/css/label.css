@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/08/2015, 20/08/2015 12:40:38
+    Author     : supervisor
+*/
+/*
+.label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12;
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+*/
+
+.label {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12;
+    /*-fx-text-fill: rgba(255, 255, 255, 1);*/
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    /*-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );*/
+    -fx-effect: dropshadow( one-pass-box , rgba(255, 255, 255, 0.6), 0, 0.0 , 0 , 1 );
+}

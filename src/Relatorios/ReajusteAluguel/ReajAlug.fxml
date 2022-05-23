@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="127.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Relatorios.ReajusteAluguel.ReajAlug">
+   <children>
+      <Spinner fx:id="mesIni" layoutX="65.0" layoutY="34.0" />
+      <Spinner fx:id="anoIni" layoutX="222.0" layoutY="34.0" prefHeight="25.0" prefWidth="87.0" />
+      <Spinner fx:id="mesFim" layoutX="347.0" layoutY="34.0" />
+      <Spinner fx:id="anoFim" layoutX="504.0" layoutY="34.0" prefHeight="25.0" prefWidth="87.0" />
+      <Label layoutX="14.0" layoutY="38.0" text="Período:" />
+      <Label layoutX="317.0" layoutY="38.0" text="Até" />
+      <Button fx:id="btnListar" layoutX="424.0" layoutY="69.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="167.0" text="Listar" />
+   </children>
+</AnchorPane>

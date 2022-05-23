@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneBancoAdm" minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="772.0" style="-fx-border-color: black; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.ContaAdm.ContaAdm">
+   <children>
+      <Label layoutX="14.0" layoutY="20.0" text="Banco:" />
+      <ComboBox fx:id="ba_banco" layoutX="69.0" layoutY="15.0" prefHeight="26.0" prefWidth="691.0" promptText="Selecione o Banco ..." />
+      <Label layoutX="14.0" layoutY="51.0" text="Agencia:" />
+      <TextField fx:id="ba_agencia" alignment="CENTER_RIGHT" layoutX="79.0" layoutY="46.0" prefHeight="26.0" prefWidth="130.0" />
+      <Label layoutX="234.0" layoutY="51.0" text="Conta:" />
+      <TextField fx:id="ba_conta" alignment="CENTER_RIGHT" layoutX="284.0" layoutY="46.0" prefHeight="26.0" prefWidth="151.0" />
+      <Label layoutX="440.0" layoutY="51.0" text="-" />
+      <TextField fx:id="ba_digito" alignment="CENTER" layoutX="448.0" layoutY="46.0" prefHeight="26.0" prefWidth="26.0" />
+      <Label layoutX="524.0" layoutY="51.0" text="Tipo:" />
+      <ComboBox fx:id="ba_tipo" layoutX="557.0" layoutY="46.0" prefHeight="26.0" prefWidth="202.0" promptText="Tipo da conta ..." />
+      <Label layoutX="14.0" layoutY="84.0" text="Valor da Tarifa para TED:" />
+      <TextField fx:id="ba_ted" alignment="CENTER_RIGHT" layoutX="159.0" layoutY="79.0" prefHeight="26.0" prefWidth="109.0" />
+      <Label layoutX="495.0" layoutY="84.0" text="Valor da Tarifa para DOC:" />
+      <TextField fx:id="ba_doc" alignment="CENTER_RIGHT" layoutX="651.0" layoutY="79.0" prefHeight="26.0" prefWidth="109.0" />
+      <Label layoutX="14.0" layoutY="117.0" text="Valor Max por cheque emitido:" />
+      <TextField fx:id="ba_cheque" alignment="CENTER_RIGHT" layoutX="182.0" layoutY="112.0" prefHeight="26.0" prefWidth="109.0" />
+      <Label layoutX="383.0" layoutY="117.0" text="Valor Min para Transferencia:" />
+      <TextField fx:id="ba_transferencia" alignment="CENTER_RIGHT" layoutX="548.0" layoutY="112.0" prefHeight="26.0" prefWidth="109.0" />
+      <Button fx:id="ba_btlancar" layoutX="661.0" layoutY="112.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Lançar" />
+      <TableView fx:id="ba_bancos" layoutX="14.0" layoutY="146.0" prefHeight="176.0" prefWidth="748.0">
+         <columns>
+            <TableColumn fx:id="ba_bancos_id" prefWidth="47.0" text="id" />
+            <TableColumn fx:id="ba_bancos_banco" prefWidth="103.0" text="Banco" />
+            <TableColumn fx:id="ba_bancos_agencia" prefWidth="79.0" text="Agencia" />
+            <TableColumn fx:id="ba_bancos_conta" prefWidth="162.0" text="Conta" />
+            <TableColumn fx:id="ba_bancos_tipo" prefWidth="75.0" text="tipo" />
+            <TableColumn fx:id="ba_bancos_ted" prefWidth="75.0" text="Ted" />
+            <TableColumn fx:id="ba_bancos_doc" prefWidth="75.0" text="Doc" />
+            <TableColumn fx:id="ba_bancos_cheque" prefWidth="75.0" text="Max CH" />
+            <TableColumn fx:id="ba_bancos_transferencia" prefWidth="75.0" text="Min TRF" />
+         </columns>
+      </TableView>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/button.css" />
+      <URL value="@../../../css/combobox.css" />
+      <URL value="@../../../css/label.css" />
+      <URL value="@../../../css/textfield.css" />
+      <URL value="@../../../css/ptableImoveis.css" />
+   </stylesheets>
+</AnchorPane>

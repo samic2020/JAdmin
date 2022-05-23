@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="anchorPane" prefHeight="390.0" prefWidth="600.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Movimento.BloqLocatario.BloqLocatario">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Contrato:" />
+      <TextField fx:id="blqContrato" layoutX="73.0" layoutY="10.0" prefHeight="25.0" prefWidth="87.0" />
+      <Label layoutX="171.0" layoutY="14.0" text="Nome:" />
+      <TextField fx:id="blqNome" layoutX="213.0" layoutY="10.0" prefHeight="25.0" prefWidth="376.0" />
+      <TextArea fx:id="blqMotivo" layoutX="14.0" layoutY="62.0" prefHeight="101.0" prefWidth="576.0" />
+      <Label layoutX="14.0" layoutY="44.0" prefHeight="17.0" prefWidth="576.0" style="-fx-background-color: LightBlue;" text="Motivo Bloqueio:" />
+      <Button fx:id="btnBloquear" layoutX="14.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Bloquear" />
+      <Button fx:id="btnGravar" layoutX="401.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="188.0" text="Gravar Motivo" />
+      <Label layoutX="14.0" layoutY="207.0" prefHeight="17.0" prefWidth="576.0" style="-fx-background-color: LightBlue;" text="Locatários Bloqueados" />
+      <TableView fx:id="blqLista" layoutX="15.0" layoutY="224.0" prefHeight="131.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="blqListaId" prefWidth="47.0" text="Id" />
+          <TableColumn fx:id="blqListaContrato" prefWidth="96.0" text="Contrato" />
+            <TableColumn fx:id="blqListaNome" prefWidth="328.0" text="Nome" />
+            <TableColumn fx:id="blqListaData" minWidth="0.0" prefWidth="85.0" text="Data" />
+        </columns>
+      </TableView>
+      <ProgressBar fx:id="blqProgress" layoutX="16.0" layoutY="361.0" prefHeight="18.0" prefWidth="576.0" progress="0.0" />
+   </children>
+</AnchorPane>

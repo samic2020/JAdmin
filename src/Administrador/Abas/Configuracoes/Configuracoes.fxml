@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneConfig" minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="772.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.Abas.Configuracoes.Configuracoes">
+   <children>
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="261.0" prefWidth="748.0" style="-fx-background-color: #dddddd;">
+         <panes>
+            <TitledPane prefHeight="72.0" prefWidth="772.0" text="Recibos">
+               <content>
+                  <AnchorPane fx:id="anchorPanecnfRecibos" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" style="-fx-background-color: #dddddd;" text="Boletos">
+               <content>
+                  <AnchorPane fx:id="anchorPanecnfBoletos" prefHeight="201.0" prefWidth="746.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefWidth="772.0" style="-fx-background-color: #dddddd;" text="Sistema">
+               <content>
+                  <AnchorPane fx:id="anchorPanecnfSistema" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #dddddd;" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Dimob">
+              <content>
+                <AnchorPane fx:id="anchorPanecnfDimob" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="746.0" />
+              </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

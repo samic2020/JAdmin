@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/08/2015, 20/08/2015 13:08:12
+    Author     : supervisor
+*/
+.button .text {
+    /*-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );*/
+    -fx-effect: dropshadow( one-pass-box , rgba(255, 255, 255, 0.8), 0, 0.0 , 0 , -1 );
+}
+
+/*
+    -fx-background-color:
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#242a2e, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+*/
+
+.button {
+/*
+    -fx-background-color:
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#242a2e, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(0,142,148,0.9),
+        rgba(255,255,255,0));
+*/
+    -fx-background-color:
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#c6c6c6 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#242a2e, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(125,130,130,0.9),
+        rgba(255,255,255,0));
+    -fx-background-radius: 7, 6, 5, 4, 3, 5;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2; /*-3 -3 -4 -3, -3, 0, 1, 2, 0; */
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-padding: 5 10 5 10;
+}
+
+.button:focused, .button:hover {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#3f4950, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+}
+
+/******
+ ** Tela de Usuários
+**/
+#listaUser_btIncluir {          
+    -fx-background-image: url("/Figuras/p24x24/new.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#listaUser_btExcluir {          
+    -fx-background-image: url("/Figuras/p24x24/empty_lixeira.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#btGravar {          
+    -fx-background-image: url("/Figuras/p24x24/save.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#btRetornar {          
+    -fx-background-image: url("/Figuras/p24x24/exit_circle.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#scanner {          
+    -fx-background-image: url("/Figuras/p24x24/camera.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#arquivo {          
+    -fx-background-image: url("/Figuras/p24x24/folder_images.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+/******
+ ** Fim Tela de Usuários
+**/
+
+/******
+ ** Tela de Proprietários
+**/
+#p_btn_incluir {
+    -fx-background-image: url("/Figuras/p24x24/new.png");
+    -fx-background-size: 18 18;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;   
+}
+
+#btn_excluir {
+    -fx-background-image: url("/Figuras/trash-delete.png");
+    -fx-background-size: 16 16;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:left;
+    -fx-background-position: 90%;
+}

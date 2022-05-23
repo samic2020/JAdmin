@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ListaBloqueados" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b0eef6ba-b4fe-4aad-9f6a-c885d2f381e9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="contrato" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="dtinicio" class="java.util.Date"/>
+	<field name="dtfim" class="java.util.Date"/>
+	<field name="dtaditamento" class="java.util.Date"/>
+	<field name="mensal" class="java.math.BigDecimal"/>
+	<pageHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="357e3169-9f11-425d-86a3-d93ed3cf0ff5" x="2" y="0" width="550" height="21"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE OCORRÊNCIAS]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="0c8b6259-a1f9-469b-9f0d-d852bd0f4ec1" x="0" y="23" width="552" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b15cfa86-1f59-4ede-9dc3-a5ae434d2aba" x="2" y="0" width="58" height="15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="844b1d4f-fcf0-4d89-bc7d-bded1d68cd63"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b18604bb-9d6f-4383-a644-3fda46b35913" x="65" y="0" width="487" height="15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f01d87b-466a-44ec-bcc0-e0c16eea5560"/>
+				</reportElement>
+				<textElement>
+					<font isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[nome]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement uuid="3c3baccc-50aa-4630-a029-cfa1d477f603" x="2" y="0" width="58" height="14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="844b1d4f-fcf0-4d89-bc7d-bded1d68cd63"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{contrato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="80548d7c-0e92-4934-b726-18208b51763a" x="65" y="0" width="203" height="14">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f01d87b-466a-44ec-bcc0-e0c16eea5560"/>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="5cc31711-2f92-4605-b992-db164ebd3984" x="290" y="0" width="64" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dtinicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="52afe5cf-4ac5-40b3-9cff-312b98d39c00" x="354" y="0" width="64" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dtfim}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement uuid="d4cd894a-de91-4199-9d80-362688832453" x="418" y="0" width="64" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dtaditamento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="d5f345df-c86c-4289-81a5-56f22b5018c6" x="482" y="0" width="70" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{mensal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="28" splitType="Stretch">
+			<line>
+				<reportElement uuid="b3a41e5a-cefa-4216-acee-db31a4923a9b" x="0" y="4" width="552" height="1"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement uuid="1e63e9e6-2924-4b50-99d9-d7800ebd7c20" x="2" y="10" width="288" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0dae25bc-3b21-418f-965d-c93567a683dc" x="352" y="10" width="100" height="14"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="a9c25fec-095e-428d-9e2d-92f6a1b9b2b9" x="452" y="10" width="100" height="14"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/08/2015, 20/08/2015 13:18:40
+    Author     : supervisor
+*/
+.check-box .label {
+    -fx-background-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.check-box .text {
+    -fx-background-color: transparent;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}
+
+.check-box .box {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 1),
+        -fx-outer-border,
+        -fx-inner-border,
+        -fx-body-color;
+        -fx-text-fill: rgba(255, 255, 255, 1);
+}
+
+.check-box:focused .box {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.15),
+        rgba(0, 0, 0, 0.8),
+        -fx-outer-border,
+        -fx-inner-border,
+        white;
+}
+

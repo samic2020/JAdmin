@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="824.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrador.AdminController">
+   <children>
+      <TabPane layoutX="9.0" layoutY="9.0" prefHeight="390.0" prefWidth="797.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dados da ADM">
+            <content>
+              <AnchorPane fx:id="anchorPaneDadosAdm" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+            </content>
+          </Tab>
+          <Tab text="Contas da ADM">
+            <content>
+              <AnchorPane fx:id="anchorPaneContasAdm" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+            </content>
+          </Tab>
+            <Tab text="Bancos Boleta">
+              <content>
+                <AnchorPane fx:id="anchorPaneContasBoletas" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+              </content>
+            </Tab>
+            <Tab text="Bancos ADM">
+              <content>
+                <AnchorPane fx:id="anchorPaneBancoAdm" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+              </content>
+            </Tab>
+            <Tab text="Serviços E-Mail">
+              <content>
+                <AnchorPane fx:id="anchorPaneContasEmail" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+              </content>
+            </Tab>
+            <Tab text="Menssagens">
+              <content>
+                <AnchorPane fx:id="anchorPaneMsg" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+              </content>
+            </Tab>
+            <Tab text="Whatsapp">
+              <content>
+                <AnchorPane fx:id="anchorPaneWhatsapp" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Configuraçoes">
+              <content>
+                <AnchorPane fx:id="anchorPaneConfig" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-insets: 5 5 5 5; -fx-border-radius: 5 5 5 5; -fx-background-color: #dddddd;" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="anchorPaneMJCE" layoutX="9.0" layoutY="383.0" prefHeight="222.0" prefWidth="797.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../css/label.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/checkbox.css" />
+      <URL value="@../css/tabpane.css" />
+      <URL value="@../css/ptableImoveis.css" />
+      <URL value="@../css/button.css" />
+      <URL value="@../css/textarea.css" />
+   </stylesheets>
+</AnchorPane>
